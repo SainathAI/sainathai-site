@@ -6,34 +6,20 @@ on:
   workflow_dispatch:
 
 jobs:
-  build-deploy:
+  deploy:
     runs-on: ubuntu-latest
-    permissions:
-      contents: read
-      pages: write
-      id-token: write
     steps:
-      - name: Checkout
+      - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Setup Node (for optional build; safe default)
+      - name: Setup Node (no-op safe)
         uses: actions/setup-node@v4
         with:
           node-version: '18'
 
-      # if you had a static build step, place it here. For plain static HTML this is a no-op.
-
-      - name: Upload artifact for GitHub Pages
-        uses: actions/upload-pages-artifact@v1
+      - name: Deploy to GitHub Pages (gh-pages branch)
+        uses: JamesIves/github-pages-deploy-action@v4
         with:
-          path: '.'   # publish entire repo root (index.html, assets, CNAME, etc.)
-
-  deploy:
-    needs: build-deploy
-    runs-on: ubuntu-latest
-    permissions:
-      pages: write
-      id-token: write
-    steps:
-      - name: Deploy to GitHub Pages
-        uses: actions/deploy-pages@v1
+          BRANCH: gh-pages
+          FOLDER: .
+          CLEAN: true
