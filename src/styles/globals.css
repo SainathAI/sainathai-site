@@ -1,0 +1,10 @@
+/* src/styles/globals.css (TASK-101 auto-created) */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap');
+:root{ --bg-grad: linear-gradient(180deg,#070714 0%, #0f0f1a 60%); --accent:#38bdf8; }
+html,body{font-family:Inter,system-ui,Segoe UI,Roboto,Arial;margin:0;background:var(--bg-grad);color:#e6f0ff;}
+.container{max-width:1100px;margin:36px auto;padding:20px;}
+
+/* TASK-101: logo sizing adjustments */
+.brand img{height:56px;width:auto;} 
+@media (max-width:768px){ .brand img{height:44px;} }
+
