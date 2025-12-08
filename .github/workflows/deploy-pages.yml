@@ -8,16 +8,16 @@ on:
 jobs:
   deploy:
     runs-on: ubuntu-latest
+    env:
+      REACT_APP_API_BASE: ${{ secrets.REACT_APP_API_BASE }}
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
-
       - name: Setup Node (no-op safe)
         uses: actions/setup-node@v4
         with:
           node-version: '18'
-
-      - name: Deploy to GitHub Pages (gh-pages branch)
+      - name: Deploy to Github Pages (gh-pages branch)
         uses: JamesIves/github-pages-deploy-action@v4
         with:
           BRANCH: gh-pages
