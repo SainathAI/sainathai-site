@@ -35,3 +35,4 @@ export async function trigger(action) {
     return { ok: false };
   }
 }
+
