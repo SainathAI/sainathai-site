@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 240">
+  <defs>
+    <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1e3a8a;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1e40af;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <rect width="400" height="240" fill="url(#grad1)"/>
+  <text x="20" y="100" font-family="Inter,sans-serif" font-size="32" font-weight="bold" fill="#fff" font-style="italic">10 AI Tools</text>
+  <text x="20" y="140" font-family="Inter,sans-serif" font-size="24" font-weight="600" fill="#60a5fa">Save 2+ Hours</text>
+  <circle cx="360" cy="30" r="20" fill="#fbbf24" opacity="0.3"/>
+  <circle cx="30" cy="220" r="15" fill="#60a5fa" opacity="0.2"/>
+</svg>
