@@ -3,241 +3,246 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Work With SainathAI - Lead Capture | AI Automation Services</title>
-    <link rel="stylesheet" href="/sainathai-site/styles.css">
+    <title>Contact SainathAI - AI Automation Services</title>
+    <meta name="description" content="Get in touch with SainathAI for AI Automation and Revenue Systems">
+    <link rel="icon" href="/sainathai-site/assets/favicon.png">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Tailwind Config -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#1A73E8',
+                        secondary: {
+                            900: '#0b0b0b',
+                            800: '#1a1a1a',
+                            700: '#2a2a2a'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- Custom Styles -->
     <style>
-        .contact-hero {
-            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
-            padding: 60px 20px;
-            text-align: center;
-            color: #fff;
-        }
-        .contact-hero h1 {
-            font-size: 2.5em;
-            margin-bottom: 20px;
-            color: #00d4ff;
-        }
-        .forms-container {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 40px;
-            max-width: 1200px;
-            margin: 60px auto;
-            padding: 0 20px;
-        }
-        .form-box {
-            background: #f8f9fa;
-            padding: 40px;
-            border-radius: 12px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-        }
-        .form-box h2 {
-            color: #1a1a2e;
-            margin-bottom: 20px;
-            font-size: 1.5em;
-        }
-        .form-group {
-            margin-bottom: 20px;
-        }
-        .form-group label {
-            display: block;
-            margin-bottom: 8px;
-            color: #333;
-            font-weight: 500;
-        }
-        .form-group input,
-        .form-group textarea,
-        .form-group select {
-            width: 100%;
-            padding: 12px;
-            border: 1px solid #ddd;
-            border-radius: 6px;
-            font-family: inherit;
-            font-size: 1em;
-        }
-        .form-group textarea {
-            resize: vertical;
-            min-height: 100px;
-        }
-        .submit-btn {
-            background: linear-gradient(135deg, #00d4ff 0%, #0099cc 100%);
-            color: white;
-            padding: 14px 30px;
-            border: none;
-            border-radius: 6px;
-            font-size: 1em;
-            cursor: pointer;
-            width: 100%;
-            font-weight: 600;
-            transition: all 0.3s ease;
-        }
-        .submit-btn:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(0,212,255,0.3);
-        }
-        .form-message {
-            display: none;
-            padding: 15px;
-            border-radius: 6px;
-            margin-bottom: 20px;
-            text-align: center;
-        }
-        .form-message.success {
-            background: #d4edda;
-            color: #155724;
-            border: 1px solid #c3e6cb;
-            display: block;
-        }
-        .form-message.error {
-            background: #f8d7da;
-            color: #721c24;
-            border: 1px solid #f5c6cb;
-            display: block;
-        }
-        @media (max-width: 768px) {
-            .forms-container {
-                grid-template-columns: 1fr;
-            }
-            .contact-hero h1 {
-                font-size: 1.8em;
-            }
-        }
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+        body { font-family: 'Inter', sans-serif; }
     </style>
 </head>
-<body>
-    <nav class="navbar">
-        <div class="nav-container">
-            <a href="/sainathai-site/" class="logo">SainathAI</a>
-            <ul class="nav-links">
-                <li><a href="/sainathai-site/">Home</a></li>
-                <li><a href="/sainathai-site/about.html">About</a></li>
-                <li><a href="/sainathai-site/services/">Services</a></li>
-                <li><a href="/sainathai-site/blog/">Blog</a></li>
-                <li><a href="/sainathai-site/contact.html" class="active">Contact</a></li>
-            </ul>
+<body class="bg-secondary-900 text-white">
+    
+    <!-- Navigation -->
+    <nav class="fixed w-full top-0 bg-secondary-900/95 backdrop-blur-sm border-b border-secondary-700 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <a href="/sainathai-site/" class="text-2xl font-bold text-primary">SainathAI</a>
+                <div class="hidden md:flex space-x-8">
+                    <a href="/sainathai-site/" class="text-gray-300 hover:text-primary transition">Home</a>
+                    <a href="/sainathai-site/about.html" class="text-gray-300 hover:text-primary transition">About</a>
+                    <a href="/sainathai-site/services/" class="text-gray-300 hover:text-primary transition">Services</a>
+                    <a href="/sainathai-site/blog/" class="text-gray-300 hover:text-primary transition">Blog</a>
+                    <a href="/sainathai-site/contact.html" class="text-primary border-b-2 border-primary">Contact</a>
+                </div>
+                <a href="/sainathai-site/#lead-magnet" class="bg-primary hover:bg-blue-600 text-white px-6 py-2 rounded-lg font-semibold transition">
+                    Get 72-hour System
+                </a>
+            </div>
         </div>
     </nav>
 
-    <section class="contact-hero">
-        <h1>Work With SainathAI</h1>
-        <p style="font-size: 1.1em; margin-bottom: 20px;">Let's Automate Your Revenue Systems</p>
-    </section>
+    <!-- Contact Section -->
+    <main class="pt-24 pb-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <!-- Page Title -->
+            <div class="text-center mb-12">
+                <h1 class="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-primary to-blue-400 bg-clip-text text-transparent">
+                    Get In Touch
+                </h1>
+                <p class="text-xl text-gray-400">
+                    Let's discuss how AI automation can transform your business
+                </p>
+            </div>
 
-    <div class="forms-container">
-        <div class="form-box">
-            <h2>Lead Magnet</h2>
-            <p style="color: #666; margin-bottom: 20px;">Get our FREE 72-Hour AI Growth System blueprint</p>
-            <form id="leadForm">
-                <div class="form-message" id="leadMessage"></div>
-                <div class="form-group">
-                    <label for="leadName">Your Name *</label>
-                    <input type="text" id="leadName" name="name" required>
+            <div class="grid md:grid-cols-2 gap-12 max-w-6xl mx-auto">
+                
+                <!-- Contact Form -->
+                <div class="bg-secondary-800 rounded-2xl p-8 shadow-2xl">
+                    <h2 class="text-2xl font-bold mb-6">Send Us a Message</h2>
+                    <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" class="space-y-4">
+                        <div>
+                            <label for="name" class="block text-sm font-medium text-gray-300 mb-2">Name *</label>
+                            <input 
+                                type="text" 
+                                id="name" 
+                                name="name" 
+                                required
+                                class="w-full px-4 py-3 bg-secondary-900 border border-secondary-700 rounded-lg text-white focus:outline-none focus:border-primary transition"
+                                placeholder="Your name"
+                            >
+                        </div>
+                        
+                        <div>
+                            <label for="email" class="block text-sm font-medium text-gray-300 mb-2">Email *</label>
+                            <input 
+                                type="email" 
+                                id="email" 
+                                name="email" 
+                                required
+                                class="w-full px-4 py-3 bg-secondary-900 border border-secondary-700 rounded-lg text-white focus:outline-none focus:border-primary transition"
+                                placeholder="your@email.com"
+                            >
+                        </div>
+                        
+                        <div>
+                            <label for="company" class="block text-sm font-medium text-gray-300 mb-2">Company</label>
+                            <input 
+                                type="text" 
+                                id="company" 
+                                name="company"
+                                class="w-full px-4 py-3 bg-secondary-900 border border-secondary-700 rounded-lg text-white focus:outline-none focus:border-primary transition"
+                                placeholder="Your company (optional)"
+                            >
+                        </div>
+                        
+                        <div>
+                            <label for="service" class="block text-sm font-medium text-gray-300 mb-2">Interested In</label>
+                            <select 
+                                id="service" 
+                                name="service"
+                                class="w-full px-4 py-3 bg-secondary-900 border border-secondary-700 rounded-lg text-white focus:outline-none focus:border-primary transition"
+                            >
+                                <option value="">Select a service</option>
+                                <option value="ai-automation">AI Automation</option>
+                                <option value="seo-growth">SEO Growth Systems</option>
+                                <option value="revenue-systems">Revenue Systems</option>
+                                <option value="consulting">Consulting</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        
+                        <div>
+                            <label for="message" class="block text-sm font-medium text-gray-300 mb-2">Message *</label>
+                            <textarea 
+                                id="message" 
+                                name="message" 
+                                required
+                                rows="5"
+                                class="w-full px-4 py-3 bg-secondary-900 border border-secondary-700 rounded-lg text-white focus:outline-none focus:border-primary transition"
+                                placeholder="Tell us about your project..."
+                            ></textarea>
+                        </div>
+                        
+                        <button 
+                            type="submit"
+                            class="w-full bg-primary hover:bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold text-lg transition"
+                        >
+                            Send Message
+                        </button>
+                        
+                        <p class="text-sm text-gray-500 text-center">
+                            We'll respond within 24 hours
+                        </p>
+                    </form>
                 </div>
-                <div class="form-group">
-                    <label for="leadEmail">Email Address *</label>
-                    <input type="email" id="leadEmail" name="email" required>
+
+                <!-- Contact Information -->
+                <div class="space-y-8">
+                    
+                    <!-- Contact Details Card -->
+                    <div class="bg-secondary-800 rounded-2xl p-8 shadow-2xl">
+                        <h2 class="text-2xl font-bold mb-6">Contact Information</h2>
+                        
+                        <div class="space-y-6">
+                            <div class="flex items-start gap-4">
+                                <div class="bg-primary/20 p-3 rounded-lg">
+                                    <svg class="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h3 class="font-semibold mb-1">Email</h3>
+                                    <a href="mailto:enquiry@sainathai.com" class="text-primary hover:text-blue-400 transition">
+                                        enquiry@sainathai.com
+                                    </a>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start gap-4">
+                                <div class="bg-primary/20 p-3 rounded-lg">
+                                    <svg class="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"></path>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h3 class="font-semibold mb-1">WhatsApp</h3>
+                                    <a href="https://wa.me/917075103333" class="text-primary hover:text-blue-400 transition">
+                                        +91 70751 03333
+                                    </a>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start gap-4">
+                                <div class="bg-primary/20 p-3 rounded-lg">
+                                    <svg class="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h3 class="font-semibold mb-1">Response Time</h3>
+                                    <p class="text-gray-400">Within 24 hours</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Quick CTA Card -->
+                    <div class="bg-gradient-to-br from-primary/20 to-blue-600/20 rounded-2xl p-8 border border-primary/30">
+                        <h3 class="text-2xl font-bold mb-4">Ready to Get Started?</h3>
+                        <p class="text-gray-300 mb-6">
+                            Download our free 72-hour AI Growth System blueprint and audit checklist.
+                        </p>
+                        <a 
+                            href="/sainathai-site/#lead-magnet"
+                            class="inline-block bg-primary hover:bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold transition"
+                        >
+                            Download Free Blueprint
+                        </a>
+                    </div>
+
+                    <!-- Business Hours Card -->
+                    <div class="bg-secondary-800 rounded-2xl p-8 shadow-2xl">
+                        <h3 class="text-xl font-bold mb-4">Business Hours</h3>
+                        <div class="space-y-2 text-gray-400">
+                            <p><span class="font-semibold text-white">Monday - Friday:</span> 9:00 AM - 6:00 PM IST</p>
+                            <p><span class="font-semibold text-white">Saturday:</span> 10:00 AM - 2:00 PM IST</p>
+                            <p><span class="font-semibold text-white">Sunday:</span> Closed</p>
+                        </div>
+                    </div>
+
                 </div>
-                <button type="submit" class="submit-btn">Download Free Blueprint</button>
-            </form>
+            </div>
+
         </div>
+    </main>
 
-        <div class="form-box">
-            <h2>Service Inquiry</h2>
-            <p style="color: #666; margin-bottom: 20px;">Tell us about your automation needs</p>
-            <form id="serviceForm">
-                <div class="form-message" id="serviceMessage"></div>
-                <div class="form-group">
-                    <label for="serviceName">Your Name *</label>
-                    <input type="text" id="serviceName" name="name" required>
-                </div>
-                <div class="form-group">
-                    <label for="serviceEmail">Email Address *</label>
-                    <input type="email" id="serviceEmail" name="email" required>
-                </div>
-                <div class="form-group">
-                    <label for="serviceType">Service Interest *</label>
-                    <select id="serviceType" name="serviceInterest" required>
-                        <option value="">Select a service...</option>
-                        <option value="ai-automation">AI Automation</option>
-                        <option value="medical-procurement">Medical Procurement</option>
-                        <option value="hospital-systems">Hospital Systems</option>
-                        <option value="seo-automation">SEO Automation</option>
-                        <option value="crm-automation">CRM Automation</option>
-                        <option value="linkedin-outreach">LinkedIn Outreach</option>
-                        <option value="marketing-automation">Marketing Automation</option>
-                    </select>
-                </div>
-                <div class="form-group">
-                    <label for="serviceMessage">Tell us more (optional)</label>
-                    <textarea id="serviceMessage" name="message" placeholder="Describe your business & automation needs"></textarea>
-                </div>
-                <button type="submit" class="submit-btn">Submit Inquiry</button>
-            </form>
+    <!-- Footer -->
+    <footer class="bg-secondary-800 border-t border-secondary-700 py-8 mt-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center text-gray-400">
+                <p class="mb-2">Founder — Sainath Phani VV • <a href="/sainathai-site/contact.html" class="text-primary hover:text-blue-400">Contact</a></p>
+                <p>© 2025 SainathAI</p>
+            </div>
         </div>
-    </div>
-
-    <section style="background: #f8f9fa; padding: 60px 20px; text-align: center; margin-top: 60px;">
-        <h2 style="color: #1a1a2e; margin-bottom: 20px;">Other Ways to Reach Us</h2>
-        <p style="font-size: 1.1em; margin: 15px 0;">
-            <strong>WhatsApp Business:</strong> <a href="https://wa.me/919999999999" target="_blank" style="color: #00d4ff;">Click to Message</a>
-        </p>
-        <p style="font-size: 1.1em; margin: 15px 0;">
-            <strong>Response Time:</strong> Typically within 2 hours
-        </p>
-    </section>
-
-    <footer style="background: #1a1a2e; color: #fff; padding: 30px 20px; text-align: center;">
-        <p>© 2025 SainathAI. All rights reserved.</p>
     </footer>
 
-    <script>
-        async function handleFormSubmit(e, formId, messageId, n8nWebhookUrl) {
-            e.preventDefault();
-            const form = document.getElementById(formId);
-            const messageDiv = document.getElementById(messageId);
-            
-            const formData = new FormData(form);
-            const data = Object.fromEntries(formData);
-            data.formType = formId === 'leadForm' ? 'lead-72hr' : 'service-inquiry';
-            data.pageUrl = window.location.href;
-            data.timestamp = new Date().toISOString();
+    <!-- Scripts -->
+    <script src="/sainathai-site/scripts.js"></script>
 
-            try {
-                const response = await fetch(n8nWebhookUrl, {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json',
-                    },
-                    body: JSON.stringify(data),
-                });
-
-                if (response.ok) {
-                    messageDiv.textContent = 'Thank you! We\'ll be in touch within 2 hours.';
-                    messageDiv.classList.add('success');
-                    form.reset();
-                    setTimeout(() => messageDiv.classList.remove('success'), 5000);
-                } else {
-                    throw new Error('Form submission failed');
-                }
-            } catch (error) {
-                console.error('Error:', error);
-                messageDiv.textContent = 'Error submitting form. Please try again.';
-                messageDiv.classList.add('error');
-                setTimeout(() => messageDiv.classList.remove('error'), 5000);
-            }
-        }
-
-        // Replace with your actual n8n webhook URLs
-        const N8N_LEAD_WEBHOOK = 'YOUR_N8N_LEAD_WEBHOOK_URL';
-        const N8N_SERVICE_WEBHOOK = 'YOUR_N8N_SERVICE_WEBHOOK_URL';
-
-        document.getElementById('leadForm').addEventListener('submit', (e) => {
-            handleFormSubmit(e, 'leadForm', 'leadMessage', N8N_LEAD_WEBHOOK);
-        });
-
-        document.getElementById('serviceForm').addEventListener('submit', (e) => {
-            handleFormSubmit(e, 'serviceForm', 'serviceMessage', N8N_SERVICE_WEBHOOK);
-        });
-    </script>
 </body>
 </html>
