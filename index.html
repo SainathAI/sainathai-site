@@ -6,232 +6,235 @@
     <title>SainathAI — AI Automation & Revenue Systems</title>
     <meta name="description" content="AI Automation, SEO & Growth systems for revenue scale">
     <link rel="icon" href="/sainathai-site/assets/favicon.png">
-    
-    <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
-    
-    <!-- Tailwind Config -->
     <script>
         tailwind.config = {
             theme: {
                 extend: {
                     colors: {
                         primary: '#1A73E8',
-                                                gold: {
-                            DEFAULT: '#FFB800',
-                            light: '#FFD700',
-                            dark: '#D4AF37'
-                        },
-                        circuit: '#FFA500',
-                        secondary: {
-                            900: '#0b0b0b',
-                            800: '#1a1a1a',
-                            700: '#2a2a2a'
-                        }
+                        gold: '#EFB800',
+                        neon: '#00F0FF'
                     }
                 }
             }
         }
     </script>
-    
-    <!-- Custom Styles -->
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
-        body { font-family: 'Inter', sans-serif; }
-                
-        /* Futuristic Animations */
-        @keyframes float {
-            0%, 100% { transform: translateY(0px); }
-            50% { transform: translateY(-20px); }
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&display=swap');
+        
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', sans-serif; background: #000; color: #fff; overflow-x: hidden; }
+        
+        /* Logo Background Watermark */
+        .logo-bg {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 150vw;
+            height: 150vh;
+            background-image: url('/sainathai-site/assets/logo.png');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: 60%;
+            opacity: 0.03;
+            z-index: 0;
+            pointer-events: none;
+            animation: logoFloat 20s ease-in-out infinite;
         }
-        @keyframes glow-pulse {
-            0%, 100% { box-shadow: 0 0 20px #FFD700, 0 0 40px #FFB800; }
-            50% { box-shadow: 0 0 40px #FFD700, 0 0 80px #FFB800; }
+        
+        @keyframes logoFloat {
+            0%, 100% { transform: translate(-50%, -50%) scale(1); }
+            50% { transform: translate(-50%, -52%) scale(1.05); }
         }
-        @keyframes circuit-flow {
-            0% { background-position: 0% 50%; }
-            100% { background-position: 100% 50%; }
+        
+        /* Animated Gradient Background */
+        .gradient-bg {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            z-index: -1;
+            background: linear-gradient(135deg, #000000 0%, #0a0a1a 25%, #001433 50%, #000820 75%, #000000 100%);
+            background-size: 400% 400%;
+            animation: gradientShift 15s ease infinite;
         }
-        .logo-glow { animation: glow-pulse 3s ease-in-out infinite; }
-        .float-animation { animation: float 6s ease-in-out infinite; }
-        .gradient-text {
-            background: linear-gradient(45deg, #1A73E8, #FFD700, #1A73E8);
-            background-size: 200% 200%;
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            animation: circuit-flow 4s ease infinite;
+        
+        @keyframes gradientShift {
+            0%, 100% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+        }
+        
+        /* Particles */
+        .particle {
+            position: fixed;
+            width: 2px;
+            height: 2px;
+            background: rgba(26, 115, 232, 0.5);
+            border-radius: 50%;
+            animation: particleFloat 20s infinite;
+            z-index: 1;
+        }
+        
+        @keyframes particleFloat {
+            0%, 100% { transform: translateY(0) translateX(0); opacity: 0; }
+            10% { opacity: 1; }
+            90% { opacity: 1; }
+            100% { transform: translateY(-100vh) translateX(50px); opacity: 0; }
+        }
+        
+        /* Glassmorphism Nav */
+        nav {
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            background: rgba(0, 0, 0, 0.5);
+            border-bottom: 1px solid rgba(26, 115, 232, 0.2);
+        }
+        
+        /* Neon Text Glow */
+        .neon-text {
+            text-shadow: 0 0 10px rgba(26, 115, 232, 0.5), 0 0 20px rgba(26, 115, 232, 0.3), 0 0 30px rgba(26, 115, 232, 0.2);
+        }
+        
+        .gold-glow {
+            text-shadow: 0 0 10px rgba(239, 184, 0, 0.5), 0 0 20px rgba(239, 184, 0, 0.3);
+        }
+        
+        /* 3D Cards */
+        .card-3d {
+            transform-style: preserve-3d;
+            transition: transform 0.3s ease;
+        }
+        
+        .card-3d:hover {
+            transform: translateY(-10px) rotateX(5deg) scale(1.02);
+        }
+        
+        /* Oversized Typography (Jeton-style) */
+        .mega-text {
+            font-size: clamp(3rem, 10vw, 8rem);
+            font-weight: 900;
+            line-height: 0.95;
+            letter-spacing: -0.03em;
+        }
+        
+        /* Button Animations */
+        .btn-glow {
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .btn-glow::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.3);
+            transform: translate(-50%, -50%);
+            transition: width 0.6s, height 0.6s;
+        }
+        
+        .btn-glow:hover::before {
+            width: 300px;
+            height: 300px;
         }
     </style>
 </head>
-<body class="bg-secondary-900 text-white">
+<body>
+    <div class="logo-bg"></div>
+    <div class="gradient-bg"></div>
     
-    <!-- Navigation -->
-    <nav class="fixed w-full top-0 bg-secondary-900/95 backdrop-blur-sm border-b border-secondary-700 z-50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center h-16">
-                <a href="/sainathai-site/" class="flex items-center gap-3 logo-glow">
-                    <img src="/sainathai-site/assets/Confirmed Logo.png" alt="SainathAI Logo" class="h-14 w-auto float-animation">
-                </a>                <div class="hidden md:flex space-x-8">
-                    <a href="/sainathai-site/" class="text-gray-300 hover:text-primary transition">Home</a>
-                    <a href="/sainathai-site/about.html" class="text-gray-300 hover:text-primary transition">About</a>
-                    <a href="/sainathai-site/services/" class="text-gray-300 hover:text-primary transition">Services</a>
-                    <a href="/sainathai-site/blog/" class="text-gray-300 hover:text-primary transition">Blog</a>
-                    <a href="/sainathai-site/contact.html" class="text-gray-300 hover:text-primary transition">Contact</a>
-                </div>
-                <button onclick="openModal()" class="bg-primary hover:bg-blue-600 text-white px-6 py-2 rounded-lg font-semibold transition">
-                    Get 72-hour System
-                </button>
+    <!-- Particles -->
+    <script>
+        for(let i=0; i<30; i++) {
+            let particle = document.createElement('div');
+            particle.className = 'particle';
+            particle.style.left = Math.random() * 100 + '%';
+            particle.style.animationDelay = Math.random() * 20 + 's';
+            particle.style.animationDuration = (15 + Math.random() * 10) + 's';
+            document.body.appendChild(particle);
+        }
+    </script>
+    
+    <!-- Glassmorphism Navigation -->
+    <nav class="fixed w-full top-0 z-50">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="/sainathai-site/" class="text-2xl font-bold neon-text">SainathAI</a>
+            <div class="hidden md:flex space-x-8">
+                <a href="/sainathai-site/" class="text-white hover:text-primary transition">Home</a>
+                <a href="/sainathai-site/about.html" class="text-gray-300 hover:text-primary transition">About</a>
+                <a href="/sainathai-site/services/" class="text-gray-300 hover:text-primary transition">Services</a>
+                <a href="/sainathai-site/blog/" class="text-gray-300 hover:text-primary transition">Blog</a>
+                <a href="/sainathai-site/contact.html" class="text-gray-300 hover:text-primary transition">Contact</a>
             </div>
+            <a href="#lead-magnet" class="bg-primary hover:bg-blue-600 text-white px-6 py-2 rounded-full font-semibold transition btn-glow">Get 72-hour System</a>
         </div>
     </nav>
-
+    
     <!-- Hero Section -->
-    <main class="pt-24 pb-16">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            
-            <!-- Hero Content -->
-            <div class="text-center mb-16">
-                <h1 class="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-primary to-blue-400 bg-clip-text text-transparent">
-                    AI Automation • SEO • Revenue Systems
-                </h1>
-                <p class="text-xl md:text-2xl text-gray-400 mb-8">
-                    AI Automation, SEO & Growth systems for revenue scale
-                </p>
-                <p class="text-lg text-gray-300 mb-8">
-                    Offer: <span class="text-primary font-bold">72-hour AI Growth System</span> — lead magnet, audit and automated funnel.
-                </p>
-                <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                    <button onclick="openModal()" class="bg-primary hover:bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold text-lg transition">
-                        Download Free Blueprint
-                    </button>
-                    <a href="#" id="wa-cta" class="bg-secondary-700 hover:bg-secondary-600 text-white px-8 py-3 rounded-lg font-semibold text-lg transition">
-                        WhatsApp Business
-                    </a>
-                </div>
+    <section class="relative min-h-screen flex items-center justify-center px-6 pt-20">
+        <div class="max-w-7xl mx-auto text-center z-10">
+            <h1 class="mega-text neon-text mb-8">
+                AI Automation
+                <span class="block text-gold gold-glow">SEO • Revenue</span>
+            </h1>
+            <p class="text-2xl md:text-3xl text-gray-300 mb-12 max-w-3xl mx-auto">
+                AI Automation, SEO & Growth systems for revenue scale
+            </p>
+            <div class="flex flex-col sm:flex-row gap-6 justify-center items-center mb-8">
+                <a href="#lead-magnet" class="bg-primary hover:bg-blue-600 text-white px-10 py-5 rounded-full font-bold text-lg transition transform hover:scale-105 btn-glow">Download Free Blueprint</a>
+                <a href="https://wa.me/917075103333" class="bg-green-600 hover:bg-green-700 text-white px-10 py-5 rounded-full font-bold text-lg transition transform hover:scale-105">WhatsApp Business</a>
             </div>
-
-            <!-- Founder Section -->
-            <div class="max-w-4xl mx-auto bg-secondary-800 rounded-2xl p-8 shadow-2xl">
-                <div class="flex flex-col md:flex-row items-center gap-8">
-                    <div class="flex-shrink-0">
-                        <img src="/sainathai-site/assets/founder.png" alt="Founder — Sainath Phani VV" class="w-48 h-48 object-cover rounded-xl shadow-lg">
-                    </div>
-                    <div class="flex-1">
-                        <h2 class="text-2xl font-bold text-primary mb-2">Sainath Phani VV</h2>
-                        <p class="text-gray-300 mb-4">
-                            15+ years IT industry experience. Consultant to Wipro, Polaris, Microsoft, HSBC. Expert in Healthcare & Banking domain systems.
-                        </p>
-                        <div class="flex flex-wrap gap-3">
-                            <a href="#ai-automation" class="text-primary hover:text-blue-400 font-medium">AI Automation</a>
-                            <span class="text-gray-600">•</span>
-                            <a href="#seo-growth" class="text-primary hover:text-blue-400 font-medium">SEO Growth</a>
-                        </div>
-                        <div class="mt-4">
-                            <p class="text-sm text-gray-400">WhatsApp: <a href="#" id="wa-link" class="text-primary hover:text-blue-400">+917075103333</a></p>
-                            <p class="text-sm text-gray-400">Email: <a href="mailto:enquiry@sainathai.com" class="text-primary hover:text-blue-400">enquiry@sainathai.com</a></p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Lead Magnet Card -->
-            <div class="max-w-2xl mx-auto mt-12 bg-gradient-to-br from-primary/20 to-blue-600/20 rounded-2xl p-8 border border-primary/30">
-                <div class="text-center">
-                    <p class="text-sm uppercase tracking-wider text-primary font-semibold mb-2">Lead Magnet</p>
-                    
-            <!-- Video Intro Section -->
-            <div class="max-w-5xl mx-auto my-16">
-                <div class="bg-gradient-to-r from-primary/10 to-gold/10 rounded-3xl p-2">
-                    <div class="bg-secondary-800 rounded-2xl p-8 shadow-2xl">
-                        <h2 class="text-3xl font-bold text-center mb-6 gradient-text">See How We Transform Businesses</h2>
-                        <p class="text-center text-gray-300 mb-8">
-                            Watch our introduction video to discover how SainathAI delivers enterprise-grade AI automation solutions
-                        </p>
-                        <div class="relative pb-[56.25%] h-0 overflow-hidden rounded-xl shadow-lg">
-                            <div class="absolute inset-0 bg-gradient-to-br from-primary/20 to-gold/20 flex items-center justify-center">
-                                <div class="text-center">
-                                    <div class="w-24 h-24 mx-auto mb-4 bg-primary/30 rounded-full flex items-center justify-center logo-glow">
-                                        <svg class="w-12 h-12 text-gold" fill="currentColor" viewBox="0 0 20 20">
-                                            <path d="M6.3 2.841A1.5 1.5 0 004 4.11V15.89a1.5 1.5 0 002.3 1.269l9.344-5.89a1.5 1.5 0 000-2.538L6.3 2.84z"/>
-                                        </svg>
-                                    </div>
-                                    <p class="text-xl text-white font-semibold">Coming Soon</p>
-                                    <p class="text-gray-400 mt-2">Professional Introduction Video</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-                    <h3 class="text-3xl font-bold mb-4">Free: 72-hour Growth System</h3>
-                    <p class="text-gray-300 mb-6">
-                        Enter email to download the step-by-step blueprint & quick audit checklist.
-                    </p>
-                    <button onclick="openModal()" class="bg-primary hover:bg-blue-600 text-white px-10 py-4 rounded-lg font-semibold text-lg transition w-full sm:w-auto">
-                        Download Free Blueprint
-                    </button>
-                </div>
-            </div>
-
+            <p class="text-xl text-gold gold-glow">Offer: 72-hour AI Growth System — lead magnet, audit and automated funnel.</p>
         </div>
-    </main>
-
-    <!-- Footer -->
-    <footer class="bg-secondary-800 border-t border-secondary-700 py-8 mt-16">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center text-gray-400">
-                <p class="mb-2">Founder — Sainath Phani VV • <a href="/sainathai-site/contact.html" class="text-primary hover:text-blue-400">Contact</a></p>
-                <p>© 2025 SainathAI</p>
+    </section>
+    
+    <!-- Founder Section -->
+    <section class="relative py-20 px-6">
+        <div class="max-w-5xl mx-auto">
+            <div class="card-3d bg-gradient-to-br from-gray-900 to-black border border-primary/30 rounded-3xl p-10 backdrop-blur-sm">
+                <div class="flex flex-col md:flex-row items-center gap-8">
+                    <img src="/sainathai-site/assets/founder.jpg" alt="Sainath Phani VV" class="w-48 h-48 rounded-full border-4 border-primary shadow-2xl object-cover" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%27200%27 height=%27200%27%3E%3Ccircle cx=%27100%27 cy=%27100%27 r=%2780%27 fill=%27%231A73E8%27/%3E%3C/svg%3E'">
+                    <div class="flex-1 text-center md:text-left">
+                        <h2 class="text-4xl font-bold neon-text mb-3">Sainath Phani VV</h2>
+                        <p class="text-xl text-gray-300 mb-4">15+ years IT industry experience. Consultant to Wipro, Polaris, Microsoft, HSBC. Expert in Healthcare & Banking domain systems.</p>
+                        <div class="flex flex-wrap gap-4 justify-center md:justify-start mb-4">
+                            <span class="bg-primary/20 text-primary px-4 py-2 rounded-full font-medium">AI Automation</span>
+                            <span class="bg-primary/20 text-primary px-4 py-2 rounded-full font-medium">SEO Growth</span>
+                        </div>
+                        <p class="text-gray-400">WhatsApp: <a href="https://wa.me/917075103333" class="text-primary hover:text-blue-400">+917075103333</a></p>
+                        <p class="text-gray-400">Email: <a href="mailto:enquiry@sainathai.com" class="text-primary hover:text-blue-400">enquiry@sainathai.com</a></p>
+                    </div>
+                </div>
             </div>
+        </div>
+    </section>
+    
+    <!-- Lead Magnet -->
+    <section id="lead-magnet" class="relative py-20 px-6">
+        <div class="max-w-4xl mx-auto text-center">
+            <h2 class="text-5xl md:text-6xl font-bold neon-text mb-6">See How We Transform <span class="text-gold gold-glow">Businesses</span></h2>
+            <p class="text-xl text-gray-300 mb-10">Enter email to download the step-by-step blueprint & quick audit checklist.</p>
+            <div class="card-3d bg-gradient-to-br from-primary/10 to-gold/10 border border-primary/40 rounded-3xl p-12 backdrop-blur-sm">
+                <form class="flex flex-col sm:flex-row gap-4 max-w-xl mx-auto">
+                    <input type="email" placeholder="your@email.com" class="flex-1 px-6 py-4 bg-black/50 border border-primary/30 rounded-full text-white focus:outline-none focus:border-primary" required>
+                    <button type="submit" class="bg-gold hover:bg-yellow-500 text-black px-8 py-4 rounded-full font-bold transition transform hover:scale-105 btn-glow">Get Free Access</button>
+                </form>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer class="relative py-8 px-6 border-t border-primary/20">
+        <div class="max-w-7xl mx-auto text-center">
+            <p class="text-gray-400">Founder — Sainath Phani VV • <a href="/sainathai-site/contact.html" class="text-primary hover:text-blue-400">Contact</a></p>
+            <p class="text-gray-400 mt-2">© 2025 SainathAI</p>
         </div>
     </footer>
-
-    <!-- Modal -->
-    <div id="modal-backdrop" class="hidden fixed inset-0 bg-black/70 backdrop-blur-sm z-50 flex items-center justify-center p-4">
-        <div class="bg-secondary-800 rounded-2xl max-w-md w-full p-8 shadow-2xl border border-secondary-700 relative">
-            <button onclick="closeModal()" class="absolute top-4 right-4 text-gray-400 hover:text-white text-2xl">
-                ✕
-            </button>
-            <h3 class="text-2xl font-bold mb-4">Get the 72-hour Growth System</h3>
-            <p class="text-gray-400 mb-6">
-                Enter your best email. We will send the blueprint and audit checklist instantly.
-            </p>
-            <form id="lead-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST" class="space-y-4">
-                <input 
-                    type="email" 
-                    name="email" 
-                    placeholder="your@email.com" 
-                    required
-                    class="w-full px-4 py-3 bg-secondary-900 border border-secondary-700 rounded-lg text-white focus:outline-none focus:border-primary transition"
-                >
-                <button type="submit" class="w-full bg-primary hover:bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold transition">
-                    Send & Download
-                </button>
-                <p class="text-sm text-gray-500 text-center">
-                    No spam. You can unsubscribe any time.
-                </p>
-            </form>
-        </div>
-    </div>
-
-    <!-- Scripts -->
-    <script src="/sainathai-site/scripts.js"></script>
-    <script>
-        function openModal() {
-            document.getElementById('modal-backdrop').classList.remove('hidden');
-        }
-        
-        function closeModal() {
-            document.getElementById('modal-backdrop').classList.add('hidden');
-        }
-        
-        // Close modal on backdrop click
-        document.getElementById('modal-backdrop').addEventListener('click', function(e) {
-            if (e.target === this) closeModal();
-        });
-    </script>
-
 </body>
 </html>
