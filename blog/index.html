@@ -4,191 +4,103 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SainathAI Blog - AI Automation & Revenue Growth Insights</title>
-    <link rel="stylesheet" href="/sainathai-site/styles.css">
+    <meta name="description" content="Latest insights on AI automation, SEO growth, and revenue systems">
+    <link rel="icon" href="/sainathai-site/assets/favicon.png">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#1A73E8',
+                        secondary: { 900: '#0b0b0b', 800: '#1a1a1a', 700: '#2a2a2a' },
+                        gold: { DEFAULT: '#EFB800', light: '#FFD700', dark: '#D4A017' }
+                    }
+                }
+            }
+        }
+    </script>
     <style>
-        .blog-hero {
-            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
-            padding: 60px 20px;
-            text-align: center;
-            color: #fff;
-        }
-        .blog-hero h1 {
-            font-size: 2.5em;
-            margin-bottom: 20px;
-            color: #00d4ff;
-        }
-        .blog-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-            gap: 30px;
-            max-width: 1200px;
-            margin: 60px auto;
-            padding: 0 20px;
-        }
-        .blog-card {
-            background: white;
-            border-radius: 12px;
-            overflow: hidden;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-            transition: transform 0.3s, box-shadow 0.3s;
-        }
-        .blog-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 25px rgba(0,212,255,0.2);
-        }
-        .blog-card-header {
-            background: linear-gradient(135deg, #00d4ff 0%, #0099cc 100%);
-            padding: 20px;
-            color: white;
-            height: 100px;
-            display: flex;
-            align-items: center;
-        }
-        .blog-card-header h3 {
-            margin: 0;
-            font-size: 1.1em;
-            line-height: 1.4;
-        }
-        .blog-card-body {
-            padding: 20px;
-        }
-        .blog-card-meta {
-            color: #999;
-            font-size: 0.9em;
-            margin-bottom: 10px;
-        }
-        .blog-card-body p {
-            color: #666;
-            margin: 0 0 20px 0;
-            line-height: 1.6;
-            font-size: 0.95em;
-        }
-        .blog-btn {
-            display: inline-block;
-            background: #00d4ff;
-            color: white;
-            padding: 10px 20px;
-            border-radius: 6px;
-            text-decoration: none;
-            font-weight: 600;
-            transition: all 0.3s;
-            font-size: 0.9em;
-        }
-        .blog-btn:hover {
-            background: #0099cc;
-            transform: translateX(5px);
-        }
-        .section-title {
-            font-size: 1.8em;
-            color: #1a1a2e;
-            margin-bottom: 40px;
-            text-align: center;
-        }
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+        body { font-family: 'Inter', sans-serif; }
+        @keyframes float { 0%, 100% { transform: translateY(0px); } 50% { transform: translateY(-10px); } }
+        .floating-card { animation: float 6s ease-in-out infinite; }
     </style>
 </head>
-<body>
-    <nav class="navbar">
-        <div class="nav-container">
-            <a href="/sainathai-site/" class="logo">SainathAI</a>
-            <ul class="nav-links">
-                <li><a href="/sainathai-site/">Home</a></li>
-                <li><a href="/sainathai-site/about.html">About</a></li>
-                <li><a href="/sainathai-site/services/">Services</a></li>
-                <li><a href="/sainathai-site/blog/" class="active">Blog</a></li>
-                <li><a href="/sainathai-site/contact.html">Contact</a></li>
-            </ul>
+<body class="bg-secondary-900 text-white">
+    <nav class="fixed w-full top-0 bg-secondary-900/95 backdrop-blur-sm border-b border-secondary-700 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <a href="/sainathai-site/" class="text-2xl font-bold text-primary">SainathAI</a>
+                <div class="hidden md:flex space-x-8">
+                    <a href="/sainathai-site/" class="text-gray-300 hover:text-primary transition">Home</a>
+                    <a href="/sainathai-site/about.html" class="text-gray-300 hover:text-primary transition">About</a>
+                    <a href="/sainathai-site/services/" class="text-gray-300 hover:text-primary transition">Services</a>
+                    <a href="/sainathai-site/blog/" class="text-primary border-b-2 border-primary">Blog</a>
+                    <a href="/sainathai-site/contact.html" class="text-gray-300 hover:text-primary transition">Contact</a>
+                </div>
+                <a href="/sainathai-site/#lead-magnet" class="bg-primary hover:bg-blue-600 text-white px-6 py-2 rounded-lg font-semibold transition">Get 72-hour System</a>
+            </div>
         </div>
     </nav>
 
-    <section class="blog-hero">
-        <h1>SainathAI Blog</h1>
-        <p style="font-size: 1.1em;">Insights, strategies, and guides for AI automation and revenue growth</p>
-    </section>
+    <main class="pt-24 pb-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h1 class="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-primary to-blue-400 bg-clip-text text-transparent">SainathAI Blog</h1>
+                <p class="text-xl text-gray-400">AI Automation & Revenue Growth Insights</p>
+            </div>
 
-    <div style="max-width: 1200px; margin: 60px auto; padding: 0 20px;">
-        <h2 class="section-title">Latest Articles</h2>
-        <div class="blog-grid">
-            <div class="blog-card">
-                <div class="blog-card-header">
-                    <h3>The Complete Guide to AI Automation</h3>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+                <div class="bg-secondary-800 rounded-2xl overflow-hidden hover:shadow-2xl transition-all floating-card">
+                    <div class="h-48 bg-gradient-to-br from-primary/30 to-blue-600/30"></div>
+                    <div class="p-6">
+                        <span class="text-sm text-primary font-semibold">AI Automation</span>
+                        <h3 class="text-xl font-bold mt-2 mb-3">How AI Automation Transforms Business Operations</h3>
+                        <p class="text-gray-400 mb-4">Discover how AI-powered workflows eliminate manual tasks and accelerate growth...</p>
+                        <a href="blog-post-01.html" class="text-primary hover:text-blue-400 font-semibold">Read More →</a>
+                    </div>
                 </div>
-                <div class="blog-card-body">
-                    <div class="blog-card-meta">Dec 15, 2025 | 8 min read</div>
-                    <p>Discover how AI automation can transform your business operations, eliminate manual tasks, and scale revenue without proportional cost increases.</p>
-                    <a href="/sainathai-site/blog/ai-automation-guide.html" class="blog-btn">Read More</a>
+
+                <div class="bg-secondary-800 rounded-2xl overflow-hidden hover:shadow-2xl transition-all floating-card" style="animation-delay: 0.2s;">
+                    <div class="h-48 bg-gradient-to-br from-gold/30 to-yellow-600/30"></div>
+                    <div class="p-6">
+                        <span class="text-sm text-gold font-semibold">SEO Growth</span>
+                        <h3 class="text-xl font-bold mt-2 mb-3">SEO Strategies for Revenue Scale</h3>
+                        <p class="text-gray-400 mb-4">Learn proven SEO tactics that drive organic traffic and convert visitors...</p>
+                        <a href="blog-post-02.html" class="text-primary hover:text-blue-400 font-semibold">Read More →</a>
+                    </div>
+                </div>
+
+                <div class="bg-secondary-800 rounded-2xl overflow-hidden hover:shadow-2xl transition-all floating-card" style="animation-delay: 0.4s;">
+                    <div class="h-48 bg-gradient-to-br from-primary/30 to-blue-600/30"></div>
+                    <div class="p-6">
+                        <span class="text-sm text-primary font-semibold">Revenue Systems</span>
+                        <h3 class="text-xl font-bold mt-2 mb-3">Building Automated Revenue Funnels</h3>
+                        <p class="text-gray-400 mb-4">Step-by-step guide to creating revenue systems that scale automatically...</p>
+                        <a href="blog-post-03.html" class="text-primary hover:text-blue-400 font-semibold">Read More →</a>
+                    </div>
                 </div>
             </div>
 
-            <div class="blog-card">
-                <div class="blog-card-header">
-                    <h3>Hospital Revenue Systems: From Chaos to Control</h3>
-                </div>
-                <div class="blog-card-body">
-                    <div class="blog-card-meta">Dec 12, 2025 | 10 min read</div>
-                    <p>Healthcare providers face complex operational challenges. Learn how integrated automation systems solve patient management, billing, and supply chain problems simultaneously.</p>
-                    <a href="/sainathai-site/blog/hospital-revenue-systems.html" class="blog-btn">Read More</a>
-                </div>
-            </div>
-
-            <div class="blog-card">
-                <div class="blog-card-header">
-                    <h3>SEO Traffic Generation at Scale</h3>
-                </div>
-                <div class="blog-card-body">
-                    <div class="blog-card-meta">Dec 10, 2025 | 9 min read</div>
-                    <p>Stop writing blog posts manually. Learn how AI-driven SEO automation generates high-ranking content, builds domain authority, and drives qualified traffic to your website.</p>
-                    <a href="/sainathai-site/blog/seo-traffic-generation.html" class="blog-btn">Read More</a>
-                </div>
-            </div>
-
-            <div class="blog-card">
-                <div class="blog-card-header">
-                    <h3>CRM Automation Best Practices 2025</h3>
-                </div>
-                <div class="blog-card-body">
-                    <div class="blog-card-meta">Dec 8, 2025 | 7 min read</div>
-                    <p>Master CRM automation strategies including lead scoring, pipeline automation, and customer journey mapping. Increase conversion rates by 40%+ with proven techniques.</p>
-                    <a href="/sainathai-site/blog/crm-automation-best-practices.html" class="blog-btn">Read More</a>
-                </div>
-            </div>
-
-            <div class="blog-card">
-                <div class="blog-card-header">
-                    <h3>Medical Industry Automation Compliance</h3>
-                </div>
-                <div class="blog-card-body">
-                    <div class="blog-card-meta">Dec 5, 2025 | 11 min read</div>
-                    <p>Healthcare automation must meet strict compliance requirements. Explore HIPAA-compliant automation strategies for procurement, patient data, and medical supply chain.</p>
-                    <a href="/sainathai-site/blog/medical-industry-automation.html" class="blog-btn">Read More</a>
-                </div>
-            </div>
-
-            <div class="blog-card">
-                <div class="blog-card-header">
-                    <h3>LinkedIn Outreach Automation That Actually Works</h3>
-                </div>
-                <div class="blog-card-body">
-                    <div class="blog-card-meta">Dec 2, 2025 | 8 min read</div>
-                    <p>B2B lead generation at scale is now possible. Learn ethical LinkedIn automation techniques that generate qualified leads without violating platform policies.</p>
-                    <a href="/sainathai-site/blog/linkedin-outreach.html" class="blog-btn">Read More</a>
+            <div class="bg-gradient-to-br from-primary/20 to-gold/20 rounded-2xl p-12 text-center border border-primary/30">
+                <h2 class="text-3xl font-bold mb-4">Stay Updated</h2>
+                <p class="text-xl text-gray-300 mb-8">Get the latest AI automation insights delivered to your inbox.</p>
+                <div class="max-w-md mx-auto flex gap-4">
+                    <input type="email" placeholder="Your email address" class="flex-1 px-6 py-3 bg-secondary-900 border border-secondary-700 rounded-lg text-white focus:outline-none focus:border-primary">
+                    <button class="bg-primary hover:bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold transition">Subscribe</button>
                 </div>
             </div>
         </div>
-    </div>
+    </main>
 
-    <section style="background: #f0f4f8; padding: 60px 20px; margin-top: 60px;">
-        <div style="max-width: 800px; margin: 0 auto; text-align: center;">
-            <h2 style="color: #1a1a2e; margin-bottom: 20px;">Want Automation Insights Delivered to Your Inbox?</h2>
-            <p style="font-size: 1.1em; color: #666; margin-bottom: 30px;">Subscribe to our newsletter for exclusive automation strategies and case studies.</p>
-            <form style="display: flex; gap: 10px; max-width: 500px; margin: 0 auto;">
-                <input type="email" placeholder="Enter your email" required style="flex: 1; padding: 12px; border: 1px solid #ddd; border-radius: 6px; font-size: 1em;">
-                <button type="submit" style="background: linear-gradient(135deg, #00d4ff 0%, #0099cc 100%); color: white; padding: 12px 30px; border: none; border-radius: 6px; font-weight: 600; cursor: pointer;">Subscribe</button>
-            </form>
+    <footer class="bg-secondary-800 border-t border-secondary-700 py-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400">Founder — Sainath Phani VV • <a href="/sainathai-site/contact.html" class="text-primary hover:text-blue-400 transition">Contact</a></p>
+                <p class="text-gray-400 mt-4 md:mt-0">© 2025 SainathAI</p>
+            </div>
         </div>
-    </section>
-
-    <footer style="background: #1a1a2e; color: #fff; padding: 30px 20px; text-align: center; margin-top: 60px;">
-        <p>© 2025 SainathAI. All rights reserved.</p>
     </footer>
 </body>
 </html>
