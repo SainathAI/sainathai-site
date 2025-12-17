@@ -1,93 +1,180 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<link rel="stylesheet" href="/styles.css">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>SainathAI — AI Automation & Revenue Systems</title>
-<meta name="description" content="AI Automation, SEO & Growth systems for revenue scale">
-<link rel="icon" href="/assets/favicon.png">
-<meta property="og:title" content="SainathAI — AI Automation & Revenue Systems">
-<meta property="og:description" content="AI Automation, SEO & Growth systems for revenue scale">
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://www.sainathai.com">
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Organization", "name": "SainathAI", "url": "https://www.sainathai.com", "email": "enquiry@sainathai.com"}</script>
-<style>
-:root{--accent:#1A73E8;--bg:#0b0b0b;--muted:#9aa;}
-body{margin:0;font-family:Inter,system-ui,Arial;background:var(--bg);color:#eee;}
-.container{max-width:1100px;margin:40px auto;padding:30px;}
-.header{display:flex;align-items:center;gap:20px}
-.logo{font-weight:700;font-size:28px;color:var(--accent)}
-.cta{background:var(--accent);color:#fff;padding:10px 14px;border-radius:8px;text-decoration:none}
-.card{background:rgba(255,255,255,0.03);padding:18px;border-radius:12px;margin:18px 0}
-a{color:var(--accent)}
-footer{margin-top:60px;color:var(--muted)}
-img.founder{max-width:220px;border-radius:8px;box-shadow:0 8px 30px rgba(0,0,0,0.6)}
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SainathAI — AI Automation & Revenue Systems</title>
+    <meta name="description" content="AI Automation, SEO & Growth systems for revenue scale">
+    <link rel="icon" href="/sainathai-site/assets/favicon.png">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Tailwind Config -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#1A73E8',
+                        secondary: {
+                            900: '#0b0b0b',
+                            800: '#1a1a1a',
+                            700: '#2a2a2a'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- Custom Styles -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+        body { font-family: 'Inter', sans-serif; }
+    </style>
 </head>
-<body>
-<div class="container">
-  <div class="header">
-    <div class="brand">SainathAI</div>
-    <div><a class="btn btn-primary" data-open-modal href="#">Get 72-hour Growth System</a></div>
-  </div>
-
-  <div class="hero">
-    <div class="card">
-      <h1 class="h1">AI Automation • SEO • Revenue Systems</h1>
-      <div class="h2">AI Automation, SEO & Growth systems for revenue scale</div>
-      <p class="lead">Offer: <strong>72-hour AI Growth System</strong> — lead magnet, audit and automated funnel.</p>
-      <div class="cta-row">
-        <a class="btn btn-primary" data-open-modal href="#">Download free blueprint</a>
-        <a class="btn btn-ghost" id="wa-cta" href="#">WhatsApp Business</a>
-      </div>
-
-      <div class="founder">
-        <img src="/assets/founder.png" alt="Founder — Sainath Phani VV">
-        <div>
-          <div style="font-weight:700">Founder — Sainath Phani VV</div>
-          <div style="color:var(--muted);margin-top:8px">15+ Years IT Industry Experience • Consultant to Wipro, Polaris, Microsoft, HSBC<br>Expert in Healthcare & Banking Domain Systems</div>
+<body class="bg-secondary-900 text-white">
+    
+    <!-- Navigation -->
+    <nav class="fixed w-full top-0 bg-secondary-900/95 backdrop-blur-sm border-b border-secondary-700 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <a href="/sainathai-site/" class="text-2xl font-bold text-primary">SainathAI</a>
+                <div class="hidden md:flex space-x-8">
+                    <a href="/sainathai-site/" class="text-gray-300 hover:text-primary transition">Home</a>
+                    <a href="/sainathai-site/about.html" class="text-gray-300 hover:text-primary transition">About</a>
+                    <a href="/sainathai-site/services/" class="text-gray-300 hover:text-primary transition">Services</a>
+                    <a href="/sainathai-site/blog/" class="text-gray-300 hover:text-primary transition">Blog</a>
+                    <a href="/sainathai-site/contact.html" class="text-gray-300 hover:text-primary transition">Contact</a>
+                </div>
+                <button onclick="openModal()" class="bg-primary hover:bg-blue-600 text-white px-6 py-2 rounded-lg font-semibold transition">
+                    Get 72-hour System
+                </button>
+            </div>
         </div>
-      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <main class="pt-24 pb-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <!-- Hero Content -->
+            <div class="text-center mb-16">
+                <h1 class="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-primary to-blue-400 bg-clip-text text-transparent">
+                    AI Automation • SEO • Revenue Systems
+                </h1>
+                <p class="text-xl md:text-2xl text-gray-400 mb-8">
+                    AI Automation, SEO & Growth systems for revenue scale
+                </p>
+                <p class="text-lg text-gray-300 mb-8">
+                    Offer: <span class="text-primary font-bold">72-hour AI Growth System</span> — lead magnet, audit and automated funnel.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <button onclick="openModal()" class="bg-primary hover:bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold text-lg transition">
+                        Download Free Blueprint
+                    </button>
+                    <a href="#" id="wa-cta" class="bg-secondary-700 hover:bg-secondary-600 text-white px-8 py-3 rounded-lg font-semibold text-lg transition">
+                        WhatsApp Business
+                    </a>
+                </div>
+            </div>
+
+            <!-- Founder Section -->
+            <div class="max-w-4xl mx-auto bg-secondary-800 rounded-2xl p-8 shadow-2xl">
+                <div class="flex flex-col md:flex-row items-center gap-8">
+                    <div class="flex-shrink-0">
+                        <img src="/sainathai-site/assets/founder.png" alt="Founder — Sainath Phani VV" class="w-48 h-48 object-cover rounded-xl shadow-lg">
+                    </div>
+                    <div class="flex-1">
+                        <h2 class="text-2xl font-bold text-primary mb-2">Sainath Phani VV</h2>
+                        <p class="text-gray-300 mb-4">
+                            15+ years IT industry experience. Consultant to Wipro, Polaris, Microsoft, HSBC. Expert in Healthcare & Banking domain systems.
+                        </p>
+                        <div class="flex flex-wrap gap-3">
+                            <a href="#ai-automation" class="text-primary hover:text-blue-400 font-medium">AI Automation</a>
+                            <span class="text-gray-600">•</span>
+                            <a href="#seo-growth" class="text-primary hover:text-blue-400 font-medium">SEO Growth</a>
+                        </div>
+                        <div class="mt-4">
+                            <p class="text-sm text-gray-400">WhatsApp: <a href="#" id="wa-link" class="text-primary hover:text-blue-400">+917075103333</a></p>
+                            <p class="text-sm text-gray-400">Email: <a href="mailto:enquiry@sainathai.com" class="text-primary hover:text-blue-400">enquiry@sainathai.com</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Lead Magnet Card -->
+            <div class="max-w-2xl mx-auto mt-12 bg-gradient-to-br from-primary/20 to-blue-600/20 rounded-2xl p-8 border border-primary/30">
+                <div class="text-center">
+                    <p class="text-sm uppercase tracking-wider text-primary font-semibold mb-2">Lead Magnet</p>
+                    <h3 class="text-3xl font-bold mb-4">Free: 72-hour Growth System</h3>
+                    <p class="text-gray-300 mb-6">
+                        Enter email to download the step-by-step blueprint & quick audit checklist.
+                    </p>
+                    <button onclick="openModal()" class="bg-primary hover:bg-blue-600 text-white px-10 py-4 rounded-lg font-semibold text-lg transition w-full sm:w-auto">
+                        Download Free Blueprint
+                    </button>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-secondary-800 border-t border-secondary-700 py-8 mt-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center text-gray-400">
+                <p class="mb-2">Founder — Sainath Phani VV • <a href="/sainathai-site/contact.html" class="text-primary hover:text-blue-400">Contact</a></p>
+                <p>© 2025 SainathAI</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modal -->
+    <div id="modal-backdrop" class="hidden fixed inset-0 bg-black/70 backdrop-blur-sm z-50 flex items-center justify-center p-4">
+        <div class="bg-secondary-800 rounded-2xl max-w-md w-full p-8 shadow-2xl border border-secondary-700 relative">
+            <button onclick="closeModal()" class="absolute top-4 right-4 text-gray-400 hover:text-white text-2xl">
+                ✕
+            </button>
+            <h3 class="text-2xl font-bold mb-4">Get the 72-hour Growth System</h3>
+            <p class="text-gray-400 mb-6">
+                Enter your best email. We will send the blueprint and audit checklist instantly.
+            </p>
+            <form id="lead-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST" class="space-y-4">
+                <input 
+                    type="email" 
+                    name="email" 
+                    placeholder="your@email.com" 
+                    required
+                    class="w-full px-4 py-3 bg-secondary-900 border border-secondary-700 rounded-lg text-white focus:outline-none focus:border-primary transition"
+                >
+                <button type="submit" class="w-full bg-primary hover:bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold transition">
+                    Send & Download
+                </button>
+                <p class="text-sm text-gray-500 text-center">
+                    No spam. You can unsubscribe any time.
+                </p>
+            </form>
+        </div>
     </div>
 
-    <div class="side-card card">
-      <div class="small">Lead Magnet</div>
-      <div style="font-weight:700">Free: 72-hour Growth System</div>
-      <div class="lead-magnet-note">Enter email to download the step-by-step blueprint & quick audit checklist.</div>
-      <div style="margin-top:auto"><a class="btn btn-primary" data-open-modal href="#">Download free blueprint</a></div>
-    </div>
-  </div>
+    <!-- Scripts -->
+    <script src="/sainathai-site/scripts.js"></script>
+    <script>
+        function openModal() {
+            document.getElementById('modal-backdrop').classList.remove('hidden');
+        }
+        
+        function closeModal() {
+            document.getElementById('modal-backdrop').classList.add('hidden');
+        }
+        
+        // Close modal on backdrop click
+        document.getElementById('modal-backdrop').addEventListener('click', function(e) {
+            if (e.target === this) closeModal();
+        });
+    </script>
 
-  <div class="footer">© 2025 SainathAI</div>
-</div>
-
-<!-- modal (lead capture) -->
-<div id="modal-backdrop" class="modal-backdrop">
-  <div class="modal">
-    <div style="display:flex;justify-content:space-between;align-items:center">
-      <div style="font-weight:700">Get the 72-hour Growth System</div>
-      <button id="modal-close" style="background:none;border:none;color:var(--muted);cursor:pointer">✕</button>
-    </div>
-    <p class="small-note">Enter your best email. We will send the blueprint and audit checklist instantly.</p>
-
-    <form id="lead-form" action="https://formspree.io/f/{YOUR_FORM_ID}" method="POST">
-      <div class="form-row">
-        <input id="lead-email" class="input" name="email" placeholder="your@email.com" required>
-        <button id="lead-submit" class="btn btn-primary" type="submit">Send & Download</button>
-      </div>
-      <div class="small-note">No spam. You can unsubscribe any time.</div>
-    </form>
-  </div>
-</div>
-
-<script src="/scripts.js"></script>
-  </main>
-
-  <footer>
-    <p>Founder — Sainath Phani VV • <a href="/contact.html">Contact</a></p>
-    <p>© 2025 SainathAI</p>
-  </footer>
-</div>
 </body>
 </html>
