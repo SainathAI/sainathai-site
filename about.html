@@ -1,57 +1,169 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Sainath Phani VV — Founder, SainathAI</title>
-<meta name="description" content="Sainath Phani VV — founder profile and experience">
-<link rel="icon" href="/assets/favicon.png">
-<meta property="og:title" content="Sainath Phani VV — Founder, SainathAI">
-<meta property="og:description" content="Sainath Phani VV — founder profile and experience">
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://www.sainathai.com/about.html">
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Person", "name": "Sainath Phani VV"}</script>
-  <link rel="stylesheet" href="/sainathai-site/styles.css">
-<style>
-:root{--accent:#1A73E8;--bg:#0b0b0b;--muted:#9aa;}
-body{margin:0;font-family:Inter,system-ui,Arial;background:var(--bg);color:#eee;}
-.container{max-width:1100px;margin:40px auto;padding:30px;}
-.header{display:flex;align-items:center;gap:20px}
-.logo{font-weight:700;font-size:28px;color:var(--accent)}
-.cta{background:var(--accent);color:#fff;padding:10px 14px;border-radius:8px;text-decoration:none}
-.card{background:rgba(255,255,255,0.03);padding:18px;border-radius:12px;margin:18px 0}
-a{color:var(--accent)}
-footer{margin-top:60px;color:var(--muted)}
-img.founder{max-width:220px;border-radius:8px;box-shadow:0 8px 30px rgba(0,0,0,0.6)}
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sainath Phani VV — Founder, SainathAI</title>
+    <meta name="description" content="Sainath Phani VV — Founder profile and experience">
+    <link rel="icon" href="/sainathai-site/assets/favicon.png">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Tailwind Config -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#1A73E8',
+                        secondary: {
+                            900: '#0b0b0b',
+                            800: '#1a1a1a',
+                            700: '#2a2a2a'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- Custom Styles -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+        body { font-family: 'Inter', sans-serif; }
+    </style>
 </head>
-<body>
-  <nav style="background: linear-gradient(90deg, #1a1a2e 0%, #16213e 100%); padding: 15px 30px; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 10px rgba(0,0,0,0.3);"><div style="display: flex; align-items: center; gap: 40px;"><a href="/sainathai-site/" style="font-weight: 700; font-size: 22px; color: #00d4ff; text-decoration: none;">SAINATHAI</a><ul style="display: flex; gap: 30px; list-style: none; margin: 0; padding: 0;"><li><a href="/sainathai-site/" style="color: #fff; text-decoration: none; font-size: 14px; transition: color 0.3s;">Home</a></li><li><a href="/sainathai-site/about.html" style="color: #00d4ff; text-decoration: none; font-size: 14px; border-bottom: 2px solid #00d4ff; padding-bottom: 3px;">About</a></li><li><a href="/sainathai-site/services/" style="color: #fff; text-decoration: none; font-size: 14px; transition: color 0.3s;">Services</a></li><li><a href="/sainathai-site/blog/" style="color: #fff; text-decoration: none; font-size: 14px; transition: color 0.3s;">Blog</a></li><li><a href="/sainathai-site/contact.html" style="color: #fff; text-decoration: none; font-size: 14px; transition: color 0.3s;">Contact</a></li></ul></div></nav>
-<div class="container">
-  <header class="header">
-    <div class="logo">SainathAI</div>
-    <nav style="margin-left:auto"><a class="cta" href="/lead.html">Get 72-hour Growth System</a></nav>
-  </header>
+<body class="bg-secondary-900 text-white">
+    
+    <!-- Navigation -->
+    <nav class="fixed w-full top-0 bg-secondary-900/95 backdrop-blur-sm border-b border-secondary-700 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <a href="/sainathai-site/" class="text-2xl font-bold text-primary">SainathAI</a>
+                <div class="hidden md:flex space-x-8">
+                    <a href="/sainathai-site/" class="text-gray-300 hover:text-primary transition">Home</a>
+                    <a href="/sainathai-site/about.html" class="text-primary border-b-2 border-primary">About</a>
+                    <a href="/sainathai-site/services/" class="text-gray-300 hover:text-primary transition">Services</a>
+                    <a href="/sainathai-site/blog/" class="text-gray-300 hover:text-primary transition">Blog</a>
+                    <a href="/sainathai-site/contact.html" class="text-gray-300 hover:text-primary transition">Contact</a>
+                </div>
+                <a href="/sainathai-site/#lead-magnet" class="bg-primary hover:bg-blue-600 text-white px-6 py-2 rounded-lg font-semibold transition">
+                    Get 72-hour System
+                </a>
+            </div>
+        </div>
+    </nav>
 
-  <main>
-    <h1 style="margin-top:24px">Founder — Sainath Phani VV</h1>
-    <div class="card">
-<div style='display:flex;gap:24px;align-items:flex-start'>
-  <div><img class='founder' src=/sainathai-site/assets/founder.png" alt='Founder photo'></div>
-    <h2>Sainath Phani VV</h2>
-    <p>15+ years IT industry experience. Consultant to Wipro, Polaris, Microsoft, HSBC. Expert in Healthcare & Banking domain systems.</p>
-    <p><a href='/services/ai-automation.html'>AI Automation</a> • <a href='/services/seo-growth-systems.html'>SEO Growth</a></p>
-    <p>WhatsApp: <a href='https://wa.me/917075103333' id='wa'>+917075103333</a></p>
-    <p>Email: <a href='mailto:enquiry@sainathai.com'>enquiry@sainathai.com</a></p>
-  </div>
-</div>
-</div>
-  </main>
+    <!-- About Section -->
+    <main class="pt-24 pb-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <!-- Page Title -->
+            <div class="text-center mb-12">
+                <h1 class="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-primary to-blue-400 bg-clip-text text-transparent">
+                    About SainathAI
+                </h1>
+                <p class="text-xl text-gray-400">
+                    Enterprise AI Automation & Revenue Systems
+                </p>
+            </div>
 
-  <footer>
-    <p>Founder — Sainath Phani VV • <a href="/contact.html">Contact</a></p>
-    <p>© 2025 SainathAI</p>
-  </footer>
-</div>
+            <!-- Founder Profile Card -->
+            <div class="max-w-5xl mx-auto mb-16">
+                <div class="bg-secondary-800 rounded-2xl p-8 shadow-2xl">
+                    <div class="flex flex-col md:flex-row items-center md:items-start gap-8">
+                        <!-- Founder Image -->
+                        <div class="flex-shrink-0">
+                            <img src="/sainathai-site/assets/founder.png" alt="Founder — Sainath Phani VV" class="w-64 h-64 object-cover rounded-2xl shadow-lg">
+                        </div>
+                        
+                        <!-- Founder Info -->
+                        <div class="flex-1 text-center md:text-left">
+                            <h2 class="text-3xl font-bold text-primary mb-3">Sainath Phani VV</h2>
+                            <p class="text-lg text-gray-300 mb-6">
+                                Founder & CEO, SainathAI
+                            </p>
+                            
+                            <div class="space-y-4 text-gray-300">
+                                <p class="text-lg leading-relaxed">
+                                    15+ years IT industry experience. Consultant to Wipro, Polaris, Microsoft, HSBC. Expert in Healthcare & Banking domain systems.
+                                </p>
+                                
+                                <div class="flex flex-wrap gap-4 justify-center md:justify-start">
+                                    <span class="bg-primary/20 text-primary px-4 py-2 rounded-lg font-medium">AI Automation</span>
+                                    <span class="bg-primary/20 text-primary px-4 py-2 rounded-lg font-medium">SEO Growth</span>
+                                    <span class="bg-primary/20 text-primary px-4 py-2 rounded-lg font-medium">Revenue Systems</span>
+                                </div>
+                                
+                                <div class="mt-6 space-y-2">
+                                    <p class="text-gray-400">
+                                        <span class="font-semibold">WhatsApp:</span> 
+                                        <a href="https://wa.me/917075103333" class="text-primary hover:text-blue-400 transition">+917075103333</a>
+                                    </p>
+                                    <p class="text-gray-400">
+                                        <span class="font-semibold">Email:</span> 
+                                        <a href="mailto:enquiry@sainathai.com" class="text-primary hover:text-blue-400 transition">enquiry@sainathai.com</a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Mission Statement -->
+            <div class="max-w-4xl mx-auto mb-12">
+                <div class="bg-gradient-to-br from-primary/20 to-blue-600/20 rounded-2xl p-8 border border-primary/30">
+                    <h3 class="text-2xl font-bold mb-4 text-center">Our Mission</h3>
+                    <p class="text-lg text-gray-300 text-center leading-relaxed">
+                        We empower businesses with AI-driven automation and growth systems that scale revenue. Our enterprise-grade solutions combine cutting-edge technology with proven strategies to deliver measurable results.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Expertise Areas -->
+            <div class="max-w-5xl mx-auto">
+                <h3 class="text-3xl font-bold text-center mb-8">Expertise Areas</h3>
+                <div class="grid md:grid-cols-3 gap-6">
+                    <div class="bg-secondary-800 rounded-xl p-6 hover:transform hover:scale-105 transition">
+                        <h4 class="text-xl font-bold text-primary mb-3">Healthcare Systems</h4>
+                        <p class="text-gray-400">
+                            Specialized experience in healthcare domain automation, patient management, and compliance systems.
+                        </p>
+                    </div>
+                    
+                    <div class="bg-secondary-800 rounded-xl p-6 hover:transform hover:scale-105 transition">
+                        <h4 class="text-xl font-bold text-primary mb-3">Banking Solutions</h4>
+                        <p class="text-gray-400">
+                            Enterprise banking automation, financial systems integration, and secure transaction processing.
+                        </p>
+                    </div>
+                    
+                    <div class="bg-secondary-800 rounded-xl p-6 hover:transform hover:scale-105 transition">
+                        <h4 class="text-xl font-bold text-primary mb-3">AI Automation</h4>
+                        <p class="text-gray-400">
+                            Custom AI-powered workflows that eliminate manual tasks and accelerate business operations.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-secondary-800 border-t border-secondary-700 py-8 mt-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center text-gray-400">
+                <p class="mb-2">Founder — Sainath Phani VV • <a href="/sainathai-site/contact.html" class="text-primary hover:text-blue-400">Contact</a></p>
+                <p>© 2025 SainathAI</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="/sainathai-site/scripts.js"></script>
+
 </body>
 </html>
