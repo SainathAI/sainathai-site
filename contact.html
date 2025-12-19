@@ -83,8 +83,164 @@
             <div class="grid lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
                 
                 <div class="bg-secondary-800 rounded-2xl p-8 shadow-2xl">
-                    <h2 class="text-2xl font-bold mb-6">Send Us a Message</h2>
-                    <form action="#" method="POST" class="space-y-6">
+  <h2 class="text-2xl font-bold mb-6">Send Us a Message</h2>
+  
+  <form id="contactForm" method="POST" class="space-y-6">
+    <!-- BASIC INFO -->
+    <div>
+      <label for="name" class="block text-sm font-medium text-gray-300 mb-2">
+        Name *
+      </label>
+      <input
+        type="text"
+        id="name"
+        name="name"
+        required
+        placeholder="Your name"
+        class="w-full px-4 py-3 bg-secondary-900 border border-secondary-700 rounded-lg focus:outline-none focus:border-primary-500 transition"
+      />
+    </div>
+
+    <div>
+      <label for="email" class="block text-sm font-medium text-gray-300 mb-2">
+        Email *
+      </label>
+      <input
+        type="email"
+        id="email"
+        name="email"
+        required
+        placeholder="your@email.com"
+        class="w-full px-4 py-3 bg-secondary-900 border border-secondary-700 rounded-lg focus:outline-none focus:border-primary-500 transition"
+      />
+    </div>
+
+    <div>
+      <label for="company" class="block text-sm font-medium text-gray-300 mb-2">
+        Company
+      </label>
+      <input
+        type="text"
+        id="company"
+        name="company"
+        placeholder="Your company (optional)"
+        class="w-full px-4 py-3 bg-secondary-900 border border-secondary-700 rounded-lg focus:outline-none focus:border-primary-500 transition"
+      />
+    </div>
+
+    <div>
+      <label for="phone" class="block text-sm font-medium text-gray-300 mb-2">
+        Phone Number *
+      </label>
+      <input
+        type="tel"
+        id="phone"
+        name="phone"
+        required
+        placeholder="+91 70751 03333"
+        pattern="[0-9+\-\s]+"
+        class="w-full px-4 py-3 bg-secondary-900 border border-secondary-700 rounded-lg focus:outline-none focus:border-primary-500 transition"
+      />
+    </div>
+
+    <!-- SERVICE SELECTION -->
+    <div>
+      <label for="serviceType" class="block text-sm font-medium text-gray-300 mb-2">
+        Interested In *
+      </label>
+      <select
+        id="serviceType"
+        name="serviceType"
+        required
+        class="w-full px-4 py-3 bg-secondary-900 border border-secondary-700 rounded-lg focus:outline-none focus:border-primary-500 transition"
+      >
+        <option value="">Select a service</option>
+        <option value="AI Automation">AI Automation & Workflows</option>
+        <option value="AI Agents">LLM Agents & Chatbots</option>
+        <option value="SEO Growth">SEO & Content Growth Engines</option>
+        <option value="Revenue Systems">Funnels & Revenue Systems</option>
+        <option value="Analytics">Analytics & Dashboards</option>
+        <option value="Consulting">General Consulting</option>
+        <option value="Other">Other</option>
+      </select>
+    </div>
+
+    <!-- AUDIT DETAILS (Conditional) -->
+    <div id="auditDetailsSection" class="space-y-6 pt-4 border-t border-secondary-700" style="display: none;">
+      <h3 class="text-lg font-semibold text-primary-400">Audit Details</h3>
+
+      <div>
+        <label for="websiteUrl" class="block text-sm font-medium text-gray-300 mb-2">
+          Website URL (for audit)
+        </label>
+        <input
+          type="url"
+          id="websiteUrl"
+          name="websiteUrl"
+          placeholder="https://yourwebsite.com"
+          class="w-full px-4 py-3 bg-secondary-900 border border-secondary-700 rounded-lg focus:outline-none focus:border-primary-500 transition"
+        />
+      </div>
+
+      <div>
+        <label for="communicationPreference" class="block text-sm font-medium text-gray-300 mb-2">
+          Preferred Communication Method
+        </label>
+        <select
+          id="communicationPreference"
+          name="communicationPreference"
+          class="w-full px-4 py-3 bg-secondary-900 border border-secondary-700 rounded-lg focus:outline-none focus:border-primary-500 transition"
+        >
+          <option value="Email">Email</option>
+          <option value="Phone">Phone Call</option>
+          <option value="WhatsApp">WhatsApp</option>
+          <option value="Skype">Skype</option>
+          <option value="Google Meet">Google Meet</option>
+          <option value="Zoom">Zoom</option>
+        </select>
+      </div>
+
+      <div>
+        <label for="communicationHandle" class="block text-sm font-medium text-gray-300 mb-2">
+          Communication Handle (Skype ID, Google Meet Link, etc.)
+        </label>
+        <input
+          type="text"
+          id="communicationHandle"
+          name="communicationHandle"
+          placeholder="your.skypeid / meetid@gmail.com / zoom link"
+          class="w-full px-4 py-3 bg-secondary-900 border border-secondary-700 rounded-lg focus:outline-none focus:border-primary-500 transition"
+        />
+      </div>
+
+      <div>
+        <label for="auditScope" class="block text-sm font-medium text-gray-300 mb-2">
+          What's Your Audit Scope?
+        </label>
+        <select
+          id="auditScope"
+          name="auditScope"
+          class="w-full px-4 py-3 bg-secondary-900 border border-secondary-700 rounded-lg focus:outline-none focus:border-primary-500 transition"
+        >
+          <option value="General Review">General Technical Review</option>
+          <option value="SEO Audit">SEO Audit</option>
+          <option value="Automation Audit">Automation Opportunity Audit</option>
+          <option value="Revenue Audit">Revenue Funnel Audit</option>
+          <option value="Full Stack">Full Stack Analysis</option>
+          <option value="Custom">Custom (Specify Below)</option>
+        </select>
+      </div>
+
+      <div>
+        <label for="expectations" class="block text-sm font-medium text-gray-300 mb-2">
+          What Are You Expecting From This Audit?
+        </label>
+        <textarea
+          id="expectations"
+          name="expectations"
+          rows="3"
+          placeholder="E.g., Identify automation opportunities, improve
+
                         <div>
                             <label for="name" class="block text-sm font-medium text-gray-300 mb-2">Name *</label>
                             <input type="text" id="name" name="name" required class="form-input w-full px-4 py-3 bg-secondary-900 border border-secondary-700 rounded-lg text-white focus:outline-none focus:border-primary transition" placeholder="Your name">
