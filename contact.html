@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact SainathAI - AI Automation Services</title>
+    <meta name="description" content="Get in touch with SainathAI for AI Automation and Revenue Systems">
+    <link rel="icon" href="/sainathai-site/assets/favicon.png">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#1A73E8',
+                        secondary: {
+                            900: '#0b0b0b',
+                            800: '#1a1a1a',
+                            700: '#2a2a2a'
+                        },
+                        gold: {
+                            DEFAULT: '#EFB800',
+                            light: '#FFD700',
+                            dark: '#D4A017'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+        body { font-family: 'Inter', sans-serif; }
+        
+        @keyframes pulse-border {
+            0%, 100% { border-color: rgba(26, 115, 232, 0.3); }
+            50% { border-color: rgba(26, 115, 232, 0.8); }
+        }
+        
+        @keyframes float-icon {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+        }
+        
+        .form-input:focus {
+            animation: pulse-border 2s ease-in-out infinite;
+        }
+        
+        .icon-float {
+            animation: float-icon 3s ease-in-out infinite;
+        }
+    </style>
+</head>
+<body class="bg-secondary-900 text-white">
+
+    <nav class="fixed w-full top-0 bg-secondary-900/95 backdrop-blur-sm border-b border-secondary-700 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <a href="/sainathai-site/" class="text-2xl font-bold text-primary">SainathAI</a>
+                <div class="hidden md:flex space-x-8">
+                    <a href="/sainathai-site/" class="text-gray-300 hover:text-primary transition">Home</a>
+                    <a href="/sainathai-site/about.html" class="text-gray-300 hover:text-primary transition">About</a>
+                    <a href="/sainathai-site/services/" class="text-gray-300 hover:text-primary transition">Services</a>
+                    <a href="/sainathai-site/blog/" class="text-gray-300 hover:text-primary transition">Blog</a>
+                    <a href="/sainathai-site/contact.html" class="text-primary border-b-2 border-primary">Contact</a>
+                </div>
+                <a href="/sainathai-site/#lead-magnet" class="bg-primary hover:bg-blue-600 text-white px-6 py-2 rounded-lg font-semibold transition">Get 72-hour System</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="pt-24 pb-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="text-center mb-12">
+                <h1 class="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-primary to-blue-400 bg-clip-text text-transparent">Get In Touch</h1>
+                <p class="text-xl text-gray-400">Let's discuss how AI automation can transform your business</p>
+            </div>
+
+            <div class="grid lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
+                
+                <div class="bg-secondary-800 rounded-2xl p-8 shadow-2xl">
+  <h2 class="text-2xl font-bold mb-6">Send Us a Message</h2>
+  
+  <form id="contactForm" method="POST" class="space-y-6">
+    <!-- BASIC INFO -->
+    <div>
+      <label for="name" class="block text-sm font-medium text-gray-300 mb-2">
+        Name *
+      </label>
+      <input
+        type="text"
+        id="name"
+        name="name"
+        required
+        placeholder="Your name"
+        class="w-full px-4 py-3 bg-secondary-900 border border-secondary-700 rounded-lg focus:outline-none focus:border-primary-500 transition"
+      />
+    </div>
+
+    <div>
+      <label for="email" class="block text-sm font-medium text-gray-300 mb-2">
+        Email *
+      </label>
+      <input
+        type="email"
+        id="email"
+        name="email"
+        required
+        placeholder="your@email.com"
+        class="w-full px-4 py-3 bg-secondary-900 border border-secondary-700 rounded-lg focus:outline-none focus:border-primary-500 transition"
+      />
+    </div>
+
+    <div>
+      <label for="company" class="block text-sm font-medium text-gray-300 mb-2">
+        Company
+      </label>
+      <input
+        type="text"
+        id="company"
+        name="company"
+        placeholder="Your company (optional)"
+        class="w-full px-4 py-3 bg-secondary-900 border border-secondary-700 rounded-lg focus:outline-none focus:border-primary-500 transition"
+      />
+    </div>
+
+    <div>
+      <label for="phone" class="block text-sm font-medium text-gray-300 mb-2">
+        Phone Number *
+      </label>
+      <input
+        type="tel"
+        id="phone"
+        name="phone"
+        required
+        placeholder="+91 70751 03333"
+        pattern="[0-9+\-\s]+"
+        class="w-full px-4 py-3 bg-secondary-900 border border-secondary-700 rounded-lg focus:outline-none focus:border-primary-500 transition"
+      />
+    </div>
+
+    <!-- SERVICE SELECTION -->
+    <div>
+      <label for="serviceType" class="block text-sm font-medium text-gray-300 mb-2">
+        Interested In *
+      </label>
+      <select
+        id="serviceType"
+        name="serviceType"
+        required
+        class="w-full px-4 py-3 bg-secondary-900 border border-secondary-700 rounded-lg focus:outline-none focus:border-primary-500 transition"
+      >
+        <option value="">Select a service</option>
+        <option value="AI Automation">AI Automation & Workflows</option>
+        <option value="AI Agents">LLM Agents & Chatbots</option>
+        <option value="SEO Growth">SEO & Content Growth Engines</option>
+        <option value="Revenue Systems">Funnels & Revenue Systems</option>
+        <option value="Analytics">Analytics & Dashboards</option>
+        <option value="Consulting">General Consulting</option>
+        <option value="Other">Other</option>
+      </select>
+    </div>
+
+    <!-- AUDIT DETAILS (Conditional) -->
+    <div id="auditDetailsSection" class="space-y-6 pt-4 border-t border-secondary-700" style="display: none;">
+      <h3 class="text-lg font-semibold text-primary-400">Audit Details</h3>
+
+      <div>
+        <label for="websiteUrl" class="block text-sm font-medium text-gray-300 mb-2">
+          Website URL (for audit)
+        </label>
+        <input
+          type="url"
+          id="websiteUrl"
+          name="websiteUrl"
+          placeholder="https://yourwebsite.com"
+          class="w-full px-4 py-3 bg-secondary-900 border border-secondary-700 rounded-lg focus:outline-none focus:border-primary-500 transition"
+        />
+      </div>
+
+      <div>
+        <label for="communicationPreference" class="block text-sm font-medium text-gray-300 mb-2">
+          Preferred Communication Method
+        </label>
+        <select
+          id="communicationPreference"
+          name="communicationPreference"
+          class="w-full px-4 py-3 bg-secondary-900 border border-secondary-700 rounded-lg focus:outline-none focus:border-primary-500 transition"
+        >
+          <option value="Email">Email</option>
+          <option value="Phone">Phone Call</option>
+          <option value="WhatsApp">WhatsApp</option>
+          <option value="Skype">Skype</option>
+          <option value="Google Meet">Google Meet</option>
+          <option value="Zoom">Zoom</option>
+        </select>
+      </div>
+
+      <div>
+        <label for="communicationHandle" class="block text-sm font-medium text-gray-300 mb-2">
+          Communication Handle (Skype ID, Google Meet Link, etc.)
+        </label>
+        <input
+          type="text"
+          id="communicationHandle"
+          name="communicationHandle"
+          placeholder="your.skypeid / meetid@gmail.com / zoom link"
+          class="w-full px-4 py-3 bg-secondary-900 border border-secondary-700 rounded-lg focus:outline-none focus:border-primary-500 transition"
+        />
+      </div>
+
+      <div>
+        <label for="auditScope" class="block text-sm font-medium text-gray-300 mb-2">
+          What's Your Audit Scope?
+        </label>
+        <select
+          id="auditScope"
+          name="auditScope"
+          class="w-full px-4 py-3 bg-secondary-900 border border-secondary-700 rounded-lg focus:outline-none focus:border-primary-500 transition"
+        >
+          <option value="General Review">General Technical Review</option>
+          <option value="SEO Audit">SEO Audit</option>
+          <option value="Automation Audit">Automation Opportunity Audit</option>
+          <option value="Revenue Audit">Revenue Funnel Audit</option>
+          <option value="Full Stack">Full Stack Analysis</option>
+          <option value="Custom">Custom (Specify Below)</option>
+        </select>
+      </div>
+
+      <div>
+        <label for="expectations" class="block text-sm font-medium text-gray-300 mb-2">
+          What Are You Expecting From This Audit?
+        </label>
+        <textarea
+          id="expectations"
+          name="expectations"
+          rows="3"
+          placeholder="E.g., Identify automation opportunities, improve
+
+                        <div>
+                            <label for="name" class="block text-sm font-medium text-gray-300 mb-2">Name *</label>
+                            <input type="text" id="name" name="name" required class="form-input w-full px-4 py-3 bg-secondary-900 border border-secondary-700 rounded-lg text-white focus:outline-none focus:border-primary transition" placeholder="Your name">
+                        </div>
+                        
+                        <div>
+                            <label for="email" class="block text-sm font-medium text-gray-300 mb-2">Email *</label>
+                            <input type="email" id="email" name="email" required class="form-input w-full px-4 py-3 bg-secondary-900 border border-secondary-700 rounded-lg text-white focus:outline-none focus:border-primary transition" placeholder="your@email.com">
+                        </div>
+                        
+                        <div>
+                            <label for="company" class="block text-sm font-medium text-gray-300 mb-2">Company</label>
+                            <input type="text" id="company" name="company" class="form-input w-full px-4 py-3 bg-secondary-900 border border-secondary-700 rounded-lg text-white focus:outline-none focus:border-primary transition" placeholder="Your company (optional)">
+                        </div>
+                        
+                        <div>
+                            <label for="service" class="block text-sm font-medium text-gray-300 mb-2">Interested In</label>
+                            <select id="service" name="service" class="form-input w-full px-4 py-3 bg-secondary-900 border border-secondary-700 rounded-lg text-white focus:outline-none focus:border-primary transition">
+                                <option value="">Select a service</option>
+                                <option value="ai-automation">AI Automation</option>
+                                <option value="seo-growth">SEO Growth Systems</option>
+                                <option value="revenue-systems">Revenue Systems</option>
+                                <option value="consulting">Consulting</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        
+                        <div>
+                            <label for="message" class="block text-sm font-medium text-gray-300 mb-2">Message *</label>
+                            <textarea id="message" name="message" rows="4" required class="form-input w-full px-4 py-3 bg-secondary-900 border border-secondary-700 rounded-lg text-white focus:outline-none focus:border-primary transition resize-none" placeholder="Tell us about your project"></textarea>
+                        </div>
+                        
+                        <button type="submit" class="w-full bg-primary hover:bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold text-lg transition transform hover:scale-105">
+                            Send Message
+                        </button>
+                        
+                        <p class="text-sm text-gray-400 text-center">We'll respond within 24 hours</p>
+                    </form>
+                </div>
+
+                <div class="space-y-8">
+                    <div class="bg-secondary-800 rounded-2xl p-8 shadow-xl">
+                        <h2 class="text-2xl font-bold mb-6">Contact Information</h2>
+                        
+                        <div class="space-y-6">
+                            <div class="flex items-start">
+                                <div class="w-12 h-12 bg-primary/20 rounded-full flex items-center justify-center mr-4 flex-shrink-0 icon-float">
+                                    <svg class="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h3 class="text-lg font-semibold mb-1">Email</h3>
+                                    <a href="mailto:enquiry@sainathai.com" class="text-primary hover:text-blue-400 transition">enquiry@sainathai.com</a>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="w-12 h-12 bg-gold/20 rounded-full flex items-center justify-center mr-4 flex-shrink-0 icon-float" style="animation-delay: 0.2s;">
+                                    <svg class="w-6 h-6 text-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h3 class="text-lg font-semibold mb-1">WhatsApp</h3>
+                                    <a href="https://wa.me/917075103333" class="text-primary hover:text-blue-400 transition">+91 70751 03333</a>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="w-12 h-12 bg-primary/20 rounded-full flex items-center justify-center mr-4 flex-shrink-0 icon-float" style="animation-delay: 0.4s;">
+                                    <svg class="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h3 class="text-lg font-semibold mb-1">Response Time</h3>
+                                    <p class="text-gray-400">Within 24 hours</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-gradient-to-br from-primary/20 to-gold/20 rounded-2xl p-8 border border-primary/30">
+                        <h3 class="text-xl font-bold mb-3">Ready to Get Started?</h3>
+                        <p class="text-gray-300 mb-4">Download our free 72-hour AI Growth System blueprint and audit checklist.</p>
+                        <a href="/sainathai-site/#lead-magnet" class="inline-block bg-primary hover:bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold transition">Download Free Blueprint</a>
+                    </div>
+
+                    <div class="bg-secondary-800 rounded-2xl p-8">
+                        <h3 class="text-xl font-bold mb-4">Business Hours</h3>
+                        <div class="space-y-3 text-gray-400">
+                            <div class="flex justify-between">
+                                <span>Monday - Friday:</span>
+                                <span class="text-white">9:00 AM - 6:00 PM IST</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span>Saturday:</span>
+                                <span class="text-white">10:00 AM - 2:00 PM IST</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span>Sunday:</span>
+                                <span class="text-white">Closed</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-secondary-800 border-t border-secondary-700 py-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400">Founder — Sainath Phani VV • <a href="/sainathai-site/contact.html" class="text-primary hover:text-blue-400 transition">Contact</a></p>
+                <p class="text-gray-400 mt-4 md:mt-0">© 2025 SainathAI</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
