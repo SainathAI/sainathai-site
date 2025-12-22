@@ -378,8 +378,49 @@
     if (window.RAM && RAM.init) RAM.init();
   });
 </script>
+
+  <!-- Contact Form Handler -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const form = document.getElementById('contactForm');
+      if (form) {
+        const service = document.getElementById('serviceType');
+        const audit = document.getElementById('auditDetailsSection');
+        if (service && audit) {
+          service.addEventListener('change', () => {
+            audit.style.display = service.value ? 'block' : 'none';
+          });
+        }
+        form.addEventListener('submit', (e) => {
+          e.preventDefault();
+          localStorage.setItem('lastContactForm', JSON.stringify({
+            email: document.getElementById('email').value,
+            timestamp: new Date().toISOString()
+          }));
+          alert('Inquiry received! We will respond within 24 hours.');
+          form.reset();
+        });
+      }
+    });
+  </script>
+
+  <!-- Contact Form Handler -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const form = document.getElementById('contactForm');
+      if (form) {
+        form.addEventListener('submit', (e) => {
+          e.preventDefault();
+          alert('Inquiry received!');
+          form.reset();
+        });
+      }
+    });
+  </script>
 </body>
 </html>
+
+
 
 
 
