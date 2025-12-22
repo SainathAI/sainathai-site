@@ -69,7 +69,6 @@
     </section>
     
 
-
   <div class="footer">© 2025 SainathAI</div>
 </div>
 
@@ -94,32 +93,7 @@
 
 <script src="scripts.js"></script>
   </main>
-<!-- START SainathAI: Pinterest Control Panel -->
-<section id="pinterest-panel" style="max-width:1100px;margin:28px auto;padding:18px;border-radius:12px;background:rgba(0,0,0,0.25);color:#e6f0ff;">
-  <h3 style="margin:0 0 8px 0;font-size:18px;">Pinterest Automation Control (Demo)</h3>
-  <div id="pin-status">Loading status…</div>
-  <pre id="pin-logs" style="background:rgba(0,0,0,0.28);padding:8px;border-radius:6px;max-height:160px;overflow:auto;">// logs…</pre>
-  <div style="margin-top:12px;">
-    <button onclick="(async()=>{const res=await fetch((window.__API_BASE||'https://bubblelike-tanja-unremniscenlty.ngrok-free.dev')+'/api/pinterest/trigger',{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify({action:'scan'})});if(res.ok){const j=await res.json();document.getElementById('pin-logs').textContent='// triggered: '+j.taskId+'\\n'+document.getElementById('pin-logs').textContent;}else{alert('trigger failed')}})()">Trigger Scan</button>
-  </div>
-  <script>
-    (async function(){
-      try{
-        const base=(window.__API_BASE||'https://bubblelike-tanja-unremniscenlty.ngrok-free.dev');
-        const s=await fetch(base+'/api/pinterest/status'); const sj=await s.json();
-        document.getElementById('pin-status').textContent = 'Status: '+sj.status + ' • Queue: '+sj.queue;
-        const logs = await fetch(base+'/api/pinterest/logs'); const lt = await logs.text();
-        document.getElementById('pin-logs').textContent = lt;
-      }catch(e){
-        document.getElementById('pin-status').textContent='Status: unreachable';
-        document.getElementById('pin-logs').textContent='// unable to reach API';
-      }
-    })();
-  </script>
-</section>
-<!-- END SainathAI: Pinterest Control Panel -->
-
-  <footer>
+<footer>
     <p>Founder — Sainath Phani VV • <a href="contact.html">Contact</a></p>
     <p>© 2025 SainathAI</p>
   </footer>
@@ -147,13 +121,7 @@
         </div>
     </footer>
 
-
-
-
-
-
 <!-- END RAM -->
-
 
 <div id="ram-root"></div>
 
@@ -180,17 +148,5 @@
   </script>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
 
 
