@@ -90,6 +90,8 @@
     <h1 class="text-5xl md:text-7xl font-black gradient-text mb-6">
       Healthcare Solutions & Procurement Intelligence
     </h1>
+    <l>
+    </l>
 
     <p class="text-gray-300 max-w-4xl text-lg">
       AI-powered platform to capture healthcare requirements, route them to the right vendors,
@@ -104,121 +106,132 @@
   </div>
 
   <!-- WHAT WE HANDLE -->
-  <div class="max-w-6xl mx-auto">
-  <div class="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16 text-sm">
-  <div class="bg-white/5 border border-white/10 p-4 rounded-xl text-center">🏥<br><strong>Hospital Automation</strong></div>
-  <div class="bg-white/5 border border-white/10 p-4 rounded-xl text-center">🩺<br><strong>Medical Equipment</strong></div>
-  <div class="bg-white/5 border border-white/10 p-4 rounded-xl text-center">💊<br><strong>Medicines & Consumables</strong></div>
-  <div class="bg-white/5 border border-white/10 p-4 rounded-xl text-center">🧠<br><strong>Healthcare SaaS & AI</strong></div>
+  <section class="py-24">
+  <div class="max-w-6xl mx-auto px-6">
+
+    <!-- INTELLIGENCE PANE -->
+    <div class="relative bg-gradient-to-br from-[#0b1220] to-[#050a14] 
+                border border-blue-500/20 rounded-3xl p-10 shadow-2xl">
+
+      <!-- FLOATING GRID: HANDLE + METRICS -->
+      <div class="grid md:grid-cols-2 gap-10 mb-14">
+
+        <!-- WHAT WE HANDLE -->
+        <div class="bg-white/5 backdrop-blur border border-white/10 
+                    rounded-2xl p-6">
+          <h3 class="text-lg font-semibold mb-4 text-blue-400">
+            What We Handle
+          </h3>
+
+          <div class="grid grid-cols-2 gap-4 text-sm">
+            <div class="p-4 rounded-xl bg-black/40 border border-white/10">
+              🏥 <strong>Hospital Automation</strong>
+              <p class="text-gray-400 text-xs mt-1">HIS · EMR · Workflow</p>
+            </div>
+            <div class="p-4 rounded-xl bg-black/40 border border-white/10">
+              🩺 <strong>Medical Equipment</strong>
+              <p class="text-gray-400 text-xs mt-1">Diagnostics · ICU · OT</p>
+            </div>
+            <div class="p-4 rounded-xl bg-black/40 border border-white/10">
+              💊 <strong>Medicines & Consumables</strong>
+              <p class="text-gray-400 text-xs mt-1">Pharma · Surgical</p>
+            </div>
+            <div class="p-4 rounded-xl bg-black/40 border border-white/10">
+              🧠 <strong>Healthcare SaaS & AI</strong>
+              <p class="text-gray-400 text-xs mt-1">AI · Analytics · RCM</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- METRICS -->
+        <div class="bg-white/5 backdrop-blur border border-white/10 
+                    rounded-2xl p-6 text-center">
+          <h3 class="text-lg font-semibold mb-6 text-blue-400">
+            Platform Impact
+          </h3>
+
+          <div class="grid grid-cols-2 gap-6 text-sm">
+            <div>
+              <p class="text-3xl font-bold gradient-text">↓30%</p>
+              <p class="text-gray-400">Procurement Cost</p>
+            </div>
+            <div>
+              <p class="text-3xl font-bold gradient-text">↑45%</p>
+              <p class="text-gray-400">Process Speed</p>
+            </div>
+            <div>
+              <p class="text-3xl font-bold gradient-text">24/7</p>
+              <p class="text-gray-400">Lead Intelligence</p>
+            </div>
+            <div>
+              <p class="text-3xl font-bold gradient-text">Verified</p>
+              <p class="text-gray-400">Vendor Network</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- FORM (ANCHOR) -->
+      <div class="bg-black/40 border border-white/10 rounded-2xl p-8">
+
+        <p class="text-sm text-blue-300 mb-2">
+          ✔ Used by hospitals, clinics & healthcare suppliers
+        </p>
+
+        <h3 class="text-2xl font-bold mb-6 gradient-text">
+          Submit Healthcare Requirement
+        </h3>
+
+        <form class="grid md:grid-cols-2 gap-6">
+
+          <input name="organization" required
+            placeholder="Hospital / Clinic / Company Name"
+            class="input-field">
+
+          <input name="email" type="email" required
+            placeholder="Official Email Address"
+            class="input-field">
+
+          <input name="phone" required
+            placeholder="Contact Phone Number"
+            class="input-field">
+
+          <select name="requirement_type" required class="input-field">
+            <option value="">What are you looking for?</option>
+            <option>Hospital Automation / HIS</option>
+            <option>Medical Equipment</option>
+            <option>Medicines & Consumables</option>
+            <option>Healthcare SaaS / AI</option>
+          </select>
+
+          <select name="scale" required class="input-field md:col-span-2">
+            <option value="">Organization Size</option>
+            <option>Small (Clinic / Lab)</option>
+            <option>Medium (50–250 beds)</option>
+            <option>Large (250+ beds)</option>
+          </select>
+
+          <textarea name="details" required
+            placeholder="Describe your healthcare requirement clearly..."
+            class="input-field md:col-span-2 h-28"></textarea>
+
+          <button type="submit"
+            class="md:col-span-2 submit-btn">
+            Get Matched with Verified Vendors
+          </button>
+
+        </form>
+
+        <p class="text-xs text-gray-400 mt-4 text-center">
+          No spam. No hard selling. Verified vendor routing only.
+        </p>
+
+      </div>
+
+    </div>
   </div>
-
-  <!-- METRICS -->
-   <div class="grid grid-cols-2 md:grid-cols-4 gap-6 mb-20 text-center text-sm">
-  <div>
-    <p class="text-2xl font-bold gradient-text">↓30%</p>
-    <p class="text-gray-400">Procurement Cost</p>
-  </div>
-  <div>
-    <p class="text-2xl font-bold gradient-text">↑45%</p>
-    <p class="text-gray-400">Process Speed</p>
-  </div>
-  <div>
-    <p class="text-2xl font-bold gradient-text">24/7</p>
-    <p class="text-gray-400">Lead Intelligence</p>
-  </div>
-  <div>
-    <p class="text-2xl font-bold gradient-text">Verified</p>
-    <p class="text-gray-400">Vendor Network</p>
-  </div>
-</div>       
-</div>
-
-  <!-- FORM -->
-  <form id="lead-form"
-    class="relative bg-white/5 border border-white/10 rounded-2xl p-8 max-w-4xl
-    shadow-[0_0_60px_rgba(59,130,246,0.15)]">
-
-    <h2 class="text-3xl font-bold gradient-text mb-6">
-      Submit Healthcare Requirement
-    </h2>
-  </div>
-    
-    <div class="grid md:grid-cols-2 gap-6 mb-6">
-
-  <!-- Organization -->
-  <input
-    type="text"
-    name="organization"
-    required
-    placeholder="Hospital / Clinic / Company Name"
-    class="p-3 rounded bg-black/50 border border-white/20 focus:outline-none focus:border-blue-500"
-  >
-
-  <!-- Email -->
-  <input
-    type="email"
-    name="email"
-    required
-    placeholder="Official Email Address"
-    class="p-3 rounded bg-black/50 border border-white/20 focus:outline-none focus:border-blue-500"
-  >
-
-  <!-- Phone -->
-  <input
-    type="tel"
-    name="phone"
-    required
-    placeholder="Contact Phone Number"
-    pattern="[0-9]{10,15}"
-    title="Please enter a valid phone number"
-    class="p-3 rounded bg-black/50 border border-white/20 focus:outline-none focus:border-blue-500"
-  >
-
-  <!-- Requirement Type -->
-  <select
-    name="requirement_type"
-    required
-    class="p-3 rounded bg-black/50 border border-white/20 text-gray-300 focus:outline-none focus:border-blue-500"
-  >
-    <option value="" disabled selected>What are you looking for?</option>
-    <option value="Hospital Automation / HIS">Hospital Automation / HIS</option>
-    <option value="Medical Equipment">Medical Equipment</option>
-    <option value="Surgical / Consumables">Surgical / Consumables</option>
-    <option value="Medicines / Pharma">Medicines / Pharma</option>
-    <option value="Healthcare Software / AI">Healthcare Software / AI</option>
-  </select>
-
-  <!-- Organization Size -->
-  <select
-    name="scale"
-    required
-    class="p-3 rounded bg-black/50 border border-white/20 text-gray-300 focus:outline-none focus:border-blue-500"
-  >
-    <option value="" disabled selected>Organization Size</option>
-    <option value="Clinic / Lab">Clinic / Lab</option>
-    <option value="50–250 Beds">50–250 Beds</option>
-    <option value="250+ Beds">250+ Beds</option>
-  </select>
-
-</div>
-
-<!-- Requirement Details -->
-<textarea
-  name="details"
-  required
-  placeholder="Describe your healthcare requirement clearly..."
-  class="w-full p-3 rounded bg-black/50 border border-white/20 focus:outline-none focus:border-blue-500 mb-6"
-></textarea>
-
-    <button id="submitBtn" type="submit" class="submit-btn">
-      Start Healthcare Assessment
-    </button>
-
-    <p class="text-xs text-gray-400 mt-4 text-center">
-      We connect verified healthcare buyers with relevant vendors. No spam. No hard selling.
-    </p>
-  </form>
-</main>
+</section>
 
 <footer class="mt-32 p-6 text-center text-gray-400 border-t border-white/10">
   © 2025 SainathAI — Healthcare Intelligence Platform
