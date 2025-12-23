@@ -41,9 +41,14 @@
     @keyframes shift {0%,100%{background-position:0% 50%}50%{background-position:100% 50%}}
 
     .logo-bg {
-      position:fixed; inset:0;
-      background:url('/sainathai-site/assets/logo.png') center/60% no-repeat;
-      opacity:50; z-index:-1;
+    position: fixed; 
+    inset: 0;
+    /* Ensure the path is correct relative to this CSS file */
+    background: url('assets/logo.png') center/60% no-repeat;
+    /* Use a value between 0 and 1 */
+    opacity: 0.5; 
+    /* Adjust z-index to ensure it sits above the gradient but below content */
+    z-index: -1; 
     }
 
     .gradient-text {
@@ -82,30 +87,56 @@
 <main class="pt-32 max-w-7xl mx-auto px-6">
 
   <!-- HERO -->
-  <center>
-  <div class="mb-16 relative">
-    <p class="text-sm tracking-widest text-blue-400 uppercase mb-3">
-      Healthcare Lead & Procurement Platform
-    </p>
+  <style>
+  .centered-hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    min-height: 80vh; /* Ensures it feels centered in the screen */
+    padding: 2rem;
+  }
 
-    <h2 class="text-5xl md:text-7xl font-black gradient-text mb-6">
-      Healthcare Solutions & Procurement Intelligence
-    </h2>
-    <l>
-    </l>
+  /* Intense glow for the main headline */
+  .glow-text {
+    text-shadow: 
+      0 0 10px rgba(59, 130, 246, 0.5), 
+      0 0 20px rgba(59, 130, 246, 0.3),
+      0 0 40px rgba(6, 182, 212, 0.2);
+  }
 
-    <p class="text-gray-300 max-w-4xl text-lg">
-      AI-powered platform to capture healthcare requirements, route them to the right vendors,
-      automate workflows, and accelerate procurement across hospitals, clinics, diagnostics,
-      and healthcare businesses.
-    </p>
+  /* Subtle glow for smaller elements */
+  .glow-subtle {
+    text-shadow: 0 0 8px rgba(59, 130, 246, 0.4);
+  }
+</style>
+
+<div class="centered-hero mb-16 relative">
+  <!-- Small Header -->
+  <p class="text-sm tracking-widest text-blue-400 uppercase mb-3 glow-subtle">
+    Healthcare Lead & Procurement Platform
+  </p>
+
+  <!-- Main Headline -->
+  <h1 class="text-5xl md:text-7xl font-black gradient-text mb-6 glow-text">
+    Healthcare Solutions & <br> Procurement Intelligence
+  </h1>
+
+  <!-- Description Paragraph -->
+  <p class="text-gray-300 max-w-4xl text-lg mx-auto">
+    AI-powered platform to capture healthcare requirements, route them to the right vendors,
+    automate workflows, and accelerate procurement across hospitals, clinics, diagnostics,
+    and healthcare businesses.
+  </p>
+</div>
 
     <!-- HUD CUES -->
     <div class="absolute top-0 right-0 text-xs text-cyan-400 tracking-widest opacity-30">
       SYSTEM STATUS: ACTIVE
     </div>
   </div>
-  </center>
+
   
   <!-- WHAT WE HANDLE -->
   <section class="py-24">
