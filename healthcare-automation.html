@@ -3,95 +3,67 @@
 <head>
   <meta charset="UTF-8">
 
-  <!-- Pinterest Domain Verification -->
+  <!-- Pinterest Verification -->
   <meta name="p:domain_verify" content="c6ea929076510ba6bb71b073ebbc98b7"/>
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Hospital Automation System | SainathAI Healthcare Solutions</title>
+  <title>Healthcare Solutions & Procurement Intelligence | SainathAI</title>
 
   <!-- SEO -->
-  <meta name="description" content="AI-powered hospital automation systems for modern healthcare operations, patient management, and workflow intelligence.">
-  <link rel="canonical" href="https://sainathai.com/healthcare-automation.html"/>
+  <meta name="description" content="AI-powered healthcare lead generation, procurement intelligence, and automation platform for hospitals, clinics, equipment buyers, and healthcare providers.">
+  <link rel="canonical" href="https://sainathai.com/healthcare-solutions.html"/>
 
-  <!-- Open Graph (Pinterest + Social) -->
-  <meta property="og:title" content="Hospital Automation System — SainathAI">
-  <meta property="og:description" content="Transform hospital operations with AI-powered automation and intelligent healthcare workflows.">
+  <!-- Open Graph -->
+  <meta property="og:title" content="Healthcare Solutions & Procurement Intelligence — SainathAI">
+  <meta property="og:description" content="Submit healthcare requirements for automation, medical equipment, medicines, and healthcare technology.">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://sainathai.com/healthcare-automation.html">
+  <meta property="og:url" content="https://sainathai.com/healthcare-solutions.html">
   <meta property="og:image" content="https://sainathai.com/sainathai-site/assets/og-healthcare.png">
 
-  <!-- Twitter Card (Pinterest reads OG/Twitter) -->
+  <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Hospital Automation System — SainathAI">
-  <meta name="twitter:description" content="AI-driven hospital automation & healthcare workflow intelligence.">
-  <meta name="twitter:image" content="https://sainathai.com/sainathai-site/assets/og-healthcare.png">
 
-  <!-- Favicon -->
   <link rel="icon" href="/sainathai-site/assets/favicon.png">
-
-  <!-- Tailwind -->
   <script src="https://cdn.tailwindcss.com"></script>
 
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&display=swap');
 
-    body {
-      font-family: 'Inter', sans-serif;
-      background: #000;
-      color: #fff;
-      overflow-x: hidden;
-    }
+    body { font-family: 'Inter', sans-serif; background:#000; color:#fff; overflow-x:hidden; }
 
     .gradient-bg {
-      position: fixed;
-      inset: 0;
-      background: linear-gradient(135deg,#000,#0a0a1a,#001433,#000820,#000);
-      background-size: 400% 400%;
-      animation: gradientShift 15s ease infinite;
-      z-index: -2;
+      position:fixed; inset:0;
+      background:linear-gradient(135deg,#000,#0a0a1a,#001433,#000820,#000);
+      background-size:400% 400%;
+      animation:shift 15s ease infinite;
+      z-index:-2;
     }
-
-    @keyframes gradientShift {
-      0%,100% { background-position: 0% 50%; }
-      50% { background-position: 100% 50%; }
-    }
+    @keyframes shift {0%,100%{background-position:0% 50%}50%{background-position:100% 50%}}
 
     .logo-bg {
-      position: fixed;
-      inset: 0;
-      background: url('/sainathai-site/assets/logo.png') center/60% no-repeat;
-      opacity: 0.05;
-      z-index: -1;
+      position:fixed; inset:0;
+      background:url('/sainathai-site/assets/logo.png') center/60% no-repeat;
+      opacity:.05; z-index:-1;
     }
 
     .gradient-text {
-      background: linear-gradient(to right,#3b82f6,#06b6d4);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
+      background:linear-gradient(to right,#3b82f6,#06b6d4);
+      -webkit-background-clip:text; -webkit-text-fill-color:transparent;
     }
 
     .submit-btn {
-      background: linear-gradient(to right,#3b82f6,#06b6d4);
-      padding: 1rem;
-      width: 100%;
-      font-weight: 700;
-      border-radius: 0.5rem;
-      transition: all .3s ease;
+      background:linear-gradient(to right,#3b82f6,#06b6d4);
+      padding:1rem; width:100%;
+      font-weight:700; border-radius:.5rem;
+      animation:pulse 3s infinite;
+    }
+    @keyframes pulse {
+      0%,100%{box-shadow:0 0 30px rgba(59,130,246,.4)}
+      50%{box-shadow:0 0 60px rgba(6,182,212,.6)}
     }
 
-    .submit-btn:hover {
-      opacity: .9;
-      transform: translateY(-2px);
-    }
-
-    @keyframes fadeIn {
-      from { opacity:0; transform:scale(.95); }
-      to { opacity:1; transform:scale(1); }
-    }
-
-    .animate-fadeIn {
-      animation: fadeIn .3s ease-out;
-    }
+    @keyframes fadeIn {from{opacity:0;transform:scale(.95)}to{opacity:1;transform:scale(1)}}
+    .animate-fadeIn{animation:fadeIn .3s ease-out}
   </style>
 </head>
 
@@ -107,44 +79,90 @@
   </div>
 </nav>
 
-<main class="pt-32 max-w-6xl mx-auto px-6">
+<main class="pt-32 max-w-7xl mx-auto px-6">
 
-  <h1 class="text-5xl md:text-7xl font-black gradient-text mb-6">
-    Hospital Automation System
-  </h1>
+  <!-- HERO -->
+  <div class="mb-16 relative">
+    <p class="text-sm tracking-widest text-blue-400 uppercase mb-3">
+      Healthcare Lead & Procurement Platform
+    </p>
 
-  <p class="text-gray-300 text-lg max-w-3xl mb-12">
-    Transform hospital operations with AI-powered automation, intelligent workflows, and modern healthcare infrastructure.
-  </p>
+    <h1 class="text-5xl md:text-7xl font-black gradient-text mb-6">
+      Healthcare Solutions & Procurement Intelligence
+    </h1>
 
-  <form id="hospital-form" class="bg-white/5 border border-white/10 rounded-2xl p-8 max-w-3xl">
-    <h2 class="text-3xl font-bold gradient-text mb-6">Request Automation Consultation</h2>
+    <p class="text-gray-300 max-w-4xl text-lg">
+      AI-powered platform to capture healthcare requirements, route them to the right vendors,
+      automate workflows, and accelerate procurement across hospitals, clinics, diagnostics,
+      and healthcare businesses.
+    </p>
+
+    <!-- HUD CUES -->
+    <div class="absolute top-0 right-0 text-xs text-cyan-400 tracking-widest opacity-30">
+      SYSTEM STATUS: ACTIVE
+    </div>
+  </div>
+
+  <!-- WHAT WE HANDLE -->
+  <div class="grid md:grid-cols-4 gap-6 mb-20 text-center text-sm">
+    <div class="bg-white/5 border border-white/10 p-4 rounded-xl">🏥<br><strong>Hospital Automation</strong></div>
+    <div class="bg-white/5 border border-white/10 p-4 rounded-xl">🩺<br><strong>Medical Equipment</strong></div>
+    <div class="bg-white/5 border border-white/10 p-4 rounded-xl">💊<br><strong>Medicines & Consumables</strong></div>
+    <div class="bg-white/5 border border-white/10 p-4 rounded-xl">🧠<br><strong>Healthcare SaaS & AI</strong></div>
+  </div>
+
+  <!-- METRICS -->
+  <div class="grid grid-cols-3 gap-6 max-w-4xl mb-16 text-center text-sm">
+    <div><p class="text-2xl font-bold gradient-text">↓30%</p><p class="text-gray-400">Procurement Cost</p></div>
+    <div><p class="text-2xl font-bold gradient-text">↑45%</p><p class="text-gray-400">Process Speed</p></div>
+    <div><p class="text-2xl font-bold gradient-text">24/7</p><p class="text-gray-400">Lead Intelligence</p></div>
+  </div>
+
+  <!-- FORM -->
+  <form id="lead-form"
+    class="relative bg-white/5 border border-white/10 rounded-2xl p-8 max-w-4xl
+    shadow-[0_0_60px_rgba(59,130,246,0.15)]">
+
+    <h2 class="text-3xl font-bold gradient-text mb-6">
+      Submit Healthcare Requirement
+    </h2>
 
     <div class="grid md:grid-cols-2 gap-6 mb-6">
-      <input name="hospital_name" required placeholder="Hospital Name" class="p-3 rounded bg-black/50 border border-white/20">
-      <input name="email" type="email" required placeholder="Contact Email" class="p-3 rounded bg-black/50 border border-white/20">
-      <input name="phone" required placeholder="Phone Number" class="p-3 rounded bg-black/50 border border-white/20">
-      <select name="beds" required class="p-3 rounded bg-black/50 border border-white/20">
-        <option value="">Number of Beds</option>
-        <option value="50-100">50–100</option>
-        <option value="100-250">100–250</option>
-        <option value="250-500">250–500</option>
-        <option value="500+">500+</option>
+      <input name="organization" required placeholder="Hospital / Clinic / Company Name" class="p-3 rounded bg-black/50 border border-white/20">
+      <input name="email" type="email" required placeholder="Official Email" class="p-3 rounded bg-black/50 border border-white/20">
+      <input name="phone" required placeholder="Contact Number" class="p-3 rounded bg-black/50 border border-white/20">
+
+      <select name="requirement_type" required class="p-3 rounded bg-black/50 border border-white/20">
+        <option value="">What are you looking for?</option>
+        <option>Hospital Automation / HIS</option>
+        <option>Medical Equipment</option>
+        <option>Surgical / Consumables</option>
+        <option>Medicines / Pharma</option>
+        <option>Healthcare Software / AI</option>
+      </select>
+
+      <select name="scale" required class="p-3 rounded bg-black/50 border border-white/20">
+        <option value="">Organization Size</option>
+        <option>Small (Clinic / Lab)</option>
+        <option>Medium (50–250 beds)</option>
+        <option>Large (250+ beds)</option>
       </select>
     </div>
 
-    <textarea name="message" placeholder="Describe your automation needs..." class="w-full p-3 rounded bg-black/50 border border-white/20 mb-6"></textarea>
+    <textarea name="details" placeholder="Describe your requirement..." class="w-full p-3 rounded bg-black/50 border border-white/20 mb-6"></textarea>
 
-    <button id="submitBtn" type="submit" class="submit-btn">Request Consultation</button>
+    <button id="submitBtn" type="submit" class="submit-btn">
+      Start Healthcare Assessment
+    </button>
 
     <p class="text-xs text-gray-400 mt-4 text-center">
-      We respect your data. No spam. No reselling.
+      We connect verified healthcare buyers with relevant vendors. No spam. No hard selling.
     </p>
   </form>
 </main>
 
 <footer class="mt-32 p-6 text-center text-gray-400 border-t border-white/10">
-  © 2025 SainathAI — Healthcare Automation
+  © 2025 SainathAI — Healthcare Intelligence Platform
 </footer>
 
 <!-- THANK YOU MODAL -->
@@ -153,64 +171,55 @@
   <div class="relative bg-[#0b1220] p-8 rounded-2xl max-w-md w-full text-center border border-blue-500/30 animate-fadeIn">
     <button id="closeModal" class="absolute top-3 right-4 text-xl text-gray-400">&times;</button>
     <h3 class="text-2xl font-bold gradient-text mb-4">
-      Thank you, <span id="clientName"></span>
+      Automation Request Registered
     </h3>
     <p class="text-gray-300 mb-6">
-      Your request has been received.<br>
-      Our team will contact you shortly.
+      Thank you, <span id="clientName"></span>.<br>
+      Your healthcare requirement is under review.
     </p>
     <button id="closeModalBtn" class="submit-btn">Close</button>
   </div>
 </div>
 
 <script>
-const form = document.getElementById('hospital-form');
-const btn = document.getElementById('submitBtn');
-const modal = document.getElementById('thankYouModal');
-const clientName = document.getElementById('clientName');
+const form=document.getElementById('lead-form');
+const btn=document.getElementById('submitBtn');
+const modal=document.getElementById('thankYouModal');
+const clientName=document.getElementById('clientName');
 
-function closeModal() {
-  modal.classList.add('hidden');
-}
+const close=()=>modal.classList.add('hidden');
+document.getElementById('closeModal').onclick=close;
+document.getElementById('closeModalBtn').onclick=close;
 
-document.getElementById('closeModal').onclick = closeModal;
-document.getElementById('closeModalBtn').onclick = closeModal;
-
-form.addEventListener('submit', async e => {
+form.addEventListener('submit',async e=>{
   e.preventDefault();
-  btn.disabled = true;
-  btn.innerText = "Submitting…";
+  btn.disabled=true; btn.innerText="Submitting…";
 
-  const fd = new FormData(form);
-  const payload = {
-    timestamp: new Date().toISOString(),
-    hospital_name: fd.get('hospital_name'),
-    email: fd.get('email'),
-    phone: fd.get('phone'),
-    beds: fd.get('beds'),
-    message: fd.get('message'),
-    lead_tier: fd.get('beds') === '500+' ? 'enterprise' : 'standard',
-    source: 'healthcare_automation_page'
+  const fd=new FormData(form);
+  const payload={
+    timestamp:new Date().toISOString(),
+    organization:fd.get('organization'),
+    email:fd.get('email'),
+    phone:fd.get('phone'),
+    requirement_type:fd.get('requirement_type'),
+    scale:fd.get('scale'),
+    details:fd.get('details'),
+    source:'healthcare-lead-platform'
   };
 
-  try {
-    const res = await fetch(
-      'https://sainathai.app.n8n.cloud/webhook/sainathai-leads',
-      { method:'POST', headers:{'Content-Type':'application/json'}, body:JSON.stringify(payload) }
-    );
-
-    if (!res.ok) throw new Error();
-
-    clientName.innerText = payload.hospital_name;
+  try{
+    const r=await fetch('https://sainathai.app.n8n.cloud/webhook/sainathai-leads',{
+      method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(payload)
+    });
+    if(!r.ok) throw new Error();
+    clientName.innerText=payload.organization;
     modal.classList.remove('hidden');
     modal.classList.add('flex');
     form.reset();
-
-  } catch {
+  }catch{
     alert("Submission failed. Please try again.");
-  } finally {
-    btn.disabled = false;
-    btn.innerText = "Request Consultation";
+  }finally{
+    btn.disabled=false; btn.innerText="Start Healthcare Assessment";
   }
 });
 </script>
