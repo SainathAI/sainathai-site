@@ -16,7 +16,6 @@
 
     body { 
       font-family: 'Inter', sans-serif; 
-      /* background: #020617; <-- Removed solid color to allow background divs to show */
       color: #fff; 
       overflow-x: hidden; 
     }
@@ -34,7 +33,7 @@
     .logo-bg {
       position: fixed; inset: 0;
       background: url('/sainathai-site/assets/logo.png') center/50% no-repeat;
-      opacity: 0.05; /* Very subtle logo, original colors preserved */
+      opacity: 0.6; /* Increased visibility */
       z-index: -1;
     }
 
@@ -46,13 +45,12 @@
 
     /* NEUMORPHIC INPUT FIELDS (Clean Look) */
     .input-field {
-      background: rgba(255, 255, 255, 0.05);
-      border: 1px solid rgba(255, 255, 255, 0.1);
+      background: rgba(255, 255, 255, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.2);
       padding: 1rem;
       border-radius: 0.5rem;
       color: #fff;
       transition: all 0.3s ease;
-      /* Fix for dropdown option text visibility issue */
       -webkit-appearance: none; 
       -moz-appearance: none; 
       appearance: none;
@@ -60,10 +58,9 @@
     .input-field:focus {
       outline: none;
       border-color: #3b82f6;
-      background: rgba(255, 255, 255, 0.1);
+      background: rgba(255, 255, 255, 0.15);
       box-shadow: 0 0 20px rgba(59, 130, 246, 0.2);
     }
-    /* Ensure options in select menu are readable (they follow OS default now) */
     select.input-field option {
         color: #000;
         background-color: #fff;
@@ -88,13 +85,13 @@
 <div class="logo-bg"></div>
 
 <!-- NAVIGATION -->
-<nav class="fixed w-full top-0 z-50 backdrop-blur-md bg-black/60 border-b border-blue-500/20">
+<nav class="fixed w-full top-0 z-50 backdrop-blur-md bg-black/70 border-b border-blue-500/20">
   <div class="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
     <div class="flex items-center">
         <img src="/sainathai-site/assets/Confirmed%20Logo.png" class="h-9 mr-3" alt="SainathAI Logo">
         <span class="font-bold text-xl" style="color:#EFB800;">SAINATHAI</span>
     </div>
-    <div class="text-xs text-cyan-400 tracking-widest opacity-70 hidden md:block">
+    <div class="text-xs text-cyan-400 tracking-widest opacity-80 hidden md:block">
       SYSTEM STATUS: ACTIVE
     </div>
   </div>
@@ -123,28 +120,28 @@
   <section class="py-12">
     <div class="max-w-6xl mx-auto px-0">
       <div class="bg-gradient-to-br from-[#0b1220] to-[#050a14] 
-                  border border-blue-500/20 rounded-3xl p-8 md:p-12 shadow-2xl">
+                  border border-blue-500/30 rounded-3xl p-8 md:p-12 shadow-2xl">
 
         <!-- GRID: HANDLE + METRICS -->
         <div class="grid md:grid-cols-2 gap-10 mb-14">
 
           <!-- WHAT WE HANDLE -->
-          <div class="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6">
+          <div class="bg-white/5 backdrop-blur-sm border border-white/20 rounded-2xl p-6">
             <h3 class="text-lg font-semibold mb-4 text-blue-400">What We Handle</h3>
             <div class="grid grid-cols-2 gap-4 text-sm">
-              <div class="p-4 rounded-xl bg-black/40 border border-white/10">
+              <div class="p-4 rounded-xl bg-black/30 border border-white/10">
                 🏥 <strong>Hospital Automation</strong>
                 <p class="text-gray-400 text-xs mt-1">HIS · EMR · Workflow</p>
               </div>
-              <div class="p-4 rounded-xl bg-black/40 border border-white/10">
+              <div class="p-4 rounded-xl bg-black/30 border border-white/10">
                 🩺 <strong>Medical Equipment</strong>
                 <p class="text-gray-400 text-xs mt-1">Diagnostics · ICU · OT</p>
               </div>
-              <div class="p-4 rounded-xl bg-black/40 border border-white/10">
+              <div class="p-4 rounded-xl bg-black/30 border border-white/10">
                 💊 <strong>Medicines & Consumables</strong>
                 <p class="text-gray-400 text-xs mt-1">Pharma · Surgical</p>
               </div>
-              <div class="p-4 rounded-xl bg-black/40 border border-white/10">
+              <div class="p-4 rounded-xl bg-black/30 border border-white/10">
                 🧠 <strong>Healthcare SaaS & AI</strong>
                 <p class="text-gray-400 text-xs mt-1">AI · Analytics · RCM</p>
               </div>
@@ -152,7 +149,7 @@
           </div>
 
           <!-- METRICS -->
-          <div class="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 text-center">
+          <div class="bg-white/5 backdrop-blur-sm border border-white/20 rounded-2xl p-6 text-center">
             <h3 class="text-lg font-semibold mb-6 text-blue-400">Platform Impact</h3>
             <div class="grid grid-cols-2 gap-6 text-sm">
               <div>
