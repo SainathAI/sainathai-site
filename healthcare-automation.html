@@ -296,40 +296,51 @@ setInterval(() => {
 }, 4000); // 4 seconds interval
 
 // Form Submission Logic
+<script>
 const form = document.getElementById('lead-form');
 const btn = document.getElementById('submitBtn');
 const modal = document.getElementById('thankYouModal');
 
-form.addEventListener('submit', async e => {
+form.addEventListener('submit', async (e) => {
   e.preventDefault();
-  if (!form.checkValidity()) { form.reportValidity(); return; }
+
+  if (!form.checkValidity()) {
+    form.reportValidity();
+    return;
+  }
 
   btn.disabled = true;
   btn.innerText = "Submitting…";
 
   const fd = new FormData(form);
   const payload = Object.fromEntries(fd);
-  payload.source = 'healthcare-lead-platform';
+  payload.source = "healthcare-lead-platform";
 
   try {
     const res = await fetch(
-      'sainathai.app.n8n.cloud',
+      "https://sainathai.app.n8n.cloud/webhook/sainathai-leads",
       {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
         body: JSON.stringify(payload)
       }
     );
 
-    if (!res.ok) throw new Error();
+    if (!res.ok) throw new Error("Webhook failed");
 
-    document.getElementById('clientName').innerText = payload.organization;
-    modal.classList.remove('hidden');
-    modal.classList.add('flex');
+    document.getElementById("clientName").innerText =
+      payload.organization || "there";
+
+    modal.classList.remove("hidden");
+    modal.classList.add("flex");
+
     form.reset();
 
-  } catch {
+  } catch (err) {
     alert("Submission failed. Please try again.");
+    console.error(err);
   } finally {
     btn.disabled = false;
     btn.innerText = "Get Matched with Verified Vendors";
