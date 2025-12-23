@@ -1,7 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  
   <meta charset="UTF-8">
+    <!-- Pinterest Verification -->
+  <meta name="p:domain_verify" content="c6ea929076510ba6bb71b073ebbc98b7"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Healthcare Solutions & Procurement Intelligence | SainathAI</title>
 
@@ -10,6 +13,12 @@
   <link rel="canonical" href="sainathai.com""")/>>
 
   <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="/sainathai-site/assets/ram/ram.css">
+  <script src="/sainathai-site/assets/ram/ram-core.js" defer></script>
+  <script src="/sainathai-site/assets/ram/ram-events.js" defer></script>
+  <script src="/sainathai-site/assets/ram/ram-loader.js" defer></script>
+  <script src="/sainathai-site/assets/ram/ram-ui.js" defer></script>
+  <script src="/sainathai-site/assets/ram/ram-assistant.js" defer></script>
 
   <style>
     @import url('fonts.googleapis.com');
@@ -30,11 +39,15 @@
     }
     @keyframes shift {0%,100%{background-position:0% 50%}50%{background-position:100% 50%}}
 
-    .logo-bg {
-      position: fixed; inset: 0;
-      background: url('/sainathai-site/assets/logo.png') center/50% no-repeat;
-      opacity: 0.6; /* Increased visibility */
-      z-index: -1;
+     .logo-bg {
+    position: fixed; 
+    inset: 0;
+    /* Ensure the path is correct relative to this CSS file */
+    background: url('assets/logo.png') center/60% no-repeat;
+    /* Use a value between 0 and 1 */
+    opacity: 0.5; 
+    /* Adjust z-index to ensure it sits above the gradient but below content */
+    z-index: -1; 
     }
 
     /* Cleaner gradient text effect */
