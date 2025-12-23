@@ -128,42 +128,71 @@
     </h2>
 
     <div class="grid md:grid-cols-2 gap-6 mb-6">
-      <input name="organization" required placeholder="Hospital / Clinic / Company Name" ...>
 
-      <input name="email" type="email" required placeholder="Official Email" ...>
+  <!-- Organization -->
+  <input
+    type="text"
+    name="organization"
+    required
+    placeholder="Hospital / Clinic / Company Name"
+    class="p-3 rounded bg-black/50 border border-white/20 focus:outline-none focus:border-blue-500"
+  >
 
-      <input name="phone" required placeholder="Contact Number" ...>
+  <!-- Email -->
+  <input
+    type="email"
+    name="email"
+    required
+    placeholder="Official Email Address"
+    class="p-3 rounded bg-black/50 border border-white/20 focus:outline-none focus:border-blue-500"
+  >
 
-      <select name="requirement_type" required ...>
-      <option value="">What are you looking for?</option>
-  ...
-    </select>
+  <!-- Phone -->
+  <input
+    type="tel"
+    name="phone"
+    required
+    placeholder="Contact Phone Number"
+    pattern="[0-9]{10,15}"
+    title="Please enter a valid phone number"
+    class="p-3 rounded bg-black/50 border border-white/20 focus:outline-none focus:border-blue-500"
+  >
 
-    <select name="scale" required ...>
-      <option value="">Organization Size</option>
-  ...
-    </select>
+  <!-- Requirement Type -->
+  <select
+    name="requirement_type"
+    required
+    class="p-3 rounded bg-black/50 border border-white/20 text-gray-300 focus:outline-none focus:border-blue-500"
+  >
+    <option value="" disabled selected>What are you looking for?</option>
+    <option value="Hospital Automation / HIS">Hospital Automation / HIS</option>
+    <option value="Medical Equipment">Medical Equipment</option>
+    <option value="Surgical / Consumables">Surgical / Consumables</option>
+    <option value="Medicines / Pharma">Medicines / Pharma</option>
+    <option value="Healthcare Software / AI">Healthcare Software / AI</option>
+  </select>
 
-<textarea name="details" required placeholder="Describe your requirement..." ...></textarea>
+  <!-- Organization Size -->
+  <select
+    name="scale"
+    required
+    class="p-3 rounded bg-black/50 border border-white/20 text-gray-300 focus:outline-none focus:border-blue-500"
+  >
+    <option value="" disabled selected>Organization Size</option>
+    <option value="Clinic / Lab">Clinic / Lab</option>
+    <option value="50–250 Beds">50–250 Beds</option>
+    <option value="250+ Beds">250+ Beds</option>
+  </select>
 
-      <select name="requirement_type" required class="p-3 rounded bg-black/50 border border-white/20">
-        <option value="">What are you looking for?</option>
-        <option>Hospital Automation / HIS</option>
-        <option>Medical Equipment</option>
-        <option>Surgical / Consumables</option>
-        <option>Medicines / Pharma</option>
-        <option>Healthcare Software / AI</option>
-      </select>
+</div>
 
-      <select name="scale" required class="p-3 rounded bg-black/50 border border-white/20">
-        <option value="">Organization Size</option>
-        <option>Small (Clinic / Lab)</option>
-        <option>Medium (50–250 beds)</option>
-        <option>Large (250+ beds)</option>
-      </select>
-    </div>
-
-    <textarea name="details" placeholder="Describe your requirement..." class="w-full p-3 rounded bg-black/50 border border-white/20 mb-6"></textarea>
+<!-- Requirement Details -->
+<textarea
+  name="details"
+  required
+  placeholder="Describe your healthcare requirement clearly..."
+  class="w-full p-3 rounded bg-black/50 border border-white/20 focus:outline-none focus:border-blue-500 mb-6"
+></textarea>
 
     <button id="submitBtn" type="submit" class="submit-btn">
       Start Healthcare Assessment
