@@ -172,56 +172,72 @@
 
       </div>
 
+      <!-- FEATURE ROTATOR -->
+<div class="mb-14">
+  <div id="featureBox"
+       class="bg-gradient-to-br from-[#0b1220] to-[#050a14]
+              border border-blue-500/30 rounded-2xl p-10
+              text-center transition-all duration-700">
+
+    <h3 id="featureTitle"
+        class="text-2xl font-bold gradient-text mb-3">
+      Hospital Automation
+    </h3>
+
+    <p id="featureDesc"
+       class="text-gray-300 text-sm">
+      ↓30% Procurement Cost · ↑45% Process Speed · 24/7 Lead Intelligence
+    </p>
+
+  </div>
+</div>
+
+
       <!-- FORM (ANCHOR) -->
-      <div class="bg-black/40 border border-white/10 rounded-2xl p-8">
+<div class="bg-black/40 border border-white/10 rounded-2xl p-10">
+  <h3 class="text-2xl font-bold mb-6 gradient-text">
+    Submit Healthcare Requirement
+  </h3>
 
-        <p class="text-sm text-blue-300 mb-2">
-          ✔ Used by hospitals, clinics & healthcare suppliers
-        </p>
+  <form class="grid md:grid-cols-2 gap-6">
 
-        <h3 class="text-2xl font-bold mb-6 gradient-text">
-          Submit Healthcare Requirement
-        </h3>
+    <input name="organization" required
+      placeholder="Hospital / Clinic / Company Name"
+      class="input-field">
 
-        <form class="grid md:grid-cols-2 gap-6">
+    <input name="email" type="email" required
+      placeholder="Official Email Address"
+      class="input-field">
 
-          <input name="organization" required
-            placeholder="Hospital / Clinic / Company Name"
-            class="input-field">
+    <input name="phone" required
+      placeholder="Contact Phone Number"
+      class="input-field">
 
-          <input name="email" type="email" required
-            placeholder="Official Email Address"
-            class="input-field">
+    <select name="requirement_type" required class="input-field">
+      <option value="">What are you looking for?</option>
+      <option>Hospital Automation / HIS</option>
+      <option>Medical Equipment</option>
+      <option>Medicines & Consumables</option>
+      <option>Healthcare SaaS / AI</option>
+    </select>
 
-          <input name="phone" required
-            placeholder="Contact Phone Number"
-            class="input-field">
+    <select name="scale" required class="input-field md:col-span-2">
+      <option value="">Organization Size</option>
+      <option>Small (Clinic / Lab)</option>
+      <option>Medium (50–250 beds)</option>
+      <option>Large (250+ beds)</option>
+    </select>
 
-          <select name="requirement_type" required class="input-field">
-            <option value="">What are you looking for?</option>
-            <option>Hospital Automation / HIS</option>
-            <option>Medical Equipment</option>
-            <option>Medicines & Consumables</option>
-            <option>Healthcare SaaS / AI</option>
-          </select>
+    <textarea name="details" required
+      placeholder="Describe your healthcare requirement clearly..."
+      class="input-field md:col-span-2 h-28"></textarea>
 
-          <select name="scale" required class="input-field md:col-span-2">
-            <option value="">Organization Size</option>
-            <option>Small (Clinic / Lab)</option>
-            <option>Medium (50–250 beds)</option>
-            <option>Large (250+ beds)</option>
-          </select>
+    <button type="submit" class="md:col-span-2 submit-btn">
+      Get Matched with Verified Vendors
+    </button>
+  </form>
+</div>
 
-          <textarea name="details" required
-            placeholder="Describe your healthcare requirement clearly..."
-            class="input-field md:col-span-2 h-28"></textarea>
-
-          <button type="submit"
-            class="md:col-span-2 submit-btn">
-            Get Matched with Verified Vendors
-          </button>
-
-        </form>
 
         <p class="text-xs text-gray-400 mt-4 text-center">
           No spam. No hard selling. Verified vendor routing only.
@@ -324,6 +340,33 @@ form.addEventListener('submit', async e => {
 });
 </script>
 
+<script>
+const features = [
+  {
+    title: "Hospital Automation",
+    desc: "↓30% Procurement Cost · ↑45% Process Speed · HIS · EMR · Workflow"
+  },
+  {
+    title: "Medical Equipment",
+    desc: "Faster vendor matching · ICU · OT · Diagnostics"
+  },
+  {
+    title: "Medicines & Consumables",
+    desc: "Verified pharma suppliers · Surgical & consumables"
+  },
+  {
+    title: "Healthcare SaaS & AI",
+    desc: "AI · Analytics · RCM · Automation platforms"
+  }
+];
+
+let index = 0;
+setInterval(() => {
+  index = (index + 1) % features.length;
+  document.getElementById("featureTitle").innerText = features[index].title;
+  document.getElementById("featureDesc").innerText = features[index].desc;
+}, 3000);
+</script>
 
 </body>
 </html>
