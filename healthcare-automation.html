@@ -32,31 +32,19 @@
 * { box-sizing: border-box; }
 body { margin: 0; background-color: var(--bg); color: var(--text); font-family: 'Inter', sans-serif; overflow-x: hidden; line-height: 1.6; }
 
-/* 1. BACKGROUND ENGINE - Fixed Absolute Path */
 .bg-engine { 
-    position: fixed; 
-    inset: 0; 
-    z-index: -1; 
-    pointer-events: none; 
-    overflow: hidden;
+    position: fixed; inset: 0; z-index: -1; pointer-events: none; overflow: hidden;
 }
 .bg-engine::before { 
     content: ""; position: absolute; inset: 0;
-    background: radial-gradient(circle at 10% 10%, rgba(56,189,248,0.12), transparent 50%),
-                radial-gradient(circle at 90% 90%, rgba(30,64,175,0.1), transparent 50%);
+    background: radial-gradient(circle at 10% 10%, rgba(56,189,248,0.12), transparent 40%),
+                radial-gradient(circle at 90% 90%, rgba(30,64,175,0.1), transparent 40%);
 }
 .bg-engine::after { 
-    content: ""; 
-    position: absolute; 
-    inset: 0;
-    /* Absolute URL ensures GitHub always finds the image regardless of subfolder */
-    background-image: url("https://sainathai.github.io/sainathai-site/assets/Confirmed%20Logo.png");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: 600px;
-    opacity: 0.55; 
-    filter: brightness(0.8);
-    z-index: -1;
+    content: ""; position: absolute; inset: 0;
+    background-image: url("./assets/Confirmed%20Logo.png");
+    background-position: center; background-repeat: no-repeat; background-size: 600px;
+    opacity: 0.12; filter: brightness(0.8); z-index: -1;
 }
 
 section { max-width: 1100px; margin: 0 auto; padding: 40px 20px; text-align: center; }
@@ -72,7 +60,6 @@ h1 { font-size: clamp(2.5rem, 5vw, 4rem); font-weight: 800; letter-spacing: -0.0
 .gradient-text { background: linear-gradient(to bottom, #fff, var(--accent)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
 .subtitle { color: var(--muted); font-size: 1.15rem; max-width: 650px; margin: 0 auto 50px; }
 
-/* CAROUSEL */
 .carousel-viewport { height: 450px; perspective: 1500px; display: flex; align-items: center; justify-content: center; position: relative; }
 .card {
     position: absolute; width: 310px; padding: 30px;
@@ -84,7 +71,6 @@ h1 { font-size: clamp(2.5rem, 5vw, 4rem); font-weight: 800; letter-spacing: -0.0
 .card ul { list-style: none; padding: 0; margin-top: 15px; font-size: 0.85rem; color: var(--muted); text-align: left; }
 .card li::before { content: "✔"; color: var(--accent); margin-right: 8px; }
 
-/* FORM */
 .form-wrap { background: var(--glass); padding: 50px; border-radius: 32px; border: 1px solid var(--border); box-shadow: 0 40px 100px rgba(0,0,0,0.5); }
 .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; text-align: left; }
 @media (max-width: 650px) { .grid { grid-template-columns: 1fr; } }
@@ -93,6 +79,16 @@ input, select, textarea {
     width: 100%; background: rgba(2, 6, 23, 0.8); border: 1px solid var(--border);
     padding: 16px; border-radius: 14px; color: white; font-size: 1rem;
 }
+
+/* FIX FOR WHITE AUTOFILL BACKGROUND */
+input:-webkit-autofill,
+textarea:-webkit-autofill,
+select:-webkit-autofill {
+    -webkit-text-fill-color: white !important;
+    -webkit-box-shadow: 0 0 0px 1000px #020617 inset !important;
+    transition: background-color 5000s ease-in-out 0s;
+}
+
 .submit-btn {
     grid-column: 1 / -1; padding: 20px; border: none; border-radius: 16px;
     background: linear-gradient(90deg, #0ea5e9, #2563eb);
@@ -100,7 +96,6 @@ input, select, textarea {
 }
 .error-msg { font-size: 0.75rem; color: var(--error); margin-top: 5px; display: none; }
 
-/* MODAL */
 #statusModal { position: fixed; inset: 0; background: rgba(2,6,23,0.96); display: none; place-items: center; z-index: 2000; backdrop-filter: blur(12px); }
 .modal-content { background: var(--bg); border: 1px solid var(--border); padding: 40px; border-radius: 28px; max-width: 450px; text-align: center; }
 .priority-btn { background: #25D366; color: white; display: flex; align-items: center; justify-content: center; gap: 10px; margin-top: 20px; border: none; border-radius: 12px; font-weight: 700; cursor: pointer; padding: 15px; width: 100%; text-decoration: none; }
@@ -160,13 +155,12 @@ input, select, textarea {
         <p style="color:var(--muted)">Our AI is now matching your requirement with verified OEMs.</p>
         <hr style="border:0; border-top:1px solid var(--border); margin:20px 0;">
         <p><strong>Need Immediate Assistance?</strong></p>
-        <a href="https://wa.me/91XXXXXXXXXX" class="priority-btn" target="_blank">Connect on WhatsApp</a>
+        <a href="https://wa.link/o6csd3" class="priority-btn" target="_blank">Connect on WhatsApp</a>
         <button onclick="location.reload()" style="background:none; border:none; color:var(--muted); margin-top:15px; cursor:pointer;">Close & Return</button>
     </div>
 </div>
 
 <script>
-/* 1. CAROUSEL LOGIC */
 const cards = document.querySelectorAll('.card');
 let currentIdx = 0;
 function rotate() {
@@ -184,7 +178,6 @@ function rotate() {
 }
 setInterval(rotate, 4000); rotate();
 
-/* 2. FORM VALIDATION & SILENT SUBMISSION */
 const form = document.getElementById('leadForm');
 document.getElementById('phone').addEventListener('input', (e) => e.target.value = e.target.value.replace(/\D/g, '').slice(0, 15));
 
@@ -224,7 +217,7 @@ form.addEventListener('submit', async (e) => {
         btn.innerText = "Get Intelligence Report"; 
         btn.disabled = false; 
     }
-    return false; // Crucial guard to prevent URL parameters
+    return false;
 });
 </script>
 </body>
