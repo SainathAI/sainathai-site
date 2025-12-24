@@ -1,262 +1,288 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>SainathAI — Healthcare Solutions & Procurement Intelligence</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SainathAI — Healthcare Solutions</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
+/* ================= BASE ================= */
 :root{
   --bg:#020617;
   --glass:rgba(15,23,42,.65);
   --border:rgba(56,189,248,.35);
   --accent:#38bdf8;
+  --text:#e5e7eb;
   --muted:#94a3b8;
 }
 
 *{box-sizing:border-box}
-html,body{margin:0;font-family:Inter,sans-serif;background:var(--bg);color:#e5e7eb}
+html,body{
+  margin:0;
+  background:var(--bg);
+  color:var(--text);
+  font-family:Inter,system-ui,sans-serif;
+}
 
-/* ==== BACKGROUND WATERMARK ==== */
-body::before{
-  content:"";
+/* ================= REAL BG WATERMARK ================= */
+.bg-watermark{
   position:fixed;
   inset:0;
   background:
-    radial-gradient(circle at center, rgba(56,189,248,.25), transparent 65%),
+    radial-gradient(circle at center, rgba(56,189,248,.22), transparent 70%),
     url("assets/confirmed-logo.png") center center / 520px no-repeat;
   opacity:.55;
   pointer-events:none;
   z-index:-1;
 }
 
-/* ==== GLOBAL LAYOUT ==== */
+/* ================= LAYOUT ================= */
 section{padding:90px 20px}
-.container{max-width:1200px;margin:auto;text-align:center}
+.container{
+  max-width:1200px;
+  margin:auto;
+  text-align:center;
+}
 
-/* ==== TYPOGRAPHY ==== */
-h1{font-size:clamp(2.6rem,4vw,3.4rem);margin-bottom:16px}
-h2{font-size:1.8rem;margin-bottom:20px}
-p{max-width:820px;margin:0 auto 40px;color:var(--muted);line-height:1.65}
+/* ================= TYPOGRAPHY ================= */
+h1{
+  font-size:clamp(2.6rem,4vw,3.3rem);
+  font-weight:700;
+  margin-bottom:16px;
+}
+p{
+  max-width:820px;
+  margin:0 auto 50px;
+  color:var(--muted);
+  line-height:1.7;
+}
 
-/* ==== SERVICES ROTATOR ==== */
-.service-rotator{
+/* ================= SERVICES ROTATOR ================= */
+.services{
   display:flex;
   justify-content:center;
   align-items:center;
   gap:40px;
-  perspective:1200px;
-  margin-top:50px;
+  perspective:1400px;
+  margin-top:60px;
 }
-.service-card{
-  width:300px;
+
+.service{
+  width:280px;
   padding:32px;
   background:var(--glass);
   border-radius:18px;
   border:1px solid transparent;
+  opacity:.25;
+  transform:scale(.9) rotateY(35deg);
   transition:all .7s ease;
-  opacity:.4;
-  transform:rotateY(25deg) scale(.9);
-}
-.service-card h3{margin-bottom:10px}
-.service-card p{margin:0;font-size:.95rem}
-.service-card.active{
-  opacity:1;
-  transform:rotateY(0) scale(1.05);
-  border-color:var(--border);
-  box-shadow:0 30px 80px rgba(56,189,248,.25);
-}
-.service-card.left{
-  transform:rotateY(35deg) translateX(-40px) scale(.9)
-}
-.service-card.right{
-  transform:rotateY(-35deg) translateX(40px) scale(.9)
 }
 
-/* ==== METRICS ==== */
+.service.active{
+  opacity:1;
+  transform:scale(1.05) rotateY(0deg);
+  border-color:var(--border);
+  box-shadow:0 30px 90px rgba(56,189,248,.25);
+}
+
+.service.left{
+  transform:scale(.9) rotateY(35deg) translateX(-30px);
+}
+
+.service.right{
+  transform:scale(.9) rotateY(-35deg) translateX(30px);
+}
+
+.service h3{margin-bottom:10px}
+
+/* ================= METRICS ================= */
 .metrics{
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
   gap:24px;
-  margin-top:70px;
+  margin-top:80px;
 }
 .metric{
   background:var(--glass);
-  padding:30px;
+  padding:28px;
   border-radius:16px;
   border:1px solid var(--border);
 }
-.metric strong{font-size:2rem;color:var(--accent)}
+.metric strong{
+  display:block;
+  font-size:2rem;
+  color:var(--accent);
+}
 
-/* ==== FORM ==== */
+/* ================= FORM ================= */
 .form-wrap{
-  margin-top:90px;
+  margin-top:100px;
   background:var(--glass);
   border-radius:22px;
   border:1px solid var(--border);
   padding:40px;
 }
+
 form{
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
   gap:20px;
 }
+
 input,select,textarea{
   background:rgba(2,6,23,.9);
   border:1px solid var(--border);
   border-radius:12px;
   padding:14px;
-  color:#e5e7eb;
+  color:var(--text);
   font-size:.95rem;
 }
-input:focus,select:focus,textarea:focus{
-  outline:none;
-  box-shadow:0 0 0 2px rgba(56,189,248,.35);
+
+textarea{
+  grid-column:1/-1;
+  min-height:120px;
+  resize:none;
 }
-textarea{grid-column:1/-1;min-height:120px;resize:none}
 
 button{
   grid-column:1/-1;
   padding:16px;
-  font-size:1rem;
   border:none;
   border-radius:14px;
   background:linear-gradient(90deg,#3b82f6,#22d3ee);
-  color:#020617;
   font-weight:600;
   cursor:pointer;
 }
 
-/* ==== MODAL ==== */
+/* ================= MODAL ================= */
 #thankYouModal{
   position:fixed;
   inset:0;
   display:none;
   align-items:center;
   justify-content:center;
-  background:rgba(2,6,23,.85);
+  background:rgba(2,6,23,.88);
   z-index:100;
 }
-.modal-box{
+
+.modal{
   background:var(--glass);
   padding:40px;
   border-radius:20px;
   border:1px solid var(--border);
-  text-align:center;
   max-width:420px;
-}
-.modal-box button{
-  margin-top:20px;
-  width:100%;
+  text-align:center;
 }
 </style>
 </head>
 
 <body>
 
+<div class="bg-watermark"></div>
+
 <section>
-  <div class="container">
-    <h1>Healthcare Solutions & Procurement Intelligence</h1>
-    <p>
-      AI-powered platform helping hospitals and healthcare businesses source
-      technology, equipment, medicines, and services through verified vendor intelligence.
-    </p>
+<div class="container">
 
-    <div class="service-rotator">
-      <div class="service-card active">
-        <h3>Hospital Automation</h3>
-        <p>HIS, EMR, workflow digitization with verified vendors.</p>
-      </div>
-      <div class="service-card right">
-        <h3>Medical Equipment</h3>
-        <p>ICU, diagnostics, OT equipment sourcing.</p>
-      </div>
-      <div class="service-card left">
-        <h3>Medicines & Consumables</h3>
-        <p>Reliable pharma and surgical supply chain.</p>
-      </div>
-    </div>
+<h1>Healthcare Solutions & Procurement Intelligence</h1>
+<p>
+AI-powered platform helping hospitals and healthcare businesses source
+technology, equipment, medicines, and services through verified vendor intelligence.
+</p>
 
-    <div class="metrics">
-      <div class="metric"><strong>↓30%</strong><br/>Cost Reduction</div>
-      <div class="metric"><strong>↑45%</strong><br/>Faster Decisions</div>
-      <div class="metric"><strong>24/7</strong><br/>Lead Intelligence</div>
-      <div class="metric"><strong>Verified</strong><br/>Vendor Network</div>
-    </div>
+<div class="services" id="services">
+  <div class="service">Hospital Automation<br><small>HIS · EMR · Workflow</small></div>
+  <div class="service">Medical Equipment<br><small>ICU · OT · Diagnostics</small></div>
+  <div class="service">Medicines & Consumables<br><small>Pharma · Surgical</small></div>
+  <div class="service">Healthcare SaaS & AI<br><small>Analytics · RCM</small></div>
+  <div class="service">Procurement Intelligence<br><small>Vendor Matching</small></div>
+</div>
 
-    <div class="form-wrap">
-      <h2>Submit Healthcare Requirement</h2>
-      <form id="lead-form">
-        <input name="organization" placeholder="Hospital / Clinic / Company Name" required>
-        <input name="email" type="email" placeholder="Official Email" required>
-        <input name="phone" type="tel" pattern="[0-9]{8,15}" placeholder="Contact Number" required>
-        <select name="requirement" required>
-          <option value="">Requirement Type</option>
-          <option>Hospital Automation</option>
-          <option>Medical Equipment</option>
-          <option>Medicines & Consumables</option>
-          <option>Healthcare SaaS & AI</option>
-        </select>
-        <textarea name="details" placeholder="Describe your requirement..." required></textarea>
-        <button id="submitBtn">Get Matched</button>
-      </form>
-    </div>
-  </div>
+<div class="metrics">
+  <div class="metric"><strong>↓30%</strong>Cost Reduction</div>
+  <div class="metric"><strong>↑45%</strong>Faster Decisions</div>
+  <div class="metric"><strong>24/7</strong>Lead Intelligence</div>
+  <div class="metric"><strong>Verified</strong>Vendor Network</div>
+</div>
+
+<div class="form-wrap">
+<h2>Submit Healthcare Requirement</h2>
+
+<form id="leadForm" novalidate>
+  <input name="organization" placeholder="Hospital / Clinic / Company Name" required>
+  <input name="email" type="email" placeholder="Official Email" required>
+  <input name="phone" placeholder="Contact Number" maxlength="15" required>
+  <select name="requirement" required>
+    <option value="">Requirement Type</option>
+    <option>Hospital Automation</option>
+    <option>Medical Equipment</option>
+    <option>Medicines & Consumables</option>
+    <option>Healthcare SaaS & AI</option>
+    <option>Procurement Intelligence</option>
+  </select>
+  <textarea name="details" placeholder="Describe your requirement..." required></textarea>
+  <button>Get Matched</button>
+</form>
+</div>
+
+</div>
 </section>
 
-<!-- MODAL -->
 <div id="thankYouModal">
-  <div class="modal-box">
+  <div class="modal">
     <h2>Request Registered</h2>
-    <p>Thank you, <span id="clientName"></span>.<br/>Our team will contact you shortly.</p>
+    <p>Thank you. Our team will contact you shortly.</p>
     <button onclick="closeModal()">Close</button>
   </div>
 </div>
 
 <script>
-/* ==== SERVICE ROTATION ==== */
-const cards=document.querySelectorAll('.service-card');
-let i=0;
-setInterval(()=>{
-  cards.forEach(c=>c.className='service-card');
-  cards[i].classList.add('active');
-  cards[(i+1)%3].classList.add('right');
-  cards[(i+2)%3].classList.add('left');
-  i=(i+1)%3;
-},3500);
+/* ===== SERVICE ROTATION (5 ITEMS) ===== */
+const services=[...document.querySelectorAll('.service')];
+let idx=0;
 
-/* ==== FORM SUBMISSION ==== */
-const form=document.getElementById('lead-form');
-const modal=document.getElementById('thankYouModal');
-const btn=document.getElementById('submitBtn');
+function rotate(){
+  services.forEach(s=>s.className='service');
+  services[idx].classList.add('active');
+  services[(idx+1)%5].classList.add('right');
+  services[(idx+4)%5].classList.add('left');
+  idx=(idx+1)%5;
+}
+rotate();
+setInterval(rotate,3500);
 
-form.addEventListener('submit',async e=>{
-  e.preventDefault();
-  if(!form.checkValidity()){form.reportValidity();return;}
-
-  btn.disabled=true;
-  const data=Object.fromEntries(new FormData(form));
-  data.source="healthcare-lead-platform";
-
-  try{
-    await fetch("https://sainathai.app.n8n.cloud/webhook/sainathai-leads",{
-      method:"POST",
-      headers:{'Content-Type':'application/json'},
-      body:JSON.stringify(data)
-    });
-    document.getElementById('clientName').innerText=data.organization;
-    modal.style.display="flex";
-    form.reset();
-  }catch{
-    alert("Submission failed. Try again.");
-  }finally{
-    btn.disabled=false;
-  }
+/* ===== FORM VALIDATION ===== */
+const phone=document.querySelector('input[name=phone]');
+phone.addEventListener('input',()=>{
+  phone.value=phone.value.replace(/\D/g,'');
 });
 
-function closeModal(){modal.style.display="none";}
+/* ===== FORM SUBMIT ===== */
+const form=document.getElementById('leadForm');
+form.addEventListener('submit',async e=>{
+  e.preventDefault();
+
+  for(const el of form.elements){
+    if(el.required && !el.value){
+      alert("Please fill all required fields correctly.");
+      return;
+    }
+  }
+
+  await fetch("https://sainathai.app.n8n.cloud/webhook/sainathai-leads",{
+    method:"POST",
+    headers:{'Content-Type':'application/json'},
+    body:JSON.stringify(Object.fromEntries(new FormData(form)))
+  });
+
+  document.getElementById('thankYouModal').style.display="flex";
+  form.reset();
+});
+
+function closeModal(){
+  document.getElementById('thankYouModal').style.display="none";
+}
 </script>
 
 </body>
