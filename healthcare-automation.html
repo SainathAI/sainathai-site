@@ -1,196 +1,366 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>SainathAI — Healthcare Solutions & Procurement Intelligence</title>
 
 <!-- Pinterest Verification -->
 <meta name="p:domain_verify" content="c6ea929076510ba6bb71b073ebbc98b7"/>
 
 <!-- SEO -->
-<meta name="description" content="AI-powered healthcare lead generation and procurement intelligence platform connecting hospitals with verified vendors.">
+<meta name="description" content="AI-powered healthcare solutions and procurement intelligence platform connecting hospitals with verified vendors.">
 <meta property="og:title" content="Healthcare Solutions & Procurement Intelligence — SainathAI">
 <meta property="og:description" content="Submit healthcare requirements and get matched with verified vendors.">
 <meta property="og:type" content="website">
 
-<!-- Tailwind -->
-<script src="https://cdn.tailwindcss.com"></script>
+<!-- FONT -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
 <style>
-/* ===== GLOBAL BACKGROUND ===== */
-body{
-  background:
-    radial-gradient(circle at 20% 20%, rgba(59,130,246,0.15), transparent 40%),
-    radial-gradient(circle at 80% 30%, rgba(6,182,212,0.15), transparent 40%),
+/* ================= ROOT ================= */
+:root {
+  --bg-main:
+    radial-gradient(circle at 20% 20%, rgba(56,189,248,0.15), transparent 40%),
+    radial-gradient(circle at 80% 30%, rgba(14,165,233,0.15), transparent 40%),
     #020617;
-  color:#e5e7eb;
-  font-family:Inter,system-ui,-apple-system;
+  --glass: rgba(15,23,42,0.65);
+  --glass-border: rgba(56,189,248,0.25);
+  --accent: #38BDF8;
+  --accent-soft: #22D3EE;
+  --text-main: #E5E7EB;
+  --text-muted: #9CA3AF;
 }
 
-/* ===== GLASS EFFECT ===== */
-.glass{
-  background:rgba(255,255,255,0.06);
-  backdrop-filter:blur(14px);
-  border:1px solid rgba(255,255,255,0.15);
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-/* ===== INPUTS ===== */
-.input{
-  width:100%;
-  padding:0.75rem;
-  border-radius:0.75rem;
-  background:rgba(0,0,0,0.55);
-  border:1px solid rgba(255,255,255,0.2);
-  color:#fff;
-}
-.input:focus{
-  outline:none;
-  border-color:#38bdf8;
+body {
+  margin: 0;
+  font-family: 'Inter', system-ui, sans-serif;
+  background: var(--bg-main);
+  color: var(--text-main);
+  min-height: 100vh;
 }
 
-/* ===== BUTTON ===== */
-.primary-btn{
-  background:linear-gradient(90deg,#3b82f6,#22d3ee);
-  color:#020617;
-  font-weight:700;
-  padding:1rem;
-  border-radius:0.75rem;
+/* ================= LAYOUT ================= */
+.page {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  text-align: center;
 }
 
-/* ===== MODAL ===== */
-#thankYouModal{
-  position:fixed;
-  inset:0;
-  z-index:9999;
-  display:none;
+section {
+  padding: clamp(4rem, 8vw, 6rem) 0;
+}
+
+/* ================= GLASS ================= */
+.glass {
+  background: var(--glass);
+  backdrop-filter: blur(16px);
+  border: 1px solid var(--glass-border);
+  border-radius: 20px;
+}
+
+/* ================= TYPOGRAPHY ================= */
+h1 {
+  font-size: clamp(2.4rem, 5vw, 3.4rem);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  line-height: 1.15;
+  color: var(--accent);
+}
+
+h2 {
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: var(--accent);
+}
+
+p {
+  line-height: 1.7;
+  color: var(--text-muted);
+}
+
+/* ================= HERO ================= */
+.hero-sub {
+  max-width: 760px;
+  margin: 18px auto 0;
+}
+
+/* ================= SERVICE ORBIT ================= */
+.orbit-stage {
+  perspective: 1200px;
+  overflow: hidden;
+}
+
+.orbit-track {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.8s ease;
+}
+
+.orbit-card {
+  min-width: 340px;
+  max-width: 380px;
+  margin: 0 18px;
+  padding: 34px 30px;
+  background: var(--glass);
+  border: 1px solid var(--glass-border);
+  border-radius: 22px;
+  transform: scale(0.85) rotateY(18deg);
+  opacity: 0.45;
+  transition: all 0.8s ease;
+}
+
+.orbit-card.active {
+  transform: scale(1) rotateY(0deg);
+  opacity: 1;
+  border-color: var(--accent);
+  box-shadow: 0 10px 40px rgba(56,189,248,0.18);
+}
+
+.orbit-card h3 {
+  font-size: 0.95rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  margin-bottom: 14px;
+}
+
+.orbit-headline {
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: var(--accent);
+  margin: 14px 0 18px;
+}
+
+.orbit-desc {
+  font-size: 0.98rem;
+  margin-bottom: 22px;
+}
+
+.orbit-trust {
+  font-size: 0.85rem;
+  color: var(--accent-soft);
+  border-top: 1px solid var(--glass-border);
+  padding-top: 12px;
+}
+
+.orbit-controls button {
+  margin: 40px 10px 0;
+  background: var(--glass);
+  border: 1px solid var(--glass-border);
+  color: var(--accent);
+  font-size: 1.3rem;
+  padding: 10px 18px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+/* ================= METRICS ================= */
+.metrics {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px,1fr));
+  gap: 32px;
+}
+
+.metric-value {
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: var(--accent);
+}
+
+.metric-label {
+  font-size: 0.9rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+/* ================= FORM ================= */
+.form-card {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 40px 36px;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+}
+
+@media(max-width:768px){
+  .form-grid { grid-template-columns: 1fr; }
+}
+
+input, select, textarea {
+  width: 100%;
+  padding: 14px 16px;
+  border-radius: 12px;
+  background: rgba(2,6,23,0.95);
+  border: 1px solid rgba(255,255,255,0.15);
+  color: var(--text-main);
+  font-size: 0.95rem;
+}
+
+input:focus, select:focus, textarea:focus {
+  outline: none;
+  border-color: var(--accent);
+}
+
+select option {
+  background: #020617;
+  color: var(--text-main);
+}
+
+.submit-btn {
+  grid-column: span 2;
+  background: linear-gradient(90deg, var(--accent), var(--accent-soft));
+  color: #020617;
+  font-weight: 600;
+  padding: 16px;
+  border-radius: 14px;
+  cursor: pointer;
+}
+
+/* ================= MODAL ================= */
+#thankYouModal {
+  position: fixed;
+  inset: 0;
+  display: none;
+  z-index: 9999;
+}
+
+.modal-box {
+  max-width: 420px;
+  margin: 15% auto;
+  padding: 32px;
+  text-align: center;
 }
 </style>
 </head>
 
 <body>
 
-<!-- ================= HERO ================= -->
-<section class="max-w-7xl mx-auto px-6 pt-28 pb-20">
-  <h1 class="text-5xl md:text-6xl font-extrabold mb-6 bg-gradient-to-r from-blue-400 to-cyan-300 bg-clip-text text-transparent">
-    Healthcare Solutions & Procurement Intelligence
-  </h1>
-  <p class="text-lg text-gray-300 max-w-3xl">
-    AI-powered platform to capture healthcare requirements and intelligently route them
-    to verified vendors across automation, equipment, medicines, and healthcare SaaS.
+<div class="page">
+
+<!-- HERO -->
+<section>
+  <h1>Healthcare Solutions & Procurement Intelligence</h1>
+  <p class="hero-sub">
+    AI-powered platform helping hospitals and healthcare businesses source technology,
+    equipment, medicines, and services through verified vendor intelligence.
   </p>
 </section>
 
-<!-- ================= FEATURES ================= -->
-<section class="max-w-7xl mx-auto px-6 pb-20 grid md:grid-cols-4 gap-6 text-center">
-  <div class="glass rounded-xl p-6">🏥<br><strong>Hospital Automation</strong></div>
-  <div class="glass rounded-xl p-6">🩺<br><strong>Medical Equipment</strong></div>
-  <div class="glass rounded-xl p-6">💊<br><strong>Medicines & Consumables</strong></div>
-  <div class="glass rounded-xl p-6">🧠<br><strong>Healthcare SaaS & AI</strong></div>
+<!-- SERVICE ORBIT -->
+<section>
+  <h2>Our Services</h2>
+  <div class="orbit-stage">
+    <div id="orbit-track" class="orbit-track">
+      <div class="orbit-card">
+        <h3>Hospital Automation</h3>
+        <div class="orbit-headline">Digitize hospital operations safely.</div>
+        <div class="orbit-desc">Right HIS, EMR, billing, and workflow systems based on scale and compliance.</div>
+        <div class="orbit-trust">✔ Verified IT providers</div>
+      </div>
+      <div class="orbit-card">
+        <h3>Medical Equipment</h3>
+        <div class="orbit-headline">Procure equipment with confidence.</div>
+        <div class="orbit-desc">ICU, OT, diagnostics from authenticated manufacturers.</div>
+        <div class="orbit-trust">✔ Compliance-ready sourcing</div>
+      </div>
+      <div class="orbit-card">
+        <h3>Medicines</h3>
+        <div class="orbit-headline">Uninterrupted supply assurance.</div>
+        <div class="orbit-desc">Medicines and consumables with predictable availability.</div>
+        <div class="orbit-trust">✔ Trusted pharma sources</div>
+      </div>
+      <div class="orbit-card">
+        <h3>Healthcare SaaS & AI</h3>
+        <div class="orbit-headline">Adopt software that delivers value.</div>
+        <div class="orbit-desc">Analytics, AI, and automation platforms mapped to use cases.</div>
+        <div class="orbit-trust">✔ Scalable solutions</div>
+      </div>
+    </div>
+  </div>
+  <div class="orbit-controls">
+    <button onclick="rotateOrbit(-1)">‹</button>
+    <button onclick="rotateOrbit(1)">›</button>
+  </div>
 </section>
 
-<!-- ================= METRICS ================= -->
-<section class="max-w-7xl mx-auto px-6 pb-20 grid md:grid-cols-4 gap-6 text-center">
-  <div class="glass rounded-xl p-6"><div class="text-3xl font-bold text-cyan-300">↓30%</div>Cost Reduction</div>
-  <div class="glass rounded-xl p-6"><div class="text-3xl font-bold text-cyan-300">↑45%</div>Process Speed</div>
-  <div class="glass rounded-xl p-6"><div class="text-3xl font-bold text-cyan-300">24/7</div>Lead Intelligence</div>
-  <div class="glass rounded-xl p-6"><div class="text-3xl font-bold text-cyan-300">Verified</div>Vendor Network</div>
+<!-- METRICS -->
+<section class="metrics">
+  <div><div class="metric-value">↓30%</div><div class="metric-label">Cost Reduction</div></div>
+  <div><div class="metric-value">↑45%</div><div class="metric-label">Faster Decisions</div></div>
+  <div><div class="metric-value">24/7</div><div class="metric-label">Lead Intelligence</div></div>
+  <div><div class="metric-value">Verified</div><div class="metric-label">Vendor Network</div></div>
 </section>
 
-<!-- ================= FORM ================= -->
-<section class="max-w-4xl mx-auto px-6 pb-32">
-  <div class="glass rounded-2xl p-10">
-    <h2 class="text-2xl font-bold text-cyan-300 mb-6">Submit Healthcare Requirement</h2>
-
-    <form id="lead-form" class="grid md:grid-cols-2 gap-6">
-
-      <input class="input" name="organization" required placeholder="Hospital / Clinic / Company Name">
-      <input class="input" type="email" name="email" required placeholder="Official Email Address">
-      <input class="input" name="phone" required placeholder="Contact Phone Number">
-
-      <select class="input" name="requirement_type" required>
-        <option value="">What are you looking for?</option>
-        <option>Hospital Automation / HIS</option>
+<!-- FORM -->
+<section>
+  <div class="glass form-card">
+    <h2>Submit Healthcare Requirement</h2>
+    <form id="lead-form" class="form-grid">
+      <input name="organization" required placeholder="Hospital / Clinic / Company Name">
+      <input name="email" type="email" required placeholder="Official Email">
+      <input name="phone" required placeholder="Contact Number">
+      <select name="requirement_type" required>
+        <option value="">Requirement Type</option>
+        <option>Hospital Automation</option>
         <option>Medical Equipment</option>
         <option>Medicines & Consumables</option>
-        <option>Healthcare SaaS / AI</option>
+        <option>Healthcare SaaS & AI</option>
       </select>
-
-      <select class="input md:col-span-2" name="scale" required>
-        <option value="">Organization Size</option>
-        <option>Clinic / Small</option>
-        <option>Medium (50–250 beds)</option>
-        <option>Large (250+ beds)</option>
-      </select>
-
-      <textarea class="input md:col-span-2 min-h-[120px]"
-        name="details" required
-        placeholder="Describe your healthcare requirement clearly..."></textarea>
-
-      <button id="submitBtn" type="submit" class="primary-btn md:col-span-2">
-        Get Matched with Verified Vendors
-      </button>
+      <textarea name="details" required placeholder="Describe your requirement..." rows="4"></textarea>
+      <button class="submit-btn" id="submitBtn">Get Matched</button>
     </form>
   </div>
 </section>
 
-<!-- ================= MODAL ================= -->
+</div>
+
+<!-- MODAL -->
 <div id="thankYouModal">
-  <div onclick="closeModal()" class="absolute inset-0 bg-black/70 backdrop-blur"></div>
-  <div class="relative max-w-md mx-auto mt-[15%] glass rounded-2xl p-8 text-center">
-    <button onclick="closeModal()" class="absolute top-3 right-4 text-xl text-gray-400">×</button>
-    <h3 class="text-2xl font-bold text-cyan-300 mb-4">Request Registered</h3>
-    <p class="text-gray-300 mb-6">
-      Thank you, <span id="clientName" class="font-semibold"></span>.<br>
-      Our team will contact you shortly.
-    </p>
-    <button onclick="closeModal()" class="primary-btn w-full">Close</button>
+  <div class="glass modal-box">
+    <h2>Request Registered</h2>
+    <p>Thank you, <span id="clientName"></span>. Our team will contact you shortly.</p>
+    <button class="submit-btn" onclick="closeModal()">Close</button>
   </div>
 </div>
 
-<!-- ================= SCRIPT ================= -->
 <script>
-const form = document.getElementById('lead-form');
-const btn = document.getElementById('submitBtn');
-const modal = document.getElementById('thankYouModal');
-const nameEl = document.getElementById('clientName');
-
-form.addEventListener('submit', async (e) => {
-  e.preventDefault();
-  if(!form.checkValidity()){ form.reportValidity(); return; }
-
-  btn.disabled = true;
-  btn.innerText = "Submitting…";
-
-  const payload = Object.fromEntries(new FormData(form));
-  payload.source = "healthcare-lead-platform";
-
-  try{
-    const res = await fetch(
-      "https://sainathai.app.n8n.cloud/webhook/sainathai-leads",
-      {
-        method:"POST",
-        headers:{ "Content-Type":"application/json" },
-        body:JSON.stringify(payload)
-      }
-    );
-    if(!res.ok) throw "";
-
-    nameEl.innerText = payload.organization || "there";
-    modal.style.display = "block";
-    form.reset();
-
-  }catch{
-    alert("Submission failed. Please try again.");
-  }finally{
-    btn.disabled = false;
-    btn.innerText = "Get Matched with Verified Vendors";
-  }
-});
-
-function closeModal(){
-  modal.style.display = "none";
+/* Orbit */
+const cards=document.querySelectorAll('.orbit-card');
+let idx=0;
+function updateOrbit(){
+  cards.forEach((c,i)=>c.classList.toggle('active',i===idx));
+  document.getElementById('orbit-track').style.transform=`translateX(${-idx*380}px)`;
 }
+function rotateOrbit(d){idx=(idx+d+cards.length)%cards.length;updateOrbit();}
+setInterval(()=>rotateOrbit(1),4500);updateOrbit();
+
+/* Form */
+const form=document.getElementById('lead-form');
+const modal=document.getElementById('thankYouModal');
+const nameEl=document.getElementById('clientName');
+form.addEventListener('submit',async e=>{
+  e.preventDefault();
+  const data=Object.fromEntries(new FormData(form));
+  const res=await fetch('https://sainathai.app.n8n.cloud/webhook/sainathai-leads',{
+    method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(data)
+  });
+  if(res.ok){nameEl.innerText=data.organization;modal.style.display='block';form.reset();}
+});
+function closeModal(){modal.style.display='none';}
 </script>
 
 </body>
