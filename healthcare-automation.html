@@ -2,166 +2,195 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SainathAI — Healthcare Solutions & Procurement Intelligence</title>
 
 <!-- Pinterest Verification -->
 <meta name="p:domain_verify" content="c6ea929076510ba6bb71b073ebbc98b7"/>
 
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Healthcare Solutions & Procurement Intelligence | SainathAI</title>
-
 <!-- SEO -->
-<meta name="description" content="AI-powered healthcare lead generation and procurement intelligence platform.">
-<link rel="canonical" href="https://sainathai.com/healthcare-solutions.html"/>
-
-<!-- Open Graph -->
+<meta name="description" content="AI-powered healthcare lead generation and procurement intelligence platform connecting hospitals with verified vendors.">
 <meta property="og:title" content="Healthcare Solutions & Procurement Intelligence — SainathAI">
-<meta property="og:description" content="Submit healthcare requirements for automation, equipment, medicines, and AI.">
+<meta property="og:description" content="Submit healthcare requirements and get matched with verified vendors.">
 <meta property="og:type" content="website">
-<meta property="og:image" content="https://sainathai.com/sainathai-site/assets/og-healthcare.png">
 
-<link rel="icon" href="/sainathai-site/assets/favicon.png">
+<!-- Tailwind -->
 <script src="https://cdn.tailwindcss.com"></script>
 
 <style>
-body { background:#000; color:#fff; font-family:Inter,sans-serif; }
-
-.input-field{
-  width:100%;
-  padding:0.75rem;
-  border-radius:0.5rem;
-  background:rgba(0,0,0,.6);
-  border:1px solid rgba(255,255,255,.2);
-  color:#fff;
+/* ===== GLOBAL BACKGROUND ===== */
+body{
+  background:
+    radial-gradient(circle at 20% 20%, rgba(59,130,246,0.15), transparent 40%),
+    radial-gradient(circle at 80% 30%, rgba(6,182,212,0.15), transparent 40%),
+    #020617;
+  color:#e5e7eb;
+  font-family:Inter,system-ui,-apple-system;
 }
 
-.submit-btn{
-  background:linear-gradient(to right,#3b82f6,#06b6d4);
-  padding:1rem;
+/* ===== GLASS EFFECT ===== */
+.glass{
+  background:rgba(255,255,255,0.06);
+  backdrop-filter:blur(14px);
+  border:1px solid rgba(255,255,255,0.15);
+}
+
+/* ===== INPUTS ===== */
+.input{
   width:100%;
+  padding:0.75rem;
+  border-radius:0.75rem;
+  background:rgba(0,0,0,0.55);
+  border:1px solid rgba(255,255,255,0.2);
+  color:#fff;
+}
+.input:focus{
+  outline:none;
+  border-color:#38bdf8;
+}
+
+/* ===== BUTTON ===== */
+.primary-btn{
+  background:linear-gradient(90deg,#3b82f6,#22d3ee);
+  color:#020617;
   font-weight:700;
-  border-radius:.5rem;
+  padding:1rem;
+  border-radius:0.75rem;
+}
+
+/* ===== MODAL ===== */
+#thankYouModal{
+  position:fixed;
+  inset:0;
+  z-index:9999;
+  display:none;
 }
 </style>
 </head>
 
 <body>
 
-<!-- ===== FORM SECTION ===== -->
-<section class="py-24 max-w-6xl mx-auto px-6">
-
-<div class="bg-black/40 border border-white/10 rounded-2xl p-10">
-
-<h3 class="text-2xl font-bold mb-6 text-cyan-400">
-Submit Healthcare Requirement
-</h3>
-
-<form id="lead-form" class="grid md:grid-cols-2 gap-6">
-
-<input name="organization" required
- placeholder="Hospital / Clinic / Company Name"
- class="input-field">
-
-<input name="email" type="email" required
- placeholder="Official Email Address"
- class="input-field">
-
-<input name="phone" required
- placeholder="Contact Phone Number"
- class="input-field">
-
-<select name="requirement_type" required class="input-field">
-<option value="">What are you looking for?</option>
-<option>Hospital Automation / HIS</option>
-<option>Medical Equipment</option>
-<option>Medicines & Consumables</option>
-<option>Healthcare SaaS / AI</option>
-</select>
-
-<select name="scale" required class="input-field md:col-span-2">
-<option value="">Organization Size</option>
-<option>Small (Clinic / Lab)</option>
-<option>Medium (50–250 beds)</option>
-<option>Large (250+ beds)</option>
-</select>
-
-<textarea name="details" required
- placeholder="Describe your healthcare requirement clearly..."
- class="input-field md:col-span-2 h-28"></textarea>
-
-<button id="submitBtn" type="submit" class="md:col-span-2 submit-btn">
-Get Matched with Verified Vendors
-</button>
-
-</form>
-</div>
+<!-- ================= HERO ================= -->
+<section class="max-w-7xl mx-auto px-6 pt-28 pb-20">
+  <h1 class="text-5xl md:text-6xl font-extrabold mb-6 bg-gradient-to-r from-blue-400 to-cyan-300 bg-clip-text text-transparent">
+    Healthcare Solutions & Procurement Intelligence
+  </h1>
+  <p class="text-lg text-gray-300 max-w-3xl">
+    AI-powered platform to capture healthcare requirements and intelligently route them
+    to verified vendors across automation, equipment, medicines, and healthcare SaaS.
+  </p>
 </section>
 
-<!-- ===== MODAL ===== -->
-<div id="thankYouModal"
- style="display:none;position:fixed;inset:0;z-index:9999;">
+<!-- ================= FEATURES ================= -->
+<section class="max-w-7xl mx-auto px-6 pb-20 grid md:grid-cols-4 gap-6 text-center">
+  <div class="glass rounded-xl p-6">🏥<br><strong>Hospital Automation</strong></div>
+  <div class="glass rounded-xl p-6">🩺<br><strong>Medical Equipment</strong></div>
+  <div class="glass rounded-xl p-6">💊<br><strong>Medicines & Consumables</strong></div>
+  <div class="glass rounded-xl p-6">🧠<br><strong>Healthcare SaaS & AI</strong></div>
+</section>
 
-<div onclick="closeModal()"
- style="position:absolute;inset:0;background:rgba(0,0,0,.75)"></div>
+<!-- ================= METRICS ================= -->
+<section class="max-w-7xl mx-auto px-6 pb-20 grid md:grid-cols-4 gap-6 text-center">
+  <div class="glass rounded-xl p-6"><div class="text-3xl font-bold text-cyan-300">↓30%</div>Cost Reduction</div>
+  <div class="glass rounded-xl p-6"><div class="text-3xl font-bold text-cyan-300">↑45%</div>Process Speed</div>
+  <div class="glass rounded-xl p-6"><div class="text-3xl font-bold text-cyan-300">24/7</div>Lead Intelligence</div>
+  <div class="glass rounded-xl p-6"><div class="text-3xl font-bold text-cyan-300">Verified</div>Vendor Network</div>
+</section>
 
-<div style="
-max-width:420px;
-margin:15% auto;
-background:#020617;
-border:1px solid rgba(59,130,246,.4);
-border-radius:16px;
-padding:30px;
-text-align:center;
-position:relative;">
+<!-- ================= FORM ================= -->
+<section class="max-w-4xl mx-auto px-6 pb-32">
+  <div class="glass rounded-2xl p-10">
+    <h2 class="text-2xl font-bold text-cyan-300 mb-6">Submit Healthcare Requirement</h2>
 
-<button onclick="closeModal()"
- style="position:absolute;top:10px;right:14px;font-size:22px;">×</button>
+    <form id="lead-form" class="grid md:grid-cols-2 gap-6">
 
-<h3 class="text-2xl font-bold text-cyan-400 mb-4">
-Your Request Registered
-</h3>
+      <input class="input" name="organization" required placeholder="Hospital / Clinic / Company Name">
+      <input class="input" type="email" name="email" required placeholder="Official Email Address">
+      <input class="input" name="phone" required placeholder="Contact Phone Number">
 
-<p class="text-gray-300 mb-6">
-Thank you, <span id="clientName"></span>.<br>
-Our team will contact you shortly.
-</p>
+      <select class="input" name="requirement_type" required>
+        <option value="">What are you looking for?</option>
+        <option>Hospital Automation / HIS</option>
+        <option>Medical Equipment</option>
+        <option>Medicines & Consumables</option>
+        <option>Healthcare SaaS / AI</option>
+      </select>
 
-<button onclick="closeModal()" class="submit-btn">Close</button>
+      <select class="input md:col-span-2" name="scale" required>
+        <option value="">Organization Size</option>
+        <option>Clinic / Small</option>
+        <option>Medium (50–250 beds)</option>
+        <option>Large (250+ beds)</option>
+      </select>
+
+      <textarea class="input md:col-span-2 min-h-[120px]"
+        name="details" required
+        placeholder="Describe your healthcare requirement clearly..."></textarea>
+
+      <button id="submitBtn" type="submit" class="primary-btn md:col-span-2">
+        Get Matched with Verified Vendors
+      </button>
+    </form>
+  </div>
+</section>
+
+<!-- ================= MODAL ================= -->
+<div id="thankYouModal">
+  <div onclick="closeModal()" class="absolute inset-0 bg-black/70 backdrop-blur"></div>
+  <div class="relative max-w-md mx-auto mt-[15%] glass rounded-2xl p-8 text-center">
+    <button onclick="closeModal()" class="absolute top-3 right-4 text-xl text-gray-400">×</button>
+    <h3 class="text-2xl font-bold text-cyan-300 mb-4">Request Registered</h3>
+    <p class="text-gray-300 mb-6">
+      Thank you, <span id="clientName" class="font-semibold"></span>.<br>
+      Our team will contact you shortly.
+    </p>
+    <button onclick="closeModal()" class="primary-btn w-full">Close</button>
+  </div>
 </div>
-</div>
 
+<!-- ================= SCRIPT ================= -->
 <script>
-const form=document.getElementById('lead-form');
-const btn=document.getElementById('submitBtn');
-const modal=document.getElementById('thankYouModal');
-const nameEl=document.getElementById('clientName');
+const form = document.getElementById('lead-form');
+const btn = document.getElementById('submitBtn');
+const modal = document.getElementById('thankYouModal');
+const nameEl = document.getElementById('clientName');
 
-form.addEventListener('submit',async e=>{
-e.preventDefault();
-if(!form.checkValidity()){form.reportValidity();return;}
+form.addEventListener('submit', async (e) => {
+  e.preventDefault();
+  if(!form.checkValidity()){ form.reportValidity(); return; }
 
-btn.disabled=true;btn.innerText="Submitting…";
+  btn.disabled = true;
+  btn.innerText = "Submitting…";
 
-const payload=Object.fromEntries(new FormData(form));
-payload.source="healthcare-lead-platform";
+  const payload = Object.fromEntries(new FormData(form));
+  payload.source = "healthcare-lead-platform";
 
-try{
-const res=await fetch(
-'https://sainathai.app.n8n.cloud/webhook/sainathai-leads',
-{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(payload)}
-);
-if(!res.ok)throw'';
-nameEl.innerText=payload.organization||'there';
-modal.style.display='block';
-form.reset();
-}catch{
-alert('Submission failed.');
-}finally{
-btn.disabled=false;
-btn.innerText='Get Matched with Verified Vendors';
-}
+  try{
+    const res = await fetch(
+      "https://sainathai.app.n8n.cloud/webhook/sainathai-leads",
+      {
+        method:"POST",
+        headers:{ "Content-Type":"application/json" },
+        body:JSON.stringify(payload)
+      }
+    );
+    if(!res.ok) throw "";
+
+    nameEl.innerText = payload.organization || "there";
+    modal.style.display = "block";
+    form.reset();
+
+  }catch{
+    alert("Submission failed. Please try again.");
+  }finally{
+    btn.disabled = false;
+    btn.innerText = "Get Matched with Verified Vendors";
+  }
 });
 
-function closeModal(){modal.style.display='none';}
+function closeModal(){
+  modal.style.display = "none";
+}
 </script>
 
 </body>
