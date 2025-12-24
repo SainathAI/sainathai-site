@@ -4,26 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SainathAI — Enterprise Procurement Intelligence</title>
-
+    
     <meta name="p:domain_verify" content="c6ea929076510ba6bb71b073ebbc98b7"/>
     
-    <link rel="icon" type="image/png" sizes="16x16" href="assets/Favicon 16.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="assets/Favicon 32.png">
-    <link rel="icon" type="image/png" sizes="48x48" href="assets/Favicon 48.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./assets/Favicon 16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/Favicon 32.png">
+    <link rel="icon" type="image/png" sizes="48x48" href="./assets/Favicon 48.png">
     
     <meta property="og:title" content="SainathAI — Healthcare Procurement Intelligence">
-    <meta property="og:description" content="Vetted medical equipment and pharma sourcing.">
-    <meta property="og:image" content="assets/confirmed-logo.jpg">
-    <meta property="og:type" content="website">
+    <meta property="og:image" content="./assets/confirmed-logo.jpg">
     <meta name="pinterest" content="nopin" description="Enterprise Healthcare Procurement Intelligence">
-  
 
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
 
 <style>
 :root {
     --bg: #020617;
-    --glass: rgba(15, 23, 42, 0.50);
+    --glass: rgba(15, 23, 42, 0.65); /* Slightly darker for better contrast */
     --border: rgba(56, 189, 248, 0.25);
     --accent: #38bdf8;
     --text: #f1f5f9;
@@ -35,18 +32,20 @@
 * { box-sizing: border-box; }
 body { margin: 0; background-color: var(--bg); color: var(--text); font-family: 'Inter', sans-serif; overflow-x: hidden; line-height: 1.6; }
 
-/* 1. LAYERED BACKGROUND ENGINE */
-.bg-engine { position: fixed; inset: 0; z-index: -1; pointer-events: none; }
+.bg-engine { position: fixed; inset: 0; z-index: -2; pointer-events: none; }
 .bg-engine::before { 
     content: ""; position: absolute; inset: 0;
     background: radial-gradient(circle at 10% 10%, rgba(56,189,248,0.12), transparent 40%),
                 radial-gradient(circle at 90% 90%, rgba(30,64,175,0.1), transparent 40%);
 }
 .bg-engine::after { 
-    content: ""; position: absolute; inset: 0;
-    /* Updated to point to your .jpg asset */
-    background: url("assets/confirmed-logo.jpg") center/800px no-repeat;
-    opacity: 0.55;
+    content: ""; 
+    position: absolute; 
+    inset: 0;
+    /* Using ./ ensures the browser looks in the assets folder relative to your index file */
+    background: url("./assets/confirmed-logo.png") center/800px no-repeat;
+    opacity: 0.55; 
+    z-index: -1;
 }
 
 section { max-width: 1100px; margin: 0 auto; padding: 40px 20px; text-align: center; }
