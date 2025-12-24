@@ -12,7 +12,7 @@
     <link rel="icon" type="image/png" sizes="48x48" href="./assets/Favicon 48.png">
     
     <meta property="og:title" content="SainathAI — Healthcare Procurement Intelligence">
-    <meta property="og:image" content="./assets/confirmed-logo.jpg">
+    <meta property="og:image" content="./assets/confirmed-logo.png">
     <meta name="pinterest" content="nopin" description="Enterprise Healthcare Procurement Intelligence">
 
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
@@ -35,8 +35,9 @@ body { margin: 0; background-color: var(--bg); color: var(--text); font-family: 
 .bg-engine { 
     position: fixed; 
     inset: 0; 
-    z-index: -2; /* Keeps it behind all content */
-    pointer-events: none; 
+    z-index: -1; /* Keeps it strictly behind the text and cards */
+    pointer-events: none;
+    overflow: hidden;
 }
 .bg-engine::before { 
     content: ""; position: absolute; inset: 0;
@@ -47,10 +48,13 @@ body { margin: 0; background-color: var(--bg); color: var(--text); font-family: 
     content: ""; 
     position: absolute; 
     inset: 0;
-    /* Use ./ and exact filename matching for GitHub Pages */
-    background: url("./assets/confirmed-logo.jpg") center/800px no-repeat;
-    opacity: 0.55; 
-    z-index: -1;
+    /* Verified Filename: confirmed-logo.jpg from your screenshot */
+    background-image: url("./assets/confirmed-logo.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 600px; /* Adjust this to make the logo larger or smaller */
+    opacity: 0.45; /* Professional watermark level; increase to 0.55 if you prefer it very bold */
+    filter: brightness(0.8); /* Helps the logo blend into your dark theme */
 }
 
 section { max-width: 1100px; margin: 0 auto; padding: 40px 20px; text-align: center; }
