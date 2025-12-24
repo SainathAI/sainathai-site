@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SainathAI — Enterprise Procurement Intelligence</title>
     
@@ -12,7 +12,7 @@
     <link rel="icon" type="image/png" sizes="48x48" href="./assets/Favicon 48.png">
     
     <meta property="og:title" content="SainathAI — Healthcare Procurement Intelligence">
-    <meta property="og:image" content="./assets/confirmed-logo.png">
+    <meta property="og:image" content="./assets/Confirmed Logo.png">
     <meta name="pinterest" content="nopin" description="Enterprise Healthcare Procurement Intelligence">
 
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
@@ -20,7 +20,7 @@
 <style>
 :root {
     --bg: #020617;
-    --glass: rgba(15, 23, 42, 0.65); /* Slightly darker for better contrast */
+    --glass: rgba(15, 23, 42, 0.65);
     --border: rgba(56, 189, 248, 0.25);
     --accent: #38bdf8;
     --text: #f1f5f9;
@@ -32,11 +32,12 @@
 * { box-sizing: border-box; }
 body { margin: 0; background-color: var(--bg); color: var(--text); font-family: 'Inter', sans-serif; overflow-x: hidden; line-height: 1.6; }
 
+/* 1. BACKGROUND ENGINE - Corrected path for GitHub Pages */
 .bg-engine { 
     position: fixed; 
     inset: 0; 
-    z-index: -1; /* Keeps it strictly behind the text and cards */
-    pointer-events: none;
+    z-index: -1; 
+    pointer-events: none; 
     overflow: hidden;
 }
 .bg-engine::before { 
@@ -48,18 +49,17 @@ body { margin: 0; background-color: var(--bg); color: var(--text); font-family: 
     content: ""; 
     position: absolute; 
     inset: 0;
-    /* Verified Filename: confirmed-logo.jpg from your screenshot */
-    background-image: url("./assets/confirmed-logo.jpg");
+    /* Exactly matches your uploaded filename "Confirmed Logo.png" */
+    background-image: url("./assets/Confirmed Logo.png");
     background-position: center;
     background-repeat: no-repeat;
-    background-size: 600px; /* Adjust this to make the logo larger or smaller */
-    opacity: 0.45; /* Professional watermark level; increase to 0.55 if you prefer it very bold */
-    filter: brightness(0.8); /* Helps the logo blend into your dark theme */
+    background-size: 600px;
+    opacity: 0.15; 
+    filter: brightness(0.8);
 }
 
 section { max-width: 1100px; margin: 0 auto; padding: 40px 20px; text-align: center; }
 
-/* 2. AUDIENCE CLARITY (NEW) */
 .audience-pill { 
     display: inline-block; padding: 6px 16px; border-radius: 50px; 
     background: rgba(56,189,248,0.1); border: 1px solid var(--accent);
@@ -71,7 +71,7 @@ h1 { font-size: clamp(2.5rem, 5vw, 4rem); font-weight: 800; letter-spacing: -0.0
 .gradient-text { background: linear-gradient(to bottom, #fff, var(--accent)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
 .subtitle { color: var(--muted); font-size: 1.15rem; max-width: 650px; margin: 0 auto 50px; }
 
-/* 3. 5-CARD CAROUSEL (UNCHANGED CORE) */
+/* 3. 5-CARD CAROUSEL - Improved spacing to prevent overlap */
 .carousel-viewport { height: 450px; perspective: 1500px; display: flex; align-items: center; justify-content: center; position: relative; }
 .card {
     position: absolute; width: 310px; padding: 30px;
@@ -83,7 +83,7 @@ h1 { font-size: clamp(2.5rem, 5vw, 4rem); font-weight: 800; letter-spacing: -0.0
 .card ul { list-style: none; padding: 0; margin-top: 15px; font-size: 0.85rem; color: var(--muted); text-align: left; }
 .card li::before { content: "✔"; color: var(--accent); margin-right: 8px; }
 
-/* 4. QUALIFIED LEAD FORM (UPGRADED) */
+/* 4. FORM STYLING */
 .form-wrap { background: var(--glass); padding: 50px; border-radius: 32px; border: 1px solid var(--border); box-shadow: 0 40px 100px rgba(0,0,0,0.5); }
 .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; text-align: left; }
 @media (max-width: 650px) { .grid { grid-template-columns: 1fr; } }
@@ -99,16 +99,15 @@ input, select, textarea {
 }
 .error-msg { font-size: 0.75rem; color: var(--error); margin-top: 5px; display: none; }
 
-/* 5. MONETIZED MODAL (NEW) */
+/* 5. MODAL */
 #statusModal { position: fixed; inset: 0; background: rgba(2,6,23,0.96); display: none; place-items: center; z-index: 2000; backdrop-filter: blur(12px); }
 .modal-content { background: var(--bg); border: 1px solid var(--border); padding: 40px; border-radius: 28px; max-width: 450px; text-align: center; }
-.priority-btn { background: #25D366; color: white; display: flex; align-items: center; justify-content: center; gap: 10px; margin-top: 20px; }
+.priority-btn { background: #25D366; color: white; display: flex; align-items: center; justify-content: center; gap: 10px; margin-top: 20px; border: none; border-radius: 12px; font-weight: 700; cursor: pointer; padding: 15px; width: 100%; }
 
-/* SEO BLOCK */
 .seo-footer { opacity: 0.2; font-size: 0.7rem; margin-top: 80px; padding: 20px; border-top: 1px solid rgba(255,255,255,0.05); }
 </style>
 </head>
-  <body>
+<body>
 
 <div class="bg-engine"></div>
 
@@ -142,7 +141,7 @@ input, select, textarea {
                 <option value="M">₹10 Lakhs - ₹50 Lakhs</option>
                 <option value="L">₹50 Lakhs+</option>
             </select>
-            <textarea name="desc" class="submit-btn" style="grid-column:1/-1; background:rgba(0,0,0,0.2); text-transform:none; font-weight:400; border:1px solid var(--border);" placeholder="Specific equipment or pharma needs..." rows="3" required></textarea>
+            <textarea name="desc" style="grid-column:1/-1; background:rgba(0,0,0,0.2); border:1px solid var(--border); padding:16px; border-radius:14px; color:white; font-family:inherit;" placeholder="Specific equipment or pharma needs..." rows="3" required></textarea>
             
             <button type="submit" class="submit-btn" id="btn">Get Intelligence Report</button>
             <p style="grid-column:1/-1; font-size:0.8rem; color:var(--muted); margin-top:10px;">🛡️ Guaranteed vendor-neutral matching • No retail inquiries</p>
@@ -160,13 +159,13 @@ input, select, textarea {
         <p style="color:var(--muted)">Our AI is now matching your requirement with verified OEMs.</p>
         <hr style="border:0; border-top:1px solid var(--border); margin:20px 0;">
         <p><strong>Need Immediate Assistance?</strong></p>
-        <button class="submit-btn priority-btn" onclick="window.open('https://wa.me/YOURNUMBER')">Connect on WhatsApp</button>
+        <button class="priority-btn" onclick="window.open('https://wa.me/91XXXXXXXXXX')">Connect on WhatsApp</button>
         <button onclick="location.reload()" style="background:none; border:none; color:var(--muted); margin-top:15px; cursor:pointer;">Close & Return</button>
     </div>
 </div>
 
 <script>
-/* 1. CAROUSEL */
+/* 1. CAROUSEL LOGIC - Fixed Spacing */
 const cards = document.querySelectorAll('.card');
 let currentIdx = 0;
 function rotate() {
@@ -174,8 +173,8 @@ function rotate() {
         const offset = (i - currentIdx + cards.length) % cards.length;
         let x = 0, z = 0, opacity = 0, scale = 1, rY = 0;
         if (offset === 0) { z = 200; opacity = 1; scale = 1.1; }
-        else if (offset === 1) { x = 320; opacity = 0.5; rY = -35; }
-        else if (offset === cards.length - 1) { x = -320; opacity = 0.5; rY = 35; }
+        else if (offset === 1) { x = 380; opacity = 0.5; rY = -35; } /* Increased x spacing */
+        else if (offset === cards.length - 1) { x = -380; opacity = 0.5; rY = 35; }
         else { z = -400; opacity = 0; }
         card.style.transform = `translateX(${x}px) translateZ(${z}px) scale(${scale}) rotateY(${rY}deg)`;
         card.style.opacity = opacity;
@@ -184,7 +183,7 @@ function rotate() {
 }
 setInterval(rotate, 4000); rotate();
 
-/* 2. VALIDATION & MONETIZED SUBMIT */
+/* 2. FORM VALIDATION & SUBMISSION */
 const form = document.getElementById('leadForm');
 document.getElementById('phone').addEventListener('input', (e) => e.target.value = e.target.value.replace(/\D/g, '').slice(0, 15));
 
