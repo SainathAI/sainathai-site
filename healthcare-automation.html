@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+  <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SainathAI — Enterprise Procurement Intelligence</title>
     
@@ -32,7 +32,12 @@
 * { box-sizing: border-box; }
 body { margin: 0; background-color: var(--bg); color: var(--text); font-family: 'Inter', sans-serif; overflow-x: hidden; line-height: 1.6; }
 
-.bg-engine { position: fixed; inset: 0; z-index: -2; pointer-events: none; }
+.bg-engine { 
+    position: fixed; 
+    inset: 0; 
+    z-index: -2; /* Keeps it behind all content */
+    pointer-events: none; 
+}
 .bg-engine::before { 
     content: ""; position: absolute; inset: 0;
     background: radial-gradient(circle at 10% 10%, rgba(56,189,248,0.12), transparent 40%),
@@ -42,8 +47,8 @@ body { margin: 0; background-color: var(--bg); color: var(--text); font-family: 
     content: ""; 
     position: absolute; 
     inset: 0;
-    /* Using ./ ensures the browser looks in the assets folder relative to your index file */
-    background: url("./assets/confirmed-logo.png") center/800px no-repeat;
+    /* Use ./ and exact filename matching for GitHub Pages */
+    background: url("./assets/confirmed-logo.jpg") center/800px no-repeat;
     opacity: 0.55; 
     z-index: -1;
 }
