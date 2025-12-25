@@ -204,10 +204,10 @@ form.addEventListener('submit', async (e) => {
         const formData = new FormData(form);
         const data = Object.fromEntries(formData);
         
-        await fetch("https://sainathai.app.n8n.cloud/webhook/sainathai-leads", {
-            method: "POST", 
-            headers: {'Content-Type': 'application/json'},
-            body: JSON.stringify(data)
+        await fetch("https://sainathai.app.n8n.cloud/webhook/healthcare-lead", {
+                      method: "POST",
+                      headers: { "Content-Type": "application/json" },
+                      body: JSON.stringify(data)
         });
         
         document.getElementById('statusModal').style.display = 'grid';
