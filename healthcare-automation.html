@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
     <title>SainathAI | Enterprise Healthcare Procurement Intelligence</title>
-    <meta name="description" content="Vendor-neutral procurement engine for healthcare leaders. Source HIS systems and medical equipment with AI-backed intelligence.">
+    
+    <meta name="description" content="Vendor-neutral procurement engine for healthcare leaders. Source HIS systems and medical equipment.">
     <meta name="p:domain_verify" content="c6ea929076510ba6bb71b073ebbc98b7"/>
     <link rel="canonical" href="https://sainathai.github.io/SainathAI/healthcare-automation.html" />
     
@@ -15,7 +15,6 @@
     <meta property="og:title" content="SainathAI — Healthcare Procurement Intelligence">
     <meta property="og:image" content="./assets/Confirmed%20Logo.png">
     <meta property="og:type" content="website">
-    <meta name="pinterest" content="nopin" description="Enterprise Healthcare Procurement Intelligence">
 
     <script type="application/ld+json">
     [
@@ -23,21 +22,8 @@
         "@context": "https://schema.org",
         "@type": "MedicalBusiness",
         "name": "SainathAI",
-        "url": "https://sainathai.github.io/SainathAI/healthcare-automation.html",
-        "description": "AI-driven procurement engine specializing in HIS systems and medical supply chain automation.",
+        "description": "AI-driven procurement engine for HIS systems and medical supply chains.",
         "areaServed": "Global"
-      },
-      {
-        "@context": "https://schema.org",
-        "@type": "FAQPage",
-        "mainEntity": [{
-          "@type": "Question",
-          "name": "How does SainathAI handle medical vendor vetting?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "SainathAI uses a multi-point audit system to verify OEM direct warranties, cold chain compliance, and risk scorecards."
-          }
-        }]
       }
     ]
     </script>
@@ -59,7 +45,6 @@
         * { box-sizing: border-box; }
         body { margin: 0; background-color: var(--bg); color: var(--text); font-family: 'Inter', sans-serif; overflow-x: hidden; line-height: 1.6; }
 
-        /* THE BG ENGINE */
         .bg-engine { position: fixed; inset: 0; z-index: -1; pointer-events: none; }
         .bg-engine::before { 
             content: ""; position: absolute; inset: 0;
@@ -69,8 +54,8 @@
         .bg-engine::after { 
             content: ""; position: absolute; inset: 0;
             background-image: url("./assets/Confirmed%20Logo.png");
-            background-position: center; background-repeat: no-repeat; background-size: 600px;
-            opacity: 0.10; filter: brightness(0.8); z-index: -1;
+            background-position: center; background-repeat: no-repeat; background-size: 800px;
+            opacity: 0.50; filter: brightness(1.1); z-index: -1;
         }
 
         section { max-width: 1100px; margin: 0 auto; padding: 40px 20px; text-align: center; }
@@ -86,7 +71,6 @@
         .gradient-text { background: linear-gradient(to bottom, #fff, var(--accent)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
         .subtitle { color: var(--muted); font-size: 1.15rem; max-width: 650px; margin: 0 auto 50px; }
 
-        /* CAROUSEL */
         .carousel-viewport { height: 450px; perspective: 1500px; display: flex; align-items: center; justify-content: center; position: relative; margin-bottom: 40px; }
         .card {
             position: absolute; width: 310px; padding: 30px;
@@ -98,7 +82,6 @@
         .card ul { list-style: none; padding: 0; margin-top: 15px; font-size: 0.85rem; color: var(--muted); text-align: left; }
         .card li::before { content: "✔"; color: var(--accent); margin-right: 8px; }
 
-        /* FORM */
         .form-wrap { background: var(--glass); padding: 50px; border-radius: 32px; border: 1px solid var(--border); box-shadow: 0 40px 100px rgba(0,0,0,0.5); }
         .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; text-align: left; }
         @media (max-width: 650px) { .grid { grid-template-columns: 1fr; } }
@@ -117,7 +100,6 @@
         }
         .error-msg { font-size: 0.75rem; color: var(--error); margin-top: 5px; display: none; }
 
-        /* MODAL */
         #statusModal { position: fixed; inset: 0; background: rgba(2,6,23,0.96); display: none; place-items: center; z-index: 2000; backdrop-filter: blur(12px); }
         .modal-content { background: var(--bg); border: 1px solid var(--border); padding: 40px; border-radius: 28px; max-width: 450px; text-align: center; }
         .priority-btn { background: #25D366; color: white; display: flex; align-items: center; justify-content: center; gap: 10px; margin-top: 20px; border: none; border-radius: 12px; font-weight: 700; cursor: pointer; padding: 15px; width: 100%; text-decoration: none; }
@@ -137,30 +119,40 @@
     <div class="carousel-viewport" id="carousel">
         <div class="card"><h3>Hospital SaaS</h3><ul><li>EMR & AI Integration</li><li>Compliance Audited</li></ul></div>
         <div class="card"><h3>Medical Equipment</h3><ul><li>OT & ICU Setup</li><li>OEM Direct Warranty</li></ul></div>
-        <div class="card)<h3>Pharma Supply</h3><ul><li>Verified Cold Chain</li><li>Bulk Pricing Access</li></ul></div>
+        <div class="card"><h3>Pharma Supply</h3><ul><li>Verified Cold Chain</li><li>Bulk Pricing Access</li></ul></div>
         <div class="card"><h3>Vendor Intel</h3><ul><li>Distributor Audits</li><li>Risk Scorecards</li></ul></div>
         <div class="card"><h3>Risk Shield</h3><ul><li>Negotiation Support</li><li>Contract Compliance</li></ul></div>
     </div>
 
-    <div class="form-wrap">
+    <div class="form-wrap" id="procurement-form">
         <form id="leadForm" class="grid">
-            <input type="text" name="org" placeholder="Organization Name" required>
+            <input type="text" name="organization" placeholder="Organization Name" required>
             
             <div class="input-group">
                 <input type="email" id="email" name="email" placeholder="Official Business Email" required>
                 <div id="eErr" class="error-msg">Business domain required</div>
             </div>
 
-            <input type="tel" id="phone" name="phone" placeholder="Phone Number" required>
+            <input type="tel" id="phone" name="phone" placeholder="Contact Number" required>
 
-            <select name="volume" required>
-                <option value="">Monthly Procurement Volume</option>
-                <option value="S">Below ₹10 Lakhs</option>
-                <option value="M">₹10 Lakhs - ₹50 Lakhs</option>
-                <option value="L">₹50 Lakhs+</option>
+            <div style="display:flex; gap:10px;">
+                <input type="number" name="order_value" placeholder="Est. Order Value" required>
+                <select name="currency" style="width:100px;" required>
+                    <option value="INR" selected>INR</option>
+                    <option value="USD">USD</option>
+                    <option value="EUR">EUR</option>
+                </select>
+            </div>
+
+            <select name="requirement_type" style="grid-column:1/-1;" required>
+                <option value="">Select Requirement Category</option>
+                <option value="HIS">Hospital Information Systems (HIS)</option>
+                <option value="Equipment">Medical Equipment / Diagnostics</option>
+                <option value="Pharma">Pharma / Consumables</option>
+                <option value="Automation">Healthcare Automation & AI</option>
             </select>
 
-            <textarea name="desc" style="grid-column:1/-1;" placeholder="Specific equipment or pharma needs..." rows="3" required></textarea>
+            <textarea name="details" style="grid-column:1/-1;" placeholder="Provide specific procurement details..." rows="3" required></textarea>
             
             <button type="submit" class="submit-btn" id="btn">Get Intelligence Report</button>
             <p style="grid-column:1/-1; font-size:0.8rem; color:var(--muted); margin-top:10px;">🛡️ Guaranteed vendor-neutral matching • No retail inquiries</p>
@@ -202,12 +194,11 @@ function rotate() {
 }
 setInterval(rotate, 4000); rotate();
 
-/* FORM & ROUTING LOGIC */
+/* FORM LOGIC */
 const params = new URLSearchParams(window.location.search);
 const tracking = {
     utm_source: params.get('utm_source') || 'direct',
-    utm_campaign: params.get('utm_campaign') || 'none',
-    pin_id: params.get('pin_id') || 'none'
+    utm_campaign: params.get('utm_campaign') || 'none'
 };
 
 const form = document.getElementById('leadForm');
@@ -215,11 +206,16 @@ const form = document.getElementById('leadForm');
 form.addEventListener('submit', async (e) => {
     e.preventDefault();
     
-    // Email Gate
     const emailVal = document.getElementById('email').value.toLowerCase();
     const junk = ['gmail.com','yahoo.com','outlook.com','hotmail.com'];
     if (junk.some(d => emailVal.endsWith(d))) {
         document.getElementById('eErr').style.display = 'block';
+        return;
+    }
+
+    const orderVal = parseFloat(form.order_value.value);
+    if (orderVal < 10000) {
+        alert("Minimum institutional procurement value required.");
         return;
     }
 
@@ -229,11 +225,9 @@ form.addEventListener('submit', async (e) => {
 
     const formData = new FormData(form);
     const payload = Object.fromEntries(formData);
-    
-    // REVENUE ROUTING DATA
-    payload.tracking = tracking;
+    payload.utm_source = tracking.utm_source;
+    payload.utm_campaign = tracking.utm_campaign;
     payload.request_id = "REQ-" + Date.now();
-    payload.source_url = window.location.href;
 
     try {
         const res = await fetch("https://sainathai.app.n8n.cloud/webhook/healthcare-lead", {
